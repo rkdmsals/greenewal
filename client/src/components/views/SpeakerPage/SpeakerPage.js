@@ -40,7 +40,34 @@ function SpeakerPage() {
                 <div className="speakerInfo_1">
                     <img src="img/SpeakerPage/Ellipse.png" />
                     <div src="speakerInfo_name">김이화</div>
-                    <div src="speakerInfo_desc">김이화</div>
+                    <ul src="speakerInfo_desc">
+                        <li>간단 프로필 1</li>
+                        <li>간단 프로필 2</li>
+                    </ul>
+                    <div src="speakerInfo_topic">강연 주제</div>
+                    <div src="speakerInfo_topic_content">주제에 대하여 작성</div>
+
+                </div>
+
+                <div className="speakerInfo_2">
+                    <img src="img/SpeakerPage/Ellipse.png" />
+                    <div src="speakerInfo_name">김이화</div>
+                    <ul src="speakerInfo_desc">
+                        <li>간단 프로필 1</li>
+                        <li>간단 프로필 2</li>
+                    </ul>
+                    <div src="speakerInfo_topic">강연 주제</div>
+                    <div src="speakerInfo_topic_content">주제에 대하여 작성</div>
+
+                </div>
+
+                <div className="speakerInfo_2">
+                    <img src="img/SpeakerPage/Ellipse.png" />
+                    <div src="speakerInfo_name">김이화</div>
+                    <ul src="speakerInfo_desc">
+                        <li>간단 프로필 1</li>
+                        <li>간단 프로필 2</li>
+                    </ul>
                     <div src="speakerInfo_topic">강연 주제</div>
                     <div src="speakerInfo_topic_content">주제에 대하여 작성</div>
 
