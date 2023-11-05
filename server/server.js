@@ -29,3 +29,9 @@ app.use(bodyParser.json());
 app.listen(PORT, () => {
   console.log(`recruiting-site server listening on port ${PORT}`);
 });
+
+//로그인 인가 토큰 받기
+const { accessToken } = req.body;
+const { data } = await axios.get( 
+  `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${accessToken}`
+  );
