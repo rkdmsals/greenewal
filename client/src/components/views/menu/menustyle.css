@@ -1,0 +1,86 @@
+.menu-container {
+    position: relative;
+
+  }
+  
+  .bar-image {
+    width: 22px;
+    height: 14px;
+    margin: 12px 0px 0px 11px;
+    
+  }
+  
+  .title {
+    top: 33px;
+    left: 75px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0px 0px 33px;
+  }
+
+  .text {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .text > div:first-child {
+    color: #008053; /* "먹거리" 텍스트 색을 초록색으로 변경 */
+    display: inline;
+  }
+  
+  .text > div:last-child {
+    color: black; /* "부스" 텍스트 색을 검은색으로 변경 */
+    display: inline;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    margin: 11px 0px 0px 33px;
+  }
+  
+  .food-image {
+    margin-bottom: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+  }
+  .bptx {
+    position: relative;
+    left: 182px;
+    top: -400px;
+    
+    font-size: 16px;
+  }
+  .dmtx {
+    position: relative;
+    top: -270px;
+    left: 182px;
+    font-size: 16px;
+  }
+  .hctx {
+    position: relative;
+    top: -150px;
+    left: 182px;
+    font-size: 16px;
+  }
+  .bpp {
+    position: relative;
+    top: -440px;
+    left: 182px;
+    font-size: 12px;
+  }
+  .dmp {
+    position: relative;
+    top: -300px;
+    left: 182px;
+    font-size: 12px;
+  }
+  .hcp {
+    position: relative;
+    top: -180px;
+    left: 182px;
+    font-size: 12px;
+  }
+  
