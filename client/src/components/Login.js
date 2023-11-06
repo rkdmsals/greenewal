@@ -1,4 +1,4 @@
-import { application } from "express";
+//import { application } from "express";
 import { ReactElement, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 //import useAuthStore from "../store/auth";
@@ -21,7 +21,7 @@ const Login = () => {
     //login(accessToken);
 
     //백엔드로 보내기
-    const { data } = await Api.post("oauth/google", { accessToken});
+    //const { data } = await Api.post("oauth/google", { accessToken});
     
     navigate("/");
   }, [navigate]);
