@@ -6,7 +6,10 @@ function SpeakerPage() {
     <div className="speakerPage_background">
         <div className="speakerPage_main_container">
             <div className="timeTable_container">
-                <div className="timeTable_title">TIME TABLE</div>
+            <div className="timeTable_title">
+            <div id="green">TIME </div>
+                <div id="black"> TABLE</div>
+            </div>
                 <div className="timeTable_date">11/00 FRI</div>
                 <table className="timeTable">
                     <tr className="timeTable_1">
@@ -37,39 +40,39 @@ function SpeakerPage() {
             <div className="speakerInfo_container">
 
                 <div className="speakerInfo_title">연사님 소개</div>
-                <div className="speakerInfo_1">
+                <div className="speakerInfo" id="speakerInfo_1">
                     <img src="img/SpeakerPage/Ellipse.png" />
-                    <div src="speakerInfo_name">김이화</div>
-                    <ul src="speakerInfo_desc">
+                    <div className="speakerInfo_name">김이화</div>
+                    <ul sclassName="speakerInfo_desc">
                         <li>간단 프로필 1</li>
                         <li>간단 프로필 2</li>
                     </ul>
-                    <div src="speakerInfo_topic">강연 주제</div>
-                    <div src="speakerInfo_topic_content">주제에 대하여 작성</div>
+                    <div className="speakerInfo_topic">강연 주제</div>
+                    <div className="speakerInfo_topic_content">주제에 대하여 작성</div>
 
                 </div>
 
-                <div className="speakerInfo_2">
+                <div className="speakerInfo" id="speakerInfo_2">
                     <img src="img/SpeakerPage/Ellipse.png" />
-                    <div src="speakerInfo_name">김이화</div>
-                    <ul src="speakerInfo_desc">
+                    <div className="speakerInfo_name">김이화</div>
+                    <ul className="speakerInfo_desc">
                         <li>간단 프로필 1</li>
                         <li>간단 프로필 2</li>
                     </ul>
-                    <div src="speakerInfo_topic">강연 주제</div>
-                    <div src="speakerInfo_topic_content">주제에 대하여 작성</div>
+                    <div className="speakerInfo_topic">강연 주제</div>
+                    <div className="speakerInfo_topic_content">주제에 대하여 작성</div>
 
                 </div>
 
-                <div className="speakerInfo_2">
+                <div className="speakerInfo" id="speakerInfo_3">
                     <img src="img/SpeakerPage/Ellipse.png" />
-                    <div src="speakerInfo_name">김이화</div>
-                    <ul src="speakerInfo_desc">
+                    <div className="speakerInfo_name">김이화</div>
+                    <ul className="speakerInfo_desc">
                         <li>간단 프로필 1</li>
                         <li>간단 프로필 2</li>
                     </ul>
-                    <div src="speakerInfo_topic">강연 주제</div>
-                    <div src="speakerInfo_topic_content">주제에 대하여 작성</div>
+                    <div className="speakerInfo_topic">강연 주제</div>
+                    <div className="speakerInfo_topic_content">주제에 대하여 작성</div>
 
                 </div>
 

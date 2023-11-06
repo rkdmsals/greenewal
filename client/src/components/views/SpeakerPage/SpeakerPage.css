@@ -1,27 +1,85 @@
+.speakerPage_background{
+    margin: 5% 10%;
+    font-size: var(--content-font-size);
+    text-align: center;
+
+
+}
 .timeTable_title{
+    display: flex;
+    margin: 30px 0%;
     color: var( --ewhaian-green);
+    font-size: var(--title-font-size);
+    font-weight: bold;
+    justify-content: center;
 
+}
+#green{
+    margin-right: 1%;
+}
+#black{
+    margin-left: 1%;
+    color: var( --toneDown-black);
 
+}
+
+.timeTable_date{
+    font-size: var(--mobile-small-font-size2);
+    text-align: left;
 }
 
 table {
     width: 100%;
+    margin: 10px 0 30px 0;
     border-top: 1px solid #444444;
     border-collapse: collapse;
 }
 
 td {
+    padding: 2%;
     border-bottom: 1px solid #444444;
-    text-align: center;
 }
 
 .timeTable_1{
     background-color: var(--ewhaian-green);
 }
 
+.speakerInfo_title{
+    font-size: var(--title-font-size);
+    font-weight: bold;
+    margin: 30px 0% 10px 0;
+}
+
+.speakerInfo_name{
+    font-size: var(--mobile-middle-font-size2);
+    font-weight: bold;
+}
+
+.speakerInfo_topic{
+    font-size: var(--mobile-middle-font-size2);
+    font-weight: bold;
+}
+
+.speakerInfo{
+    margin: 50px 0;
+}
+
+/*모바일*/
+
 @media screen and (max-width: 480px) {
 
+.speakerPage_background{
+    margin: 3% 10%;
 
+}
+
+.timeTable_title{
+    font-size: var(--mobile-title-font-size);
+}
+
+.speakerInfo_title{
+    font-size: var(--mobile-title-font-size);
+}
   
 }
   
