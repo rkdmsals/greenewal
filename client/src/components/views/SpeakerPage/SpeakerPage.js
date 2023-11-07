@@ -7,74 +7,63 @@ function SpeakerPage() {
         <div className="speakerPage_main_container">
             <div className="timeTable_container">
             <div className="timeTable_title">
-            <div id="green">TIME </div>
-                <div id="black"> TABLE</div>
+                <div>Timeline</div><img className="dia_img" src="img/SpeakerPage/dia.png" />
             </div>
-                <div className="timeTable_date">11/00 FRI</div>
-                <table className="timeTable">
-                    <tr className="timeTable_1">
-                        <td>00:00 - 00:00</td>
-                        <td>김이화 연사님</td>
-                    </tr>
-                    <tr className="timeTable_2">
-                        <td>00:00 - 00:00</td>
-                        <td>BREAK TIME</td>
-                    </tr>
-                    <tr className="timeTable_1">
-                        <td>00:00 - 00:00</td>
-                        <td>김이화 연사님</td>
-                    </tr>
-                    <tr className="timeTable_2">
-                        <td>00:00 - 00:00</td>
-                        <td>BREAK TIME</td>
-                    </tr>
-                    <tr className="timeTable_1">
-                        <td>00:00 - 00:00</td>
-                        <td>김이화 연사님</td>
-                    </tr>
+            <div className="timeTable_background" style={{ 
+            backgroundImage: `url("/img/SpeakerPage/clober1.png")` 
+            }}>
+                <div className="timeTable_content_container">
+                    <div className="timeTable_content">
+                        <div>00:00 - 00:00</div>
+                        <div className="timeTable_content_name">
+                            <img className="clober_img" src="img/SpeakerPage/clober2.png" />
+                            <div>이주미 변호사</div>
+                        </div>
+                    </div>
+                    <div className="timeTable_break">
+                        <div class="division_line"></div>
+                        <div>Break Time</div>
+                        <div class="division_line"></div>
+                    </div>
+                    <div className="timeTable_content">
+                        <div>00:00 - 00:00</div>
+                        <div className="timeTable_content_name">
+                            <img className="clober_img" src="img/SpeakerPage/clober2.png" />
+                            <div>전효진 변호사</div>
+                        </div>
+                    </div>
+                    <div className="timeTable_break">
+                    <div class="division_line"></div>
+                        <div>Break Time</div>
+                        <div class="division_line"></div>
+                    </div>
+                    <div className="timeTable_content">
+                        <div>00:00 - 00:00</div>
+                        <div className="timeTable_content_name">
+                            <img className="clober_img" src="img/SpeakerPage/clober2.png" />
+                            <div>이주미 변호사</div>
+                        </div>
+                    </div>
+                </div>
 
-                </table>
+            </div>
 
             </div>
 
             <div className="speakerInfo_container">
+                <div className="speakerInfo_title">
+                    <div>Speaker Info</div><img className="arrow_img" src="img/SpeakerPage/arrow_btn.png" />
+                </div>
 
-                <div className="speakerInfo_title">연사님 소개</div>
                 <div className="speakerInfo" id="speakerInfo_1">
-                    <img src="img/SpeakerPage/Ellipse.png" />
-                    <div className="speakerInfo_name">김이화</div>
-                    <ul sclassName="speakerInfo_desc">
-                        <li>간단 프로필 1</li>
-                        <li>간단 프로필 2</li>
-                    </ul>
-                    <div className="speakerInfo_topic">강연 주제</div>
-                    <div className="speakerInfo_topic_content">주제에 대하여 작성</div>
-
+                    <div className="speakerInfo_content">
+                        <div className="speakerInfo_name">이주미</div>
+                        <div className="speakerInfo_topic_content">강연주제강연주제강연주제</div>
+                    </div>
+                    
                 </div>
 
-                <div className="speakerInfo" id="speakerInfo_2">
-                    <img src="img/SpeakerPage/Ellipse.png" />
-                    <div className="speakerInfo_name">김이화</div>
-                    <ul className="speakerInfo_desc">
-                        <li>간단 프로필 1</li>
-                        <li>간단 프로필 2</li>
-                    </ul>
-                    <div className="speakerInfo_topic">강연 주제</div>
-                    <div className="speakerInfo_topic_content">주제에 대하여 작성</div>
 
-                </div>
-
-                <div className="speakerInfo" id="speakerInfo_3">
-                    <img src="img/SpeakerPage/Ellipse.png" />
-                    <div className="speakerInfo_name">김이화</div>
-                    <ul className="speakerInfo_desc">
-                        <li>간단 프로필 1</li>
-                        <li>간단 프로필 2</li>
-                    </ul>
-                    <div className="speakerInfo_topic">강연 주제</div>
-                    <div className="speakerInfo_topic_content">주제에 대하여 작성</div>
-
-                </div>
 
 
 

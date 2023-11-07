@@ -1,11 +1,12 @@
 :root {
+    --background-yellow: #FBFBF4;
     --toneDown-white: #f0f4f5;
-    --toneDown-black: #0a0a0a;
+    --toneDown-black: #080808;
     --ewhaian-green: #058053;
     --ewhaian-subgreen: #058053;
 
     --title-font-size: 50px;
-    --content-big-font-size: 40px
+    --content-big-font-size: 40px;
     --middle-font-size: 18px;
     --content-font-size: 14px;
 
