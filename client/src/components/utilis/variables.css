@@ -1,20 +1,18 @@
 :root {
+    --background-yellow: #FBFBF4;
     --toneDown-white: #f0f4f5;
-    --toneDown-black: #0a0a0a;
+    --toneDown-black: #080808;
     --ewhaian-green: #058053;
     --ewhaian-subgreen: #058053;
 
     --title-font-size: 50px;
-    --middle-font-size: 24px;
-    --content-font-size: 16px;
+    --content-big-font-size: 40px;
+    --middle-font-size: 18px;
+    --content-font-size: 14px;
 
-    --mobile-title-font-size: 30px;
-    --mobile-middle-font-size: 24px;
-    --mobile-middle-font-size2: 20px;
-    --mobile-content-font-size: 16px;
-    /*기본 폰트 사이즈는 웹 버전과 같게 통일 */
-    --mobile-small-font-size2: 13px;
-    --mobile-small-font-size: 11px;
+    
+    /* desktop font size 따로 설정시 아래에*/
+    --desk-font-size: 60px; /* 예시 */
 
     --contents-max-width: 850px;
 }
