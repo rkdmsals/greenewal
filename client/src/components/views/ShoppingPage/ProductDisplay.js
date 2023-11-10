@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './ProductDisplay.css';
 
 function ProductDisplay() {
 
@@ -48,7 +50,7 @@ function ProductDisplay() {
     ]
 
 
-    const detailData = [
+    const productData = [
         {
             id: 1,
             title: '스티커팩',
@@ -66,7 +68,6 @@ function ProductDisplay() {
             describe: '신나는 회전목마가 그려진 컵, 어떤 음료를 담아 마셔도 맛있을 거예요!',
             img: "../img/goods/goods_detail/2-1.png",
             detailImg: detailImg_2
-
         },
         {
             id: 3,
@@ -76,7 +77,8 @@ function ProductDisplay() {
             describe: '스트레스 받을 땐 말랑콩떡 버섯 인형을 꾹꾹 눌러봐요!',
             img: "../img/goods/goods_detail/3-1.png",
             detailImg: detailImg_3
-        }, {
+        },
+        {
             id: 4,
             title: '액정클리너',
             originalprice: 2000,
@@ -105,16 +107,99 @@ function ProductDisplay() {
         }
     ];
 
+
+    const [currentDisplay, setCurrentDisplay] = useState(productData)
+    const handleButton1Click = (e) => {
+        setCurrentDisplay(productData)
+    };
+
+    const handleButton2Click = (e) => {
+        setCurrentDisplay([{
+            id: 1,
+            title: '스티커팩',
+            originalPrice: 1500,
+            discountedPrice: 1000,
+            describe: '버섯이의 우당탕탕 놀이공원 체험기! 노트북, 휴대폰 여기저기에 붙여봐요!',
+            img: "../img/goods/goods_detail/1-1.png",
+            detailImg: detailImg_1
+        },
+        {
+            id: 2,
+            title: '스택컵',
+            originalPrice: 9000,
+            discountedPrice: 7000,
+            describe: '신나는 회전목마가 그려진 컵, 어떤 음료를 담아 마셔도 맛있을 거예요!',
+            img: "../img/goods/goods_detail/2-1.png",
+            detailImg: detailImg_2
+        },
+        {
+            id: 3,
+            title: '말랑비즈인형',
+            originalprice: 13000,
+            discountedPrice: 10000,
+            describe: '스트레스 받을 땐 말랑콩떡 버섯 인형을 꾹꾹 눌러봐요!',
+            img: "../img/goods/goods_detail/3-1.png",
+            detailImg: detailImg_3
+        }
+        ])
+    };
+
+    const handleButton3Click = (e) => {
+        setCurrentDisplay([
+            {
+                id: 5,
+                title: '레고 피규어',
+                originalprice: 11000,
+                discountedPrice: 9000,
+                describe: '초록 후드의 캐릭터, 공구템을 입고 있는 벗들의 모습 같지 않나요?',
+                img: "../img/goods/goods_detail/5-1.png",
+                detailImg: detailImg_5
+            },
+            {
+                id: 6,
+                title: '그립톡',
+                originalprice: 4000,
+                discountedPrice: 3000,
+                describe: '달콤한 바닐라맛의 아이스크림 그립톡, 보기만 해도 놀이동산이 가고 싶어지지 않나요?',
+                img: "../img/goods/goods_detail/6-1.png",
+                detailImg: detailImg_6
+            }
+        ])
+
+    };
+
+
     return (
-        <div className="ProductDisplay_main_contianer">
-            <div className="ProductDisplay_main_title">
-                2023 배꽃정원
+        <div className="ProductDisplay_background">
+            <div className="ProductDisplay_main_contianer">
+                <div className="ProductDisplay_main_title">
+                    Previous Goods
+                </div>
+                <div className="ProductDisplay_top_button_container">
+                    <button className="ProductDisplay_top_button1" onClick={() => handleButton1Click("버튼 1")}>전체</button>
+                    <button className="ProductDisplay_top_button2" onClick={() => handleButton2Click("버튼 2")}>2022 배꽃정원</button>
+                    <button className="ProductDisplay_top_button3" onClick={() => handleButton3Click("버튼 3")}>2023 배꽃정원</button>
+
+                </div>
+                <div className="ProductDisplay_inner_container">
+                    {currentDisplay.map((product) => (
+                        <div key={product.id} className="ProductDisplay_content_container">
+                            <div className='ProductDisplay_content_title'>
+                                {product.title}
+                            </div>
+                            <div className='ProductDisplay_content_price'>
+                                가격: {product.discountedPrice}￦
+                            </div>
+                            <div className='ProductDisplay_content_describe'>
+                                {product.describe}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <button className="ProductDisplay_cart_button">
+                    장바구니 가기
+                </button>
             </div>
-            <div className="ProdcutDisplay_inner_container">
-                굿즈 1
-                굿즈 2
-                굿즈 3 ...
-            </div >
         </div >)
 }
 export default ProductDisplay;

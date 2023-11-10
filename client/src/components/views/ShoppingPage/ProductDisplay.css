@@ -1,0 +1,39 @@
+.ProductDisplay_background {}
+
+.ProductDisplay_main_contianer {
+    display: flex;
+    flex-direction: column;
+}
+
+.ProductDisplay_main_title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.ProductDisplay_top_button_container {
+    display: flex;
+}
+
+.ProductDisplay_top_button1 {
+    width: 20%;
+}
+
+.ProductDisplay_top_button2,
+.ProductDisplay_top_button3 {
+    width: 40%;
+    margin-left: 2%;
+}
+
+.ProductDisplay_inner_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3개의 열 */
+    grid-gap: 20px;
+    /* 열과 행 사이의 간격 설정 */
+}
+
+.ProductDisplay_content_container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
