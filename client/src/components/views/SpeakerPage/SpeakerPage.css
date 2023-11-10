@@ -1,34 +1,143 @@
-.timeTable_title{
-    color: var( --ewhaian-green);
-
-
+html{
+    background-color: var(--background-yellow);
 }
 
-table {
-    width: 100%;
-    border-top: 1px solid #444444;
-    border-collapse: collapse;
-}
+.speakerPage_background{
 
-td {
-    border-bottom: 1px solid #444444;
+    margin: 5% 10%;
+    font-size: var(--content-font-size);
     text-align: center;
+    color: var(--toneDown-black);
+
 }
 
-.timeTable_1{
-    background-color: var(--ewhaian-green);
+.timeTable_container{
+    margin-top: 10%;
+}
+.timeTable_title{
+    display: flex;
+    justify-content: flex-start; 
+    margin: 0px 0%;
+    font-size: var(--content-big-font-size);
+    font-weight: bold;
+
 }
 
-@media screen and (max-width: 480px) {
-
-
-  
+.dia_img{
+    margin: 10px;
+    width: 22px;
+    height: 30px;
+    object-fit: cover;
 }
-  
-@media screen and (max-width: 375px) {
-  
-}
-  
-@media screen and (max-width: 280px) {
 
+
+.timeTable_background{
+    width: 304px;
+    height: 304px;
+    margin: 10% auto;
+    object-fit: cover;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.timeTable_content_container{
+    width: 60%;
+}
+
+.timeTable_break{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+.division_line{
+    border-top: 1px solid #444444;
+    margin: 10% auto;
+    width: 27%;        
+}
+.timeTable_content_name{
+    display: flex;
+    margin: 2% 0% 0% 0%;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--middle-font-size);
+    font-weight: bold;
+
+}
+
+.clober_img{
+    margin: 1% 4%;
+    width: 19px;
+    height: 19px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+/* speaker info*/
+
+.speakerInfo_container{
+    margin-top: 10%;
+
+}
+.speakerInfo_title{
+    display: flex;
+    justify-content: flex-start;
+    font-size: var(--content-big-font-size);
+    font-weight: bold;
+    margin: 0;
+}
+.arrow_img{
+    margin: 10px;
+    width: 31px;
+    height: 31px;
+    object-fit: cover;
+}
+
+
+/* speaker card */
+.speakerInfo_name{
+    font-size: var(--mobile-middle-font-size2);
+    font-weight: bold;
+}
+
+.speakerInfo_topic{
+    font-size: var(--mobile-middle-font-size2);
+    font-weight: bold;
+}
+
+.speakerInfo{
+    width: 239px;
+    height: 239px;
+    background-color: #EFEFEF;
+    margin: 10px 0px;
+    border-radius: 20px;
+    text-align: right;
+}
+
+.speakerInfo_content{
+    padding: 10%;
+}
+
+.speakerInfo_name{
+    font-size: 20px;
+}
+
+
+
+/* desktop */
+@media screen and (min-width:800px) {
+    .speakerPage_background {
+        width: 500px;
+        margin: 0 auto;
+    }
 }
