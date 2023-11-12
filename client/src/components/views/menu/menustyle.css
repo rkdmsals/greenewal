@@ -1,18 +1,18 @@
 .menu-container {
     position: relative;
-
+    width: 100%;
+    height: 100vh;
   }
   
   .bar-image {
     width: 22px;
     height: 14px;
     margin: 12px 0px 0px 11px;
-    
   }
   
   .title {
-    top: 33px;
-    left: 75px;
+    padding:0 0 0 55px;
+    left: 505px;
     font-size: 30px;
     font-weight: bold;
     margin: 20px 0px 0px 33px;
@@ -24,12 +24,12 @@
   }
 
   .text > div:first-child {
-    color: #008053; /* "먹거리" 텍스트 색을 초록색으로 변경 */
+    color: #008053; 
     display: inline;
   }
   
   .text > div:last-child {
-    color: black; /* "부스" 텍스트 색을 검은색으로 변경 */
+    color: black;
     display: inline;
   }
 
@@ -50,7 +50,6 @@
     position: relative;
     left: 182px;
     top: -400px;
-    
     font-size: 16px;
   }
   .dmtx {
