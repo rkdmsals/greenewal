@@ -213,7 +213,7 @@ function ProductDisplay() {
                     ))}
                 </div>
                 <div className="ProductDisplay_cart_button_container">
-                    <button className="ProductDisplay_cart_button" onClick={() => navigate('/ShoppingCart')}>
+                    <button className="ProductDisplay_cart_button" onClick={() => navigate('/cart')}>
                         장바구니 가기
                     </button>
                 </div>
