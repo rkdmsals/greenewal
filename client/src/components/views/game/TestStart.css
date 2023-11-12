@@ -1,0 +1,91 @@
+.TestBackground {
+    background-color: #E5DED8;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    overflow: auto;
+}
+
+.Round {
+    width: 81px;
+    height: 31px;
+    border-radius: 30px;
+    border: 1px solid var(--toneDown-black);
+    margin-left: 5%;
+    margin-top: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.TestStartBtn {
+    background-color: var(--toneDown-black);
+    width: 90%;
+    height: 66px;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 20px;
+}
+
+.TestTitle {
+    font-size: 44px;
+    margin-bottom: 2%;
+}
+
+.TestSubTitle {
+    font-size: var(--middle-font-size);
+    padding-bottom: 4%;
+}
+
+.TestUser span {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 2px 6px;
+    margin: 0;
+}
+
+.TestUser {
+    width: 90%;
+    /* margin-bottom: 7.4%; */
+    margin: 10px auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.TestDescription {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+    word-break: keep-all;
+    line-break: strict;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 22px 10px;
+    margin-bottom: 7.2%;
+}
+
+.TestDescription li {
+    padding: 2px
+}
+
+/* 
+.TestStart {
+    z-index: 1;
+    transform-origin: left top;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+.TestStart:hover {
+    transform: rotate(-120deg, -120deg, -20deg);
+    transform: rotate3d(-120deg, -120deg, +12deg);
+    opacity: 0.4;
+}
+ */
+
+@media screen and (min-width:800px) {
+    .TestBackground {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
