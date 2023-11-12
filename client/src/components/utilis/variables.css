@@ -18,9 +18,26 @@
     --contents-max-width: 850px;
 }
 
+/* 기본 폰트 */
 @font-face {
-    font-family: "pretendard-Regular";
-    src: url("./PretendardVariable.ttf") format("truetype");
+    font-family: "pretendard-medium";
+    src: url("./Pretendard-Medium.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 타이틀 폰트 */
+@font-face {
+    font-family: "kameron-bold";
+    src: url("./kameron.bold.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 손글씨 폰트 */
+@font-face {
+    font-family: "kyobo-hand";
+    src: url("./Kyobo\ Handwriting\ 2019.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
