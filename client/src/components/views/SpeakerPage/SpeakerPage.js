@@ -1,5 +1,6 @@
 import "./SpeakerPage.css";
 import React from 'react';
+import { ReactComponent as Dia } from "../../../assets/images/SpeakerPage/dia.svg";
 
 function SpeakerPage() {
     return (
@@ -7,7 +8,7 @@ function SpeakerPage() {
         <div className="speakerPage_main_container">
             <div className="timeTable_container">
             <div className="timeTable_title">
-                <div>Timeline</div><img className="dia_img" src="img/SpeakerPage/dia.png" />
+                <div>Timeline</div><img className="dia_img" src="img/SpeakerPage/dia.png" /><Dia />
             </div>
             <div className="timeTable_background" style={{ 
             backgroundImage: `url("/img/SpeakerPage/clober1.png")` 
