@@ -18,6 +18,7 @@ const { UserInfo } = require("./models/userInfo");
 // const PayForGoodsRouter = require("./routes/payForGoods");
 
 app.use(cookieParser());
+app.use(express.urlencoded({extended: true}))
 
 //몽고DB 연결
 mongoose.set("strictQuery", false);
@@ -81,7 +82,7 @@ app.post('/login',(req, res) =>{
   })
 })
 
-app.post('/auth', auth, (req, res) => {
+app.get('/auth', auth, (req, res) => {
 
   res.status(200).json({
     _id: req.user._id,
@@ -89,6 +90,11 @@ app.post('/auth', auth, (req, res) => {
     isAuth: true,
     id : req.user.id,
     name: req.user.name,
+    studentID: req.user.studentID,
+    phoneNumber: req.user.phoneNumber,
+    seatNumber: req.user.seatNumber,
+    role: req.user.role,
+    
   })
   
 })
