@@ -1,80 +1,36 @@
-.TestBackground {
-    background-color: #F3F3F3;
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    overflow: auto;
-}
-
-.TestStartBtn {
-    background-color: var(--ewhaian-green);
-    width: 27%;
-    border: 0px;
-    border-radius: 10px;
-    color: white;
-    padding: 8px 20px;
-}
-
-.TestTitle {
-    font-size: var(--mobile-title-font-size);
-    margin-top: 13%;
-    margin-bottom: 2%;
-}
-
-.TestSubTitle {
-    font-size: var(--mobile-middle-font-size);
-    padding-bottom: 4%;
-}
-
-.TestUser span {
-    border: 1px solid black;
-    display: inline-block;
-    margin-right: 1px;
-    padding: 2px 6px;
-}
-
-.TestUser {
-    display: flex;
-    width: 85%;
-    margin: 0 auto;
-    justify-content: space-between;
-    margin-bottom: 7.4%;
-}
-
-.TestDescription {
-    width: 85%;
-    margin: 0 auto;
-    border: 1px solid black;
-    word-break: keep-all;
-    line-break: strict;
+.TestInner {
     text-align: left;
+}
+
+.TestQuestion {
+    margin: 0 32px;
+}
+
+.Answer span {
+    display: inline-block;
+    border: 1px solid var(--toneDown-black);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     box-sizing: border-box;
-    padding: 22px 10px;
-    margin-bottom: 7.2%;
 }
 
-.TestDescription li {
-    padding: 2px
+.Answer {
+    display: flex;
+    /* align-items: flex-start;
+    justify-content: flex-start; */
+    margin: 0 13%;
 }
 
-/* 
-.TestStart {
-    z-index: 1;
-    transform-origin: left top;
-    transition-duration: 1s;
-    transition-timing-function: ease-in;
+.Lines {
+    border-bottom: 1px solid var(--toneDown-black);
+    border-top: 2px solid var(--toneDown-black);
+    height: 5px;
 }
 
-.TestStart:hover {
-    transform: rotate(-120deg, -120deg, -20deg);
-    transform: rotate3d(-120deg, -120deg, +12deg);
-    opacity: 0.4;
-}
- */
-
-@media screen and (min-width:800px) {
-    .TestBackground {
-        width: 500px;
-        margin: 0 auto;
-    }
+.Round {
+    border-radius: 30px;
+    border: 1px solid var(--toneDown-black);
+    padding: 5px;
+    box-sizing: border-box;
 }
