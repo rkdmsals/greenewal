@@ -8,7 +8,6 @@ import LoginButton from "./components/views/LoginButton";
 import Login from "./components/Login";
 import TestStart from "./components/views/game/TestStart";
 import Test from "./components/views/game/Test"
-import ProductDisplay from "./components/views/ShoppingPage/ProductDisplay";
 import Menu from "./components/views/menu/menu";
 
 function App() {
@@ -23,11 +22,11 @@ function App() {
           <Route
             exact path="/login"
             element={<LoginButton />}
-            />
-          <Route 
-            path="redirect" 
-            element={<Login />} 
-            />
+          />
+          <Route
+            path="redirect"
+            element={<Login />}
+          />
           <Route exact path="/testStart" element={<TestStart />} />
           <Route exact path="/test" element={<Test />} />
           <Route exact path="/menu" element={<Menu />} />
