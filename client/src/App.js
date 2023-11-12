@@ -4,7 +4,7 @@ import Home from "./components/views/Home";
 import SpeakerPage from "./components/views/SpeakerPage/SpeakerPage";
 import ProductDisplay from "./components/views/ShoppingPage/ProductDisplay";
 import ShoppingCart from "./components/views/ShoppingPage/ShoppingCart";
-import LoginPage from "./components/views/LoginPage";
+import LoginPage from "./components/views/Login/LoginPage";
 import TestStart from "./components/views/game/TestStart";
 import Test from "./components/views/game/Test"
 import Menu from "./components/views/menu/menu";

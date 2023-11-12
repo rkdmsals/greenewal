@@ -1,0 +1,17 @@
+html{
+    background-color: var(--background-yellow);
+}
+
+.LoginPage_background{
+
+    margin: 5% 10%;
+    font-size: var(--content-font-size);
+    text-align: center;
+    color: var(--toneDown-black);
+
+}
+
+.Login {
+    display: flex;
+    flex-direction: column;
+}
