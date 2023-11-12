@@ -1,6 +1,7 @@
 import "./SpeakerPage.css";
 import React from 'react';
 import { ReactComponent as Dia } from "../../../assets/images/SpeakerPage/dia.svg";
+import { ReactComponent as Speaker1 } from "../../../assets/images/SpeakerPage/speaker1.svg";
 
 function SpeakerPage() {
     return (
@@ -8,7 +9,8 @@ function SpeakerPage() {
         <div className="speakerPage_main_container">
             <div className="timeTable_container">
             <div className="timeTable_title">
-                <div>Timeline</div><img className="dia_img" src="img/SpeakerPage/dia.png" /><Dia />
+                <div>Timeline</div>
+                <div className="dia_svg"><Dia /></div>
             </div>
             <div className="timeTable_background" style={{ 
             backgroundImage: `url("/img/SpeakerPage/clober1.png")` 
@@ -55,13 +57,31 @@ function SpeakerPage() {
                 <div className="speakerInfo_title">
                     <div>Speaker Info</div><img className="arrow_img" src="img/SpeakerPage/arrow_btn.png" />
                 </div>
-
+              <div className="x_scroll">
                 <div className="speakerInfo" id="speakerInfo_1">
                     <div className="speakerInfo_content">
                         <div className="speakerInfo_name">이주미</div>
-                        <div className="speakerInfo_topic_content">강연주제강연주제강연주제</div>
+                        <div className="speakerInfo_topic_content">강연주제</div>
+                        <div className="speaker_svg"><Speaker1 /></div>
                     </div>
                     
+                </div>
+                <div className="speakerInfo" id="speakerInfo_2">
+                    <div className="speakerInfo_content">
+                        <div className="speakerInfo_name">이주미</div>
+                        <div className="speakerInfo_topic_content">강연주제</div>
+                        <div className="speaker_svg"><Speaker1 /></div>
+                    </div>
+                    
+                </div>
+                <div className="speakerInfo" id="speakerInfo_3">
+                    <div className="speakerInfo_content">
+                        <div className="speakerInfo_name">이주미</div>
+                        <div className="speakerInfo_topic_content">강연주제</div>
+                        <div className="speaker_svg"><Speaker1 /></div>
+                    </div>
+                    
+                </div>
                 </div>
 
 
