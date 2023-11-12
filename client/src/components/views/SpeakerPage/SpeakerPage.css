@@ -114,9 +114,10 @@ html{
     min-width: 239px;
     min-height: 239px;
     background-color: #EFEFEF;
-    margin: 10px 10px 10px 0px;
+    margin: 10px 20px 10px 0px;
     border-radius: 20px;
     text-align: right;
+    box-shadow: 5px 5px gray;
 }
 
 .speakerInfo_content{
@@ -127,14 +128,33 @@ html{
     font-weight: bold;
 }
 
+.speakerInfo_name_2{
+    text-align: left;
+}
+
 .speakerInfo_topic_content{
     position: relative;
     margin-left: 50%;
     width: 50%
 }
-.speaker_svg{
+
+.speakerInfo_topic_content_2{
+    margin-left: 0;
+    text-align: left;
+}
+.speaker_svg1{
     position: absolute;
-    top: 12%;
+    top: 13%;
+    left: 5%;
+}
+.speaker_svg2{
+    position: absolute;
+    top: 11%;
+    left: 27%;
+}
+.speaker_svg3{
+    position: absolute;
+    top: 11%;
     left: 5%;
 }
 
