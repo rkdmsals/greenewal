@@ -1,5 +1,6 @@
 :root {
     --background-yellow: #FFFFF8;
+    --background-green: #349A6B;
     --toneDown-white: #f0f4f5;
     --toneDown-black: #080808;
     --greenewal-mint: #C0DFCC;
@@ -41,7 +42,7 @@
     font-weight: 400;
     font-style: normal;
 }
-
+/*
 * {
     font-family: "pretendard-medium";
-}
+} */
