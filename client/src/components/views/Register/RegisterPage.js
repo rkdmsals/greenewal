@@ -3,6 +3,8 @@ import "./RegisterPage.css";
 import { useDispatch } from 'react-redux';
 import { registerUser } from '../../../_actions/user_action';
 import { useNavigate } from 'react-router-dom';
+import { auth } from '../../../_actions/user_action';
+import { useEffect } from 'react';
 
 
 function RegisterPage(props) {
@@ -61,6 +63,22 @@ function RegisterPage(props) {
             }
         })
     }
+
+    useEffect(() => {
+
+        dispatch(auth()).then(response => {
+            console.log(response)
+
+            if(!response.payload.isAuth) {
+                return
+            } else{
+                navigate('/');
+            }
+        })
+
+
+    }, [])
+
     return (
         <div className='RegisterPage_background'> 
         <form className='Register'
@@ -69,7 +87,7 @@ function RegisterPage(props) {
             <label>Name</label>
             <input type="text" value={Name} onChange={onNameHandler} />
 
-            <label>ID</label>
+            <label>Ewhaian ID</label>
             <input type="ID" value={ID} onChange={onIDHandler} />
 
             <label>StudentID</label>
@@ -79,6 +97,7 @@ function RegisterPage(props) {
             <input type="phoneNumber" value={PhoneNumber} onChange={onPhoneNumberHandler} />
 
             <label>Password</label>
+            <label>5자 이상이여야 합니다.</label>
             <input type="password" value={Password} onChange={onPasswordHandler} />
 
             <label>Confirm Password</label>

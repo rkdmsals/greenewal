@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
 import { useNavigate } from 'react-router-dom';
 import Auth from '../../../hoc/auth';
+import { auth } from '../../../_actions/user_action';
+import { useEffect } from 'react';
 
 
 function LoginPage(props) {
@@ -12,14 +14,10 @@ function LoginPage(props) {
     const navigate = useNavigate();
 
     const [ID, setID] = useState("")
-    const [StudentID, setStudentID] = useState("")
     const [Password, setPassword] = useState("")
 
     const onIDHandler = (event) => {
         setID(event.currentTarget.value)
-    }
-    const onStudentIDHandler = (event) => {
-        setStudentID(event.currentTarget.value)
     }
     const onPasswordHandler = (event) => {
         setPassword(event.currentTarget.value)
@@ -30,7 +28,6 @@ function LoginPage(props) {
 
         let body = {
             id: ID,
-            studentID: StudentID,
             password: Password
         }
 
@@ -47,15 +44,29 @@ function LoginPage(props) {
 
     }
 
+    useEffect(() => {
+
+        dispatch(auth()).then(response => {
+            console.log(response)
+
+            if(!response.payload.isAuth) {
+                return
+            } else{
+                navigate('/');
+            }
+        })
+
+
+    }, [])
+
+
     return (
    <div className='LoginPage_background'> 
        <form className='Login'
             onSubmit={onSubmitHandler}
         >
-           <label>ID</label>
+           <label>Ewhaian ID</label>
            <input type="ID" value={ID} onChange={onIDHandler} />
-           <label>StudentID</label>
-           <input type="StudentID" value={StudentID} onChange={onStudentIDHandler} />
            <label>Password</label>
            <input type="password" value={Password} onChange={onPasswordHandler} />
            <br />
