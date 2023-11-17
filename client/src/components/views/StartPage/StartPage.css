@@ -11,7 +11,7 @@
 .startPage_container{
     background-color: #349A6B;
     display: block;
-    margin: 5% 10%;
+    margin: 0 10%;
     font-size: var(--content-font-size);
     text-align: center;
     color: var(--toneDown-black);
