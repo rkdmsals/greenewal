@@ -28,14 +28,18 @@ function TestEach(props) {
             if (correctAnswer != userAnswer) {
 
                 //2. userAnswer에 검은색 체크
+                const userTop = userAnswer * 23 + 107;
+                $(`.UserAnswer${page}`).css("top", `${userTop}px`);
                 //3. 정답에 빨간색 체크
                 const correctTop = (correctAnswer - 1) * 23 + 107;
                 $(`.CorrectAnswer${page}`).css("display", "block");
                 $(`.CorrectAnswer${page}`).css("top", `${correctTop}px`);
                 // $('.CheckAnswer').css("margin-top", "-23px");
             }
-            const userTop = userAnswer * 23 + 107;
-            $(`.UserAnswer${page}`).css("top", `${userTop}px`);
+            else {
+                const userTop = userAnswer * 23 + 84;
+                $(`.UserAnswer${page}`).css("top", `${userTop}px`);
+            }
             // $('.UserAnswer').css("margin-top", "-23px");
         })
 
