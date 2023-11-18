@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+
 import './ProductDisplay.css';
 
 function ProductDisplay() {
@@ -169,6 +170,11 @@ function ProductDisplay() {
 
     };
 
+    const handleProductClick = (productId) => {
+        const clickedProduct = productData.find((product) => product.id === productId);
+        navigate(`/shop/product-detail/${productId}`, { state: { product: clickedProduct } });
+    };
+
 
     return (
         <div className="ProductDisplay_background">
@@ -185,7 +191,8 @@ function ProductDisplay() {
                 </div>
                 <div className="ProductDisplay_inner_container">
                     {currentDisplay.map((product) => (
-                        <div key={product.id} className="ProductDisplay_content_container">
+                        <div key={product.id} className="ProductDisplay_content_container"
+                            onClick={() => handleProductClick(product.id)}>
                             <div className="ProductDisplay_content_img_container">
                                 임시이미지
                             </div>
