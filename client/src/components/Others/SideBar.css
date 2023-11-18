@@ -1,0 +1,88 @@
+.sidebar {
+    width: 240px;
+    background-color: var(--background-green);
+    position: fixed;
+    height: 95vh;
+    padding: 10px 30px;
+    right: -100%;
+    transition: 850ms;
+}
+
+.sidebar.active {
+    right: 0;
+    transition: 850ms;
+}
+
+
+.SideBar_inner_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hello {
+    font-size: var(--content-font-size);
+}
+
+.hello_name {
+    font-size: var(--middle-font-size);
+}
+
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+ul li a {
+    color: var(--toneDown-black);
+    text-decoration: none;
+    font-size: var(--middle-font-size);
+    display: flex;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+ul li a:hover,
+ul li a.active {
+    background: var(--background-yellow);
+}
+
+.submenu {
+    display: none;
+}
+
+.submenu.active {
+    display: block;
+    
+}
+
+.sub{
+    font-size: var(--content-font-size);
+}
+
+.hello_name {
+    display: flex;
+
+}
+
+.ticket_title {
+    display: flex;
+}
+
+.booth_tap {
+    color: var(--toneDown-black);
+    text-decoration: none;
+    font-size: var(--middle-font-size);
+    display: flex;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.booth_tap:hover,
+.booth_tap.active {
+    background-color: var(--background-yellow);
+}
