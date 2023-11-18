@@ -36,6 +36,7 @@ const userSchema = mongoose.Schema({
     },
     seatNumber: {
         type: String,
+        defaul: 0,
     },
     role: {
         type: Number,

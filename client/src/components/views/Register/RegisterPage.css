@@ -1,0 +1,17 @@
+html{
+    background-color: var(--background-yellow);
+}
+
+.RegisterPage_background{
+
+    margin: 5% 10%;
+    font-size: var(--content-font-size);
+    text-align: center;
+    color: var(--toneDown-black);
+
+}
+
+.Register {
+    display: flex;
+    flex-direction: column;
+}
