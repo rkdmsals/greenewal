@@ -1,0 +1,68 @@
+header {
+    display: block;
+    height: 50px;
+}
+
+.BoothInfo {
+    font-family: "pretendard-medium";
+    font-style: normal;
+}
+
+.BoothMap {
+    width: 90%;
+    height: 300px;
+    background-color: gray;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.AllBooths {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 9px;
+}
+
+.AllBooths button {
+    background-image: url("../../../../public/img/BoothBtn.svg");
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    position: relative;
+    top: -30px;
+    left: 85%;
+    border: 0px;
+}
+
+.EachBooth {
+    margin: 20px 0px;
+    font-size: 11px;
+    display: flex;
+    height: 105px;
+}
+
+.EachBooth img {
+    width: 33%;
+}
+
+.EachBoothInfo {
+    width: 66%;
+    background-color: #EBF7E9;
+    border-radius: 15px 15px 0px 15px;
+    margin-left: 10px;
+    padding-left: 11px;
+}
+
+.EachBoothInfo div {
+    margin-bottom: 8px;
+    padding-right: 20%;
+}
+
+.BoothName {
+    font-size: var(--content-font-size);
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.BoothTag {
+    color: #058053;
+}

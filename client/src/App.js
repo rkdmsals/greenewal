@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./components/utilis/variables.css"
 import Home from "./components/views/Home";
@@ -16,23 +16,21 @@ import CheckAnswers from "./components/views/game/CheckAnswers";
 import Menu from "./components/views/menu/menu";
 import SideBar from "./components/Others/SideBar";
 import Ticket from "./components/views/Ticket/TicketPage"
-
+import BoothInfo from "./components/views/BoothInfo/BoothInfo";
 function App() {
 
-  const [showSideBar, setShowSideBar ] = useState(false)
+  const [showSideBar, setShowSideBar] = useState(false)
 
   return (
     <div className="App">
 
-    <img src="img/menu_navigation.png" alt='sidebaricon' className="sidebaricon" 
+      <img src="img/menu_navigation.png" alt='sidebaricon' className="sidebaricon"
         onClick={() => setShowSideBar(!showSideBar)}
-        />
+      />
       <BrowserRouter>
 
-      
-        <Routes>
 
-          
+        <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/start" element={<StartPage />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
@@ -47,15 +45,16 @@ function App() {
           <Route exact path="/test" element={<Test />} />
           <Route exact path="/menu" element={<Menu />} />
           <Route exact path="/ticket" element={<Ticket />} />
-          
+          <Route exact path="/booth" element={<BoothInfo />} />
+
         </Routes>
 
         <SideBar show={showSideBar} />
       </BrowserRouter>
 
-      
-        
-      
+
+
+
     </div>
   );
 }
