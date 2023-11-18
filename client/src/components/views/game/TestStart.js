@@ -7,10 +7,10 @@ function TestStart() {
         <div className="TestSubtitle">2023년도 하반기 이화이언 만점고사</div>
         <div className="TestTitle" style={{ fontSize: "44px" }}>이화인 탐구영역</div>
         <div className="TestUser">
-            <div className="TestUserInfo"><span>이름</span>
-                <span>이화연</span></div>
+            <div className="TestUserInfo"><span id="UserText">이름</span>
+                <span >이화연</span></div>
             <div className="TestUserInfo">
-                <span>수험번호</span>
+                <span id="UserText">수험번호</span>
                 <span>1</span><span>8</span><span>8</span><span>6</span><span>-</span><span>2</span><span>0</span><span>0</span><span>1</span>
             </div>
         </div>

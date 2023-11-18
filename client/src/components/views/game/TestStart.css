@@ -33,10 +33,10 @@
     margin-bottom: 2%;
 }
 
-.StartSubtitle {
+/* .StartSubtitle {
     font-size: var(--middle-font-size);
     padding-bottom: 10px;
-}
+} */
 
 .TestUser {
     margin-top: 30px;
@@ -49,7 +49,9 @@
     margin: 10px auto;
     display: flex;
     /* align-items: flex-start; */
+    font-family: "kyobo-hand";
 }
+
 
 .TestUserInfo span {
     border: 1px solid black;
@@ -58,6 +60,10 @@
     padding: 4px 6px;
     box-sizing: border-box;
     margin: 0;
+}
+
+.TestUserInfo #UserText {
+    font-family: "pretendard-medium";
 }
 
 .TestScore {
@@ -127,5 +133,11 @@
     .TestBackground {
         width: 500px;
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-height:690px) {
+    .TestStartBtn {
+        height: 50px;
     }
 }
