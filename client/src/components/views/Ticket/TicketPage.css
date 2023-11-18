@@ -1,0 +1,22 @@
+html{
+    background-color: var(--background-yellow);
+}
+
+.TicketPage_background {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+
+.ticket {
+    width: 315px;
+    height: 461px;
+    margin-top: 10px;
+}
+
+.check {
+    width: 315px;
+    height: 66px;
+    margin-top: 10px;
+}
