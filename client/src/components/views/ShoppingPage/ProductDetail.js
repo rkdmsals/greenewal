@@ -1,6 +1,12 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+import ProductDisplay from './ProductDisplay';
 
-function ProductDetail({ product }) {
+
+function ProductDetail() {
+
+    const location = useLocation();
+    const { product } = location.state;
 
     return (
         <div className='ProductDetail_background'>
