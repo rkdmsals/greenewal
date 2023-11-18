@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./components/utilis/variables.css"
 import Home from "./components/views/Home";
@@ -5,6 +6,7 @@ import StartPage from "./components/views/StartPage/StartPage";
 import SpeakerPage from "./components/views/SpeakerPage/SpeakerPage";
 import SpeakerDetailPage from "./components/views/SpeakerPage/SpeakerDetailPage/SpeakerDeatailPage";
 import ProductDisplay from "./components/views/ShoppingPage/ProductDisplay";
+import ProductDetail from "./components/views/ShoppingPage/ProductDetail";
 import ShoppingCart from "./components/views/ShoppingPage/ShoppingCart";
 import LoginPage from "./components/views/Login/LoginPage";
 import RegisterPage from "./components/views/Register/RegisterPage";
@@ -13,6 +15,7 @@ import Test from "./components/views/game/Test"
 import CheckAnswers from "./components/views/game/CheckAnswers";
 import Menu from "./components/views/menu/menu";
 import Auth from "./hoc/auth";
+
 
 function App() {
 
@@ -24,6 +27,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/start" element={<StartPage />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
+          <Route path="/shop/product-detail/:productId" element={<ProductDetail />} />
           <Route exact path="/cart" element={<ShoppingCart />} />
           <Route exact path="/speaker" element={<SpeakerPage />} />
           <Route exact path="/speakerDetail" element={<SpeakerDetailPage />} />
