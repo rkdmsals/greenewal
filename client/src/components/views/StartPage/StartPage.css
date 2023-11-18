@@ -9,9 +9,10 @@
 }
 
 .startPage_container{
+    height: 100%;
     background-color: #349A6B;
     display: block;
-    margin: 5% 10%;
+    margin: 0 10%;
     font-size: var(--content-font-size);
     text-align: center;
     color: var(--toneDown-black);
@@ -19,6 +20,27 @@
 }
 
 .clober_white{
+    position: relative;
+    left: 30%;
     width: 275px;
     height: 275px;
+    transform: rotate(23deg);
+}
+.startPage_title_container{
+    height: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.startPage_title{
+    font-family: "kameron-bold";
+    font-size: var(--bigger-title-font-size);
+    color: white;
+    text-align: left;
+    vertical-align: bottom;
+}
+.startPage_restart{
+    margin-top: 10%;
 }
