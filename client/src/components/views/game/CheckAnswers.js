@@ -9,6 +9,7 @@ function CheckAnswers() {
     const answers = location.state.answers;
     const correctAnswers = location.state.correctAnswers;
     const score = location.state.score;
+    console.log(answers[0])
     return <div className="CheckAnswersBack">
         <div className="Round">제 1교시</div>
         <div>2023년도 하반기 이화이언 만점고사</div>

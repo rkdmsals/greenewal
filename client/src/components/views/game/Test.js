@@ -10,7 +10,7 @@ function Test() {
 
     //유저가 입력한 정답을 answers에 저장
     const TakeAnswer = (val) => {
-        if (page < 4) {
+        if (page < 5) {
             var answersArr = answers;
             // 변수로 받아온 결과를 배열에 저장 후 업로드
             answersArr[page - 1] = val;
@@ -19,7 +19,7 @@ function Test() {
         }
     }
     return (<div className="TestBackground">
-        {page < 4 ? TestData.map((a, idx) =>
+        {page < 5 ? TestData.map((a, idx) =>
             <div className="TestPage" key={idx} style={{ display: page === idx + 1 ? 'block' : 'none' }}>
                 <div className="Round">제 1교시</div>
                 <div>2023년도 하반기 이화이언 만점고사</div>
