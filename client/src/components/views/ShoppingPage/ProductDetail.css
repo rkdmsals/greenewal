@@ -2,3 +2,91 @@
     width: 100vw;
     height: 100vh;
 }
+
+.ProductDetail_main_container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    /*임시*/
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+}
+
+
+.ProductDetail_img_container {
+    width: 335px;
+    height: 335px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 120px;
+}
+
+.ProductDetail_main_description_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6%;
+}
+
+.ProductDetail_description_title_container {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ProductDetail_description_price_container {
+    display: flex;
+    text-align: right;
+    font-size: 18px;
+}
+
+.ProductDetail_description_original_price {
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 3px;
+}
+
+.ProductDetail_sub_description_container {
+    margin-top: 5%;
+
+}
+
+.ProductDetail_sub_description_details_wrapper {
+    width: 80%;
+    font-size: 14px;
+    margin-bottom: 5%;
+    color: gray;
+}
+
+.ProductDetail_sub_description_content_body_container {
+    margin-top: 2%;
+    font-size: 14px;
+    color: gray;
+}
+
+.ProductDetial_bottom_button_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+.ProductDetail_cart_button {
+    background-color: var(--toneDown-black);
+    width: 50%;
+    height: 50px;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    margin-right: 2%;
+    font-size: 16px;
+}
+
+.ProductDetail_buy_button {
+    background-color: #C0DFCC;
+    width: 50%;
+    height: 50px;
+    border: 0px;
+    border-radius: 10px;
+    margin-left: 2%;
+    font-size: 16px;
+}
