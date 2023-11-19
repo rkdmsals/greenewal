@@ -1,5 +1,5 @@
 .sidebar {
-    width: 240px;
+    width: 60%;
     background-color: var(--background-green);
     position: fixed;
     height: 95vh;
@@ -13,20 +13,41 @@
     transition: 850ms;
 }
 
+.SideBar_inner {
+    margin-top: 15px;
+}
+
 
 .SideBar_inner_header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .hello {
-    font-size: var(--content-font-size);
+    font-size: var(--middle-font-size);
+    font-family: "pretendard-medium";
 }
 
 .hello_name {
-    font-size: var(--middle-font-size);
+    font-size: var(--title-font-size);
+    font-family: "pretendard-medium";
+    margin-bottom: 12px;
+    margin-top: 5px;
 }
 
+.border {
+    border: 0.5px solid #000;
+    opacity: 0.15;
+    width: 100%;
+}
+
+.sidebar_ticket {
+    margin-top: 15px;
+}
+
+.ticket_pic {
+    margin-top: 10px
+}
 
 ul {
     padding: 0;
@@ -44,6 +65,7 @@ ul li a {
     display: flex;
     padding: 10px 15px;
     border-radius: 6px;
+    font-family: "pretendard-medium";
 }
 
 ul li a:hover,
@@ -53,6 +75,7 @@ ul li a.active {
 
 .submenu {
     display: none;
+    
 }
 
 .submenu.active {
@@ -62,6 +85,8 @@ ul li a.active {
 
 .sub{
     font-size: var(--content-font-size);
+    margin-left: 10%;
+    font-family: "pretendard-medium";
 }
 
 .hello_name {
@@ -73,6 +98,9 @@ ul li a.active {
     display: flex;
 }
 
+.ticket_icon {
+    margin-right: 5px;
+}
 .booth_tap {
     color: var(--toneDown-black);
     text-decoration: none;
@@ -80,6 +108,7 @@ ul li a.active {
     display: flex;
     padding: 10px 15px;
     border-radius: 6px;
+    font-family: "pretendard-medium";
 }
 
 .booth_tap:hover,

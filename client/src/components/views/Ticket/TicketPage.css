@@ -4,19 +4,76 @@ html{
 
 .TicketPage_background {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     margin-top: 10px;
 
 }
 
-.ticket {
-    width: 315px;
-    height: 461px;
-    margin-top: 10px;
+
+.TicketPage_title {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px 0%;
+    font-size: var(--title-font-size);
+    font-weight: bold;
+    font-family: "kameron-bold";
 }
 
-.check {
+.dia {
+    margin-left: 10px;
+}
+
+.ticket {
+    
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+
+}
+
+.checkSeatNum {
     width: 315px;
     height: 66px;
     margin-top: 10px;
+}
+
+.checkSeatNum{
+    padding: 10px 20px;
+    display: block;
+    margin: 10px auto 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
 }
