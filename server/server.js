@@ -111,7 +111,6 @@ app.get('/logout', auth, (req,res) => {
     res.json({ success: false, err});
   })
   })
- 
 
 app.listen(PORT, () => {
   console.log(`recruiting-site server listening on port ${PORT}`);
