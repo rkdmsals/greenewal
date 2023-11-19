@@ -1,0 +1,138 @@
+.eventinformation-container{
+    margin-top:8.4%;
+    margin-left: 7.5%;
+  }
+  .headertxt{
+      margin-left: 25%;
+      margin-right: 25%;
+  }
+    
+  .previous-image{
+      display: inline-block;
+      width: 7.5%;
+      height: 5%;
+  }
+  .headertxt{
+      display: inline-block;
+      font-weight: bold;
+  }
+  .bar-image{
+      display: inline-block;
+      width: 5%;
+      height: 5%;
+  }
+  
+  .titletext{
+      display: inline-block;
+      margin-top: 5.2%;
+      margin-left: 5.3%;
+      font-size: 250%;
+      font-weight: bold;
+    }
+    .title-image{
+      width: 6%;
+      height: 7%;
+    }
+
+    .clover-image{
+        width: 35px;
+        height: 35px;
+    }
+    .line-image{
+        width: 335px;
+    }
+
+    .main{
+        margin-top: 40px;
+    }
+    .leftposter-image{
+        width: 45px;
+        height: 348px;
+    }
+    .poster-image{
+        width: 245px;
+        height: 348px;
+    }
+    .rightposter-image{
+        width: 45px;
+        height: 348px;
+    }
+    .maintext{
+        margin-top: 20px;
+    }
+
+    .date{
+        margin-top: 22px;
+    }
+
+    .datetext{
+        margin-left: 40px;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    .date1text{
+        margin-bottom: 15px;
+        font-weight: 550;
+    }
+    .date2text{
+        line-height: 1.8; 
+    }
+
+
+    .map{
+        margin-top: 20px;
+    }
+    .maptext{
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+    .maptext1{
+        font-weight: 550;
+    }
+    .map-image{
+        margin-top: 20px;
+        margin-left: 4px;
+        width: 325px;
+        height: 249px;
+    }
+
+
+    .help{
+        margin-top: 20px;
+    }
+    .helplogo-image{
+        margin-top: 20px;
+    }
+
+    .aboutmanagement{
+        margin-top: 20px;
+    }
+    .amtext{
+        margin-top: 30px;
+        margin-left: 46px;
+    }
+    .number{
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration:underline;
+        margin-bottom: 10px;
+    }
+
+    .logofooter-image{
+        width: 375px;
+        height: 146px;
+    }
+
+   
+
+.title1, .title2, .title3, .title4 {
+    margin-left: -18%;
+    margin-top: 4.8%; 
+  }
+
+
+.item-41, .item-42, .item-43, .item-44 {
+    margin-bottom: 20px;
+}
+  
+
