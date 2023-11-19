@@ -1,8 +1,9 @@
 const express = require('express');
+const Feedback = require('../models/feedback.js');
 
 const feedback = {
     readAll: async (req,res) => {
-        const feedbacks = await feedback.findAll();
+        const feedbacks = await Feedback.findAll();
         try {
             if (!feedbacks.length)
                 return res.status(404).send({
