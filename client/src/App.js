@@ -19,17 +19,10 @@ import Ticket from "./components/views/Ticket/TicketPage"
 import BoothInfo from "./components/views/BoothInfo/BoothInfo";
 function App() {
 
-  const [showSideBar, setShowSideBar] = useState(false)
-
   return (
     <div className="App">
 
-      <img src="img/menu_navigation.png" alt='sidebaricon' className="sidebaricon"
-        onClick={() => setShowSideBar(!showSideBar)}
-      />
       <BrowserRouter>
-
-
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/start" element={<StartPage />} />
@@ -48,8 +41,6 @@ function App() {
           <Route exact path="/booth" element={<BoothInfo />} />
 
         </Routes>
-
-        <SideBar show={showSideBar} />
       </BrowserRouter>
 
 
