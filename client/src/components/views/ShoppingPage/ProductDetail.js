@@ -1,31 +1,67 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useDispatch } from 'react-redux';
+import { auth } from '../../../_actions/user_action';
+
 import axios from 'axios';
 
 import './ProductDetail.css';
 
 function ProductDetail() {
+
     const navigate = useNavigate();
     const location = useLocation();
     const { product } = location.state;
 
-    const addToCart = async () => {
-        try {
-            const response = await axios.post('/api/addToCart', {
-                userId: '유저ID',
-                productId: product.id,
-                quantity: 1,
-            });
+    const dispatch = useDispatch();
+    const [userId, setUserId] = useState(1);
 
-            if (response.status === 200) { // 장바구니에 추가 성공
-                navigate('/cart'); // 장바구니 페이지로 이동
-            } else {
-                console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
-            }
-        } catch (error) {
-            console.error('장바구니 요청 중 오류 발생:');
-        }
+    useEffect(() => {
+        dispatch(auth()).then(response => {
+            console.log(response.payload.name);
+            console.log(response.payload.id);
+            setUserId(response.payload.id);
+        })
+    })
+
+    const addToCart = () => {
+        axios.post('/api/addToCart', {
+            userId: userId,
+            productId: product.id,
+            quantity: 1, // 장바구니에 추가하는 상품의 수량
+        })
+            .then(response => {
+                if (response.status === 200) {
+                    console.log('장바구니에 상품이 추가되었습니다.');
+                    navigate('/cart');  // 장바구니로 이동
+                } else {
+                    console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
+                }
+            })
+            .catch(error => {
+                console.error('장바구니 요청 중 오류 발생:', error);
+            });
+    };
+
+    const directParchase = () => {
+        axios.post('/api/addToCart', {
+            userId: userId,
+            productId: product.id,
+            quantity: 1, // 장바구니에 추가하는 상품의 수량
+        })
+            .then(response => {
+                if (response.status === 200) {
+                    console.log('장바구니에 상품이 추가되었습니다.');
+                    navigate('/cart');  // 장바구니로 이동 -----> 구글폼으로..
+                } else {
+                    console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
+                }
+            })
+            .catch(error => {
+                console.error('장바구니 요청 중 오류 발생:', error);
+            });
     };
 
 
@@ -74,7 +110,7 @@ function ProductDetail() {
                     <button className="ProductDetail_cart_button" onClick={addToCart}>
                         장바구니
                     </button>
-                    <button className="ProductDetail_buy_button" onClick={addToCart}>
+                    <button className="ProductDetail_buy_button" onClick={directParchase}>
                         구매하기
                     </button>
                 </div>

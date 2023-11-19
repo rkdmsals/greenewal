@@ -6,16 +6,16 @@
 .ProductDisplay_main_contianer {
     display: flex;
     flex-direction: column;
-    margin-top: 10%;
     /*임시*/
+    margin-top: 10%;
     margin-left: 5%;
     margin-right: 5%;
 }
 
 .ProductDisplay_main_title {
+    font-family: "kameron-bold";
     font-size: 40px;
     font-weight: bold;
-
 }
 
 .ProductDisplay_top_button_container {
@@ -32,7 +32,6 @@
     border-radius: 30px;
     padding: 5px;
     font-size: 14px;
-
 }
 
 .ProductDisplay_top_button2,
