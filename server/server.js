@@ -14,27 +14,35 @@ var fs = require('fs')
 const path = require("path");
 
 const { UserInfo } = require("./models/userInfo");
+//const { feedback } = require("./models/feedback");
 //Route 가져오기
 // const PayForGoodsRouter = require("./routes/payForGoods");
-
-app.use(cookieParser());
+// app.use("/api/payForGoods", PayForGoodsRouter);
+app.use(express.static(path.join(__dirname, "../client/build")));
 app.use(express.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json());
+app.use(cookieParser());
+
+// router 연결
+var routes = require('./routes/index')
+app.use('/', routes);
 
 //몽고DB 연결
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(config.mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("MongoDB Connected...");
-  })
-  .catch((e) => console.error(e));
+.connect(config.mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
+  console.log("MongoDB Connected...");
+})
+.catch((e) => console.error(e));
 
-app.use(express.static(path.join(__dirname, "../client/build")));
-app.use(bodyParser.json());
-// app.use("/api/payForGoods", PayForGoodsRouter);
+
+// mongodb://localhost/<db-name>
+//mongoose.connect('mongodb://localhost/');
 
 app.post('/register', async (req, res) => {
   const userInfo = new UserInfo(req.body)
