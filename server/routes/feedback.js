@@ -3,5 +3,6 @@ var router = express.Router();
 const feedbackController = require('../controllers/feedbackController');
 
 router.get('/', feedbackController.readAll);
+router.post('/', feedbackController.write);
 
 module.exports = router;
