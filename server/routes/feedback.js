@@ -2,8 +2,6 @@ var express = require('express');
 var router = express.Router();
 const feedbackController = require('../controllers/feedbackController');
 
-router.get('/', () => {
-    //logic
-});
+router.get('/', feedbackController.readAll);
 
 module.exports = router;
