@@ -1,0 +1,118 @@
+.quizgame-container{
+    margin-top:8.4%;
+    margin-left: 5%;
+  }
+  .headertxt{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  .previous-image{
+    display: inline-block;
+    width: 7.5%;
+    height: 5%;
+  }
+  .headertxt{
+    display: inline-block;
+    font-weight: bold;
+  }
+  .bar-image{
+    display: inline-block;
+    width: 5%;
+    height: 5%;
+  }
+  
+.titletext{
+    display: inline-block;
+    margin-top: 5.2%;
+    margin-left: 5.3%;
+    font-size: 250%;
+    font-weight: bold;
+  }
+  .title-image{
+    width: 6%;
+    height: 7%;
+  }
+
+
+
+.sort{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 550;
+    margin-left: 16px;
+    vertical-align: 45px; 
+}
+.title{
+    display: block;
+    font-size: 22px;
+    font-weight: bold; 
+    margin: -12% 0px 0px 26.5%;
+}
+.boothep{
+    margin: 30px 0px 0px 15px;
+    font-size: 14px;
+}
+
+.plustext{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.n1-image{
+    display: inline-block;
+    margin: 5% 0px 0px 5%;
+    width: 67px;
+    height: 67px;
+}
+.n2-image{
+    display: inline-block;
+    margin: 5% 0px 0px 5%;
+    width: 67px;
+    height: 67px;
+}
+.n3-image{
+    display: inline-block;
+    margin: 5% 0px 0px 5%;
+    width: 67px;
+    height: 67px;
+}
+
+.test{
+    width: 95%;
+    height: 27vh;
+    margin-top: 20px;
+    border-radius: 15px 15px 0px 15px;
+    background-color: #C0DFCC;
+}
+.testmove{
+    float: right;
+    margin-right: 10px;
+    margin-top: 4%;
+}
+.testmovetxt{
+    display: inline-block;
+    font-size: 113%;
+    font-weight: bold;
+}
+.testmove-image{
+    width: 14.87px;
+    height: 14px;
+}
+
+.search{
+    width: 95%;
+    height: 26vh;
+    margin-top: 20px;
+    border-radius: 15px 15px 0px 15px;
+    background-color: #C5E9BF
+}
+.match{
+    width: 95%;
+    height: 36vh;
+    margin-top: 20px;
+    border-radius: 15px 15px 0px 15px;
+    background-color: #C0DFCC;
+}
