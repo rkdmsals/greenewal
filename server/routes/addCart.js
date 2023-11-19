@@ -1,57 +1,52 @@
 const express = require('express');
 const CartRouter = express.Router();
+//var mongoose = require("mongoose");
 const { Cart } = require('./models/Cart');
 const { User } = require('./models/userInfo');
 
 // 장바구니에 상품 추가
-CartRouter.post('/api/addToCart', async (req, res) => {
-    try {
-        const { userId } = req.params;
-        const { productId, quantity } = req.body;
+CartRouter.post('/api/addToCart', (req, res) => {
 
-        const user = await User.findById(userId);
-        if (!user) {
-            return res.status(404).json({ message: '해당 사용자를 찾을 수 없습니다.' });
-        }
+    let userId = req.body.userId;
+    let productId = req.body.productId;
+    let quantity = req.body.quantity;
 
-        let cart = await Cart.findOne({ userId });
-
-        if (!cart) {
-            cart = new Cart({ userId, products: [{ productId, quantity }] });
-        } else {
-            const existingProductIndex = cart.products.findIndex(
-                (product) => product.productId === productId
-            );
-
-            if (existingProductIndex !== -1) {
-                cart.products[existingProductIndex].quantity += quantity || 1;
-            } else {
-                cart.products.push({ productId, quantity: quantity || 1 });
+    User.findById(userId)
+        .then(user => {
+            if (!user) {
+                return res.status(404).json({ message: '해당 사용자를 찾을 수 없습니다.' });
             }
-        }
 
-        await cart.save();
-        res.status(200).json({ message: '상품이 장바구니에 추가되었습니다.' });
-    } catch (err) {
-        res.status(500).json({ error: err.message });
-    }
+            return Cart.findOneAndUpdate(
+                { userId },
+                { $addToSet: { productList: { productId, quantity } } },
+                { upsert: true, new: true }
+            );
+        })
+        .then(cart => {
+            res.status(200).json({ message: '상품이 장바구니에 추가되었습니다.', cart });
+        })
+        .catch(err => {
+            res.status(500).json({ error: err.message });
+        });
 });
 
 // 장바구니 조회
+CartRouter.get('/cart/:userId', (req, res) => {
+    const { userId } = req.params;
 
-CartRouter.get('/cart/:userId', async (req, res) => {
-    try {
-        const { userId } = req.params;
-        const cart = await Cart.findOne({ userId }).populate('products.productId');
+    Cart.findOne({ userId })
+        .populate('products.productId')
+        .then(cart => {
+            if (!cart) {
+                return res.status(404).json({ message: '장바구니가 존재하지 않습니다.' });
+            }
 
-        if (!cart) {
-            return res.status(404).json({ message: '장바구니가 존재하지 않습니다.' });
-        }
-
-        res.status(200).json({ cart });
-    } catch (err) {
-        res.status(500).json({ error: err.message });
-    }
+            res.status(200).json({ cart });
+        })
+        .catch(err => {
+            res.status(500).json({ error: err.message });
+        });
 });
 
 // 다른 라우터들...
