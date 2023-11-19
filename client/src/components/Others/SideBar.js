@@ -34,6 +34,7 @@ function SideBar({show}) {
                 <img src="/img/SideBar/ewhaian_icon.png" alt="icon" className="icon"/>
                 </div>
             </div>
+            <div className="border"></div>
             </div>
             <div className="sidebar_ticket">
                 <div className="ticket_title">
