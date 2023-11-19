@@ -1,11 +1,32 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 function ProductDetail() {
     const navigate = useNavigate();
     const location = useLocation();
     const { product } = location.state;
+
+    const addToCart = async () => {
+        try {
+            const response = await axios.post('/api/addToCart', {
+                userId: '유저ID',
+                productId: product.id,
+                quantity: 1,
+            });
+
+            if (response.status === 200) { // 장바구니에 추가 성공
+                navigate('/cart'); // 장바구니 페이지로 이동
+            } else {
+                console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
+            }
+        } catch (error) {
+            console.error('장바구니 요청 중 오류 발생:');
+        }
+    };
+
+
 
     return (
         <div className='ProductDetail_background'>
@@ -44,8 +65,8 @@ function ProductDetail() {
 
             </div >
             굿즈상세설명페이지
-            <button className="ProductDisplay_cart_button" onClick={() => navigate('/cart')}>
-                장바구니 가기
+            <button className="ProductDetail_cart_button" onClick={addToCart}>
+                장바구니 담기
             </button>
         </div >
     )
