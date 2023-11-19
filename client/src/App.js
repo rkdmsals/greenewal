@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./components/utilis/variables.css"
 import Home from "./components/views/Home";
 import StartPage from "./components/views/StartPage/StartPage";
+import Eventinformation from "./components/views/eventinformation/eventinformation"
 import SpeakerPage from "./components/views/SpeakerPage/SpeakerPage";
 import SpeakerDetailPage from "./components/views/SpeakerPage/SpeakerDetailPage/SpeakerDeatailPage";
 import ProductDisplay from "./components/views/ShoppingPage/ProductDisplay";
@@ -14,6 +15,9 @@ import TestStart from "./components/views/game/TestStart";
 import Test from "./components/views/game/Test"
 import CheckAnswers from "./components/views/game/CheckAnswers";
 import Menu from "./components/views/menu/menu";
+import Quizgame from "./components/views/quizgame/quizgame"
+import Event from "./components/views/event/event";
+import Photo from "./components/views/photo/photo";
 import SideBar from "./components/Others/SideBar";
 import Ticket from "./components/views/Ticket/TicketPage"
 import BoothInfo from "./components/views/BoothInfo/BoothInfo";
