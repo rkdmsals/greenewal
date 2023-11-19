@@ -16,6 +16,7 @@ import CheckAnswers from "./components/views/game/CheckAnswers";
 import Menu from "./components/views/menu/menu";
 import Ticket from "./components/views/Ticket/TicketPage"
 import BoothInfo from "./components/views/BoothInfo/BoothInfo";
+import Feedback from "./components/views/Feedback/Feedback";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route exact path="/menu" element={<Menu />} />
           <Route exact path="/ticket" element={<Ticket />} />
           <Route exact path="/booth" element={<BoothInfo />} />
+          <Route exact path="/feedback" element={<Feedback />} />
         </Routes>
       </BrowserRouter>
 
