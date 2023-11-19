@@ -11,7 +11,12 @@ html{
 
 }
 
-.LoginPage_title {
+.Register {
+    display: flex;
+    flex-direction: column;
+}
+
+.RegisterPage_title {
     display: flex;
     justify-content: flex-start;
     margin: 0px 0%;
@@ -20,7 +25,50 @@ html{
     font-family: "kameron-bold";
 }
 
-.Register {
+.Register_container {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+}
+
+.inputset {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.register_label {
+    font-size: var(--context-font-size);
+    font-family: "kameron-bold";
+}
+
+.register_label_confirm {
+    font-size: var(--context-font-size);
+    font-family: "kameron-bold";
+    text-align: left;
+}
+
+.message {
+    text-align: left;
+    font-size: 10px;
+    margin-top: -15px;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+
+.btn_register {
+    width: 85%;
+    height: 40px;
+    background-color: var(--toneDown-black);
+    border-radius: 7px;
+    border: none;
+    margin: 0 auto;
+    color: var(--toneDown-white);
+    margin-top: 20px;
+    line-height: 40px;
+}
+
+.register_input {
+    height: 22px;
 }

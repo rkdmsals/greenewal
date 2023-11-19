@@ -17,7 +17,11 @@ html{
 }
 
 .LoginPage_title {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px 0%;
     font-size: var(--title-font-size);
+    font-weight: bold;
     font-family: "kameron-bold";
 }
 
@@ -39,7 +43,7 @@ html{
 }
 
 .btn_login,
-.btn_register {
+.nav_register {
     width: 85%;
     height: 40px;
     background-color: var(--toneDown-black);
@@ -51,14 +55,13 @@ html{
     line-height: 40px;
 }
 
-.btn_register {
+.nav_register {
     background-color: var(--greenewal-mint);
     color: var(--toneDown-black);
     text-decoration: none;
 }
 
-.btn_login.active
-.btn_register.active {
+.btn_login.active {
     outline: none;
     box-shadow: none;
 }
