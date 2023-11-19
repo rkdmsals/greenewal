@@ -1,6 +1,11 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
-function ProductDetail({ product }) {
+function ProductDetail() {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { product } = location.state;
 
     return (
         <div className='ProductDetail_background'>
@@ -39,6 +44,9 @@ function ProductDetail({ product }) {
 
             </div >
             굿즈상세설명페이지
+            <button className="ProductDisplay_cart_button" onClick={() => navigate('/cart')}>
+                장바구니 가기
+            </button>
         </div >
     )
 }
