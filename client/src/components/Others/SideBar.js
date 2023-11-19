@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
 import "./SideBar.css";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { auth } from '../../_actions/user_action';
+import Axios from "axios";
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
 
 
 function SideBar({show}) {
     const dispatch = useDispatch();
 
     const [showSubMenu, setShowSubMenu ] = useState(false) 
+    const [userName, setUserName ] = useState("김이화")
 
-    const [username, setusername] = useState("김이화")
 
     useEffect(() => {
 
         dispatch(auth()).then(response => {
-            console.log(response);
-            setusername(response.payload.name);
+            console.log(response.payload.name)
+            setUserName(response.payload.name);
         })
 
 
@@ -30,7 +30,7 @@ function SideBar({show}) {
             <div className="hello">
                 <div> 안녕하세요, </div>
                 <div className="hello_name">
-                <div> {username}님</div>
+                <div> {userName} 님</div>
                 <img src="/img/SideBar/ewhaian_icon.png" alt="icon" className="icon"/>
                 </div>
             </div>

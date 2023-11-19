@@ -14,8 +14,8 @@ function TicketPage(props) {
     useEffect(() => {
 
         dispatch(auth()).then(response => {
-            console.log(response);
-            setuserseatnum(response.payload.seatNumber);
+            console.log(response.payload.seatNumber)
+            setuserseatnum(response.payload.phoneNumber);
         })
 
 
