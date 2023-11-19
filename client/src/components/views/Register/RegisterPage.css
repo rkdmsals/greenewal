@@ -11,6 +11,15 @@ html{
 
 }
 
+.LoginPage_title {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px 0%;
+    font-size: var(--title-font-size);
+    font-weight: bold;
+    font-family: "kameron-bold";
+}
+
 .Register {
     display: flex;
     flex-direction: column;

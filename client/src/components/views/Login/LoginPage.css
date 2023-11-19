@@ -15,3 +15,51 @@ html{
     display: flex;
     flex-direction: column;
 }
+
+.LoginPage_title {
+    font-size: var(--title-font-size);
+    font-family: "kameron-bold";
+}
+
+.login_container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputset {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.login_label {
+    font-size: var(--context-font-size);
+    font-family: "kameron-bold";
+}
+
+.btn_login,
+.btn_register {
+    width: 85%;
+    height: 40px;
+    background-color: var(--toneDown-black);
+    border-radius: 7px;
+    border: none;
+    margin: 0 auto;
+    color: var(--toneDown-white);
+    margin-top: 20px;
+    line-height: 40px;
+}
+
+.btn_register {
+    background-color: var(--greenewal-mint);
+    color: var(--toneDown-black);
+    text-decoration: none;
+}
+
+.btn_login.active
+.btn_register.active {
+    outline: none;
+    box-shadow: none;
+}
+

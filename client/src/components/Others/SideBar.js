@@ -45,7 +45,7 @@ function SideBar({show}) {
             </div>
         <ul>
             <li>
-                <Link to="/">행사 정보</Link>
+                <Link className="menu" to="/">행사 정보</Link>
             </li>
             <li className="booth">
                 <div  className="booth_tap" onClick={() => setShowSubMenu(!showSubMenu)}>부스 정보</div>
@@ -58,13 +58,13 @@ function SideBar({show}) {
                 </div>
             </li>
             <li>
-                <Link to="/login">강연 정보</Link>
+                <Link className="menu" to="/login">강연 정보</Link>
             </li>
             <li>
-                <Link to="/register">이벤트 정보</Link>
+                <Link className="menu" to="/register">이벤트 정보</Link>
             </li>
             <li>
-                <Link to="/">지난 굿즈 상점</Link>
+                <Link className="menu" to="/">지난 굿즈 상점</Link>
             </li>
         </ul>
         
