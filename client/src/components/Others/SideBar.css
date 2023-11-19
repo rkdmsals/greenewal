@@ -65,6 +65,7 @@ ul li a {
     display: flex;
     padding: 10px 15px;
     border-radius: 6px;
+    font-family: "pretendard-medium";
 }
 
 ul li a:hover,
@@ -74,6 +75,7 @@ ul li a.active {
 
 .submenu {
     display: none;
+    
 }
 
 .submenu.active {
@@ -83,6 +85,8 @@ ul li a.active {
 
 .sub{
     font-size: var(--content-font-size);
+    margin-left: 10%;
+    font-family: "pretendard-medium";
 }
 
 .hello_name {
@@ -104,6 +108,7 @@ ul li a.active {
     display: flex;
     padding: 10px 15px;
     border-radius: 6px;
+    font-family: "pretendard-medium";
 }
 
 .booth_tap:hover,
