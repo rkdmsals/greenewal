@@ -81,7 +81,7 @@ function LoginPage(props) {
            <button className="btn_login" type='submit'>
                로그인
            </button>
-           <Link className='btn_register' to="/register"> 회원가입 </Link>
+           <Link className='nav_register' to="/register"> 회원가입 </Link>
             </div>
            
        </form>
