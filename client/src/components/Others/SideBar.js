@@ -4,10 +4,12 @@ import { useState, useEffect} from "react";
 import { auth } from '../../_actions/user_action';
 import Axios from "axios";
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 
 function SideBar({show}) {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [showSubMenu, setShowSubMenu ] = useState(false) 
     const [userName, setUserName ] = useState("김이화")
@@ -36,7 +38,7 @@ function SideBar({show}) {
             </div>
             <div className="border"></div>
             </div>
-            <div className="sidebar_ticket">
+            <div className="sidebar_ticket" onClick={() => navigate('/ticket') }>
                 <div className="ticket_title">
                     <img src="/img/SideBar/ticket_icon.png" alt="ticket" className="ticket_icon" />
                     <div>나의 티켓</div>
