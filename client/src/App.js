@@ -17,8 +17,10 @@ import Menu from "./components/views/menu/menu";
 import Ticket from "./components/views/Ticket/TicketPage"
 import BoothInfo from "./components/views/BoothInfo/BoothInfo";
 import Feedback from "./components/views/Feedback/Feedback";
-
-
+import Quizgame from "./components/views/quizgame/quizgame";
+import Event from "./components/views/event/event"
+import EventInformation from "./components/views/eventinformation/eventinformation"
+import Photo from "./components/views/photo/photo"
 function App() {
 
   return (
@@ -40,6 +42,10 @@ function App() {
           <Route exact path="/menu" element={<Menu />} />
           <Route exact path="/ticket" element={<Ticket />} />
           <Route exact path="/booth" element={<BoothInfo />} />
+          <Route exact path="/quizgame" element={<Quizgame />} />
+          <Route exact path="/event" element={<Event />} />
+          <Route exact path="/eventinfo" element={<EventInformation />} />
+          <Route exact path="/photo" element={<Photo />} />
           <Route exact path="/feedback" element={<Feedback />} />
         </Routes>
       </BrowserRouter>
