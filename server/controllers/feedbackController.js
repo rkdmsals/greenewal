@@ -23,6 +23,18 @@ const feedback = {
         } catch (err) {
             res.status(500).send(err);
         }
+    },
+    delete: async(req, res) => {
+        
+        try {
+            const result = await Feedback.deleteById(req.body);
+            //const result = await Feedback.remove(req.body);
+            console.log("result : ", result);
+            res.status(200).send(result);
+
+        } catch (err) {
+            res.status(500).send(err);
+        }
     }
 };
 

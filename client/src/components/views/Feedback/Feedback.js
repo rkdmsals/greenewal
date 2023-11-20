@@ -1,24 +1,38 @@
 import "./Feedback.css";
 import React from 'react';
-import { useState,useEffect,useDispatch } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { useState,useEffect } from 'react';
 import axios from 'axios';
 import { ReactComponent as Dia } from "../../../assets/images/SpeakerPage/dia.svg";
+import { auth } from '../../../_actions/user_action';
 
 const Feedback = () => {
-    //const dispatch = useDispatch();
-
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [Content, setContent] = useState("")
     const [feedbacks, setFeedbacks] = useState([]);
+    const [StudentID, setStudentID] = useState("")
 
     const onContentHandler = (event) => {
         setContent(event.currentTarget.value)
     }
-
+    const deleteClick = (e) => {
+        console.log(e.target.id)
+        axios.delete('/feedback', { data : { _id : e.target.id } })
+        .then(() => {
+          console.log('delete성공');
+        })
+        .catch(() => {
+          console.log('delete실패');
+        })
+      }
     const onSubmitHandler = (event) => {
         //event.preventDefault();
 
         axios.post('/feedback', {
-            content: Content
+            content: Content,
+            studentID: StudentID
           })
           .then(function (response) {
             console.log(response);
@@ -26,18 +40,29 @@ const Feedback = () => {
           .catch(function (error) {
             console.log(error);
           });
-        
-
-        
-
     }
     useEffect(() => {
         axios.get('/feedback')
             .then(response => {
-                console.log(response.data)
+                console.log(response.data);
                 setFeedbacks(response.data);
             });
     }, []);
+    useEffect(() => {
+        dispatch(auth()).then(response => {
+            console.log(response);
+
+            if(response.payload.isAuth) {
+                setStudentID(response.payload.studentID);
+                console.log(response.payload.studentID);
+                return
+            } else{
+                navigate('/');
+            }
+        })
+
+
+    }, [])
 
     return (
         <div className="fb_main_container">
@@ -50,9 +75,9 @@ const Feedback = () => {
             <div className="fb_main_content_inner_container">
             <div className="fb_main_content_inner_inner_container">
                 <ul className="fb_main_content_list">
-                {feedbacks.map(feedback => (
-                    <li className="fb_main_content" key={feedback.id}>
-                        {feedback.content}
+                {feedbacks.map((feedback, i) => (
+                    <li className="fb_main_content" key={feedback._id}>
+                        {feedback.content} <button id = {feedback._id} onClick={deleteClick}> 삭제 </button>
                     </li>
                 ))}
                 </ul>
