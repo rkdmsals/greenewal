@@ -21,11 +21,15 @@ import Quizgame from "./components/views/quizgame/quizgame";
 import Event from "./components/views/event/event"
 import EventInformation from "./components/views/eventinformation/eventinformation"
 import Photo from "./components/views/photo/photo"
+import Header from "./components/Others/Header";
+
+
 function App() {
 
   return (
     <div className="App">
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/start" element={<StartPage />} />

@@ -14,8 +14,11 @@ function SideBar({ show }) {
 
     useEffect(() => {
         dispatch(auth()).then(response => {
-            console.log(response.payload.name)
+            if (!response.payload.isAuth) {
+                return 
+            } else { console.log(response.payload.name)
             setUserName(response.payload.name);
+            }
         })
     })
 
