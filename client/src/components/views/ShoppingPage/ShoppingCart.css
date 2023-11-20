@@ -1,0 +1,121 @@
+.Cart {
+    font-family: "pretendard-medium";
+}
+
+.CartEach {
+    display: flex;
+    width: 90%;
+    height: 130px;
+    /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px 0px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.CartEach img {
+    width: 90px;
+    height: 90px;
+    /* padding: 20px 0px; */
+}
+
+.CartRight {
+    /* width: 60%; */
+    margin-left: 12px;
+    font-size: var(--content-font-size);
+    vertical-align: middle;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.CartRight div {
+    margin-bottom: 10px;
+}
+
+.CartNum {
+    font-size: 18px;
+    /* border: 3px solid var(--toneDown-black); */
+    font-weight: 600;
+    display: flex;
+    position: relative;
+    left: 24%;
+    top: 60px
+}
+
+.MinusBtn,
+.PlusBtn {
+    width: 26px;
+    height: 26px;
+}
+
+.MinusBtn {
+    background-image: url("../../../../public/img/ShoppingPage/minusBtn.svg");
+    background-size: cover;
+    margin-right: 9px;
+}
+
+.PlusBtn {
+    background-image: url("../../../../public/img/ShoppingPage/plusBtn.svg");
+    background-size: cover;
+    margin-left: 9px;
+}
+
+.DelBtn {
+    background-image: url("../../../../public/img/ShoppingPage/DelBtn.svg");
+    background-size: cover;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    left: 49%;
+}
+
+.ShopBill {
+    height: 230px;
+    width: 100vw;
+    border-radius: 30px 30px 0px 0px;
+    background-color: white;
+    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    bottom: 0;
+    padding: 35px 5%;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ShopBill button {
+    background-color: var(--greenewal-mint);
+    width: 100%;
+    height: 66px;
+    border: 0;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.BillLine1 {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.BillLine1 span {
+    margin-right: 10px;
+}
+
+.BillLine2 {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.CartContainer {
+    height: calc(100vh - 300px);
+    padding-top: 20px;
+    overflow: scroll;
+}
