@@ -31,8 +31,10 @@ CartRouter.post('/api/addToCart', (req, res) => {
         });
 });
 
+
+
 // 장바구니 조회
-CartRouter.get('/cart/:userId', (req, res) => {
+CartRouter.get('/checkCart/:userId', (req, res) => {
     const { userId } = req.params;
 
     Cart.findOne({ userId })
