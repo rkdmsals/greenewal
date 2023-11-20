@@ -3,6 +3,7 @@ html{
 }
 
 .TicketPage_background {
+    margin: 5% 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -18,6 +19,7 @@ html{
     font-size: var(--title-font-size);
     font-weight: bold;
     font-family: "kameron-bold";
+    margin-bottom: 10px;
 }
 
 .dia {

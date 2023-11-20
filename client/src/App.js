@@ -17,6 +17,7 @@ import Menu from "./components/views/menu/menu";
 import Ticket from "./components/views/Ticket/TicketPage"
 import BoothInfo from "./components/views/BoothInfo/BoothInfo";
 import Feedback from "./components/views/Feedback/Feedback";
+import Header from "./components/Others/Header";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/start" element={<StartPage />} />
