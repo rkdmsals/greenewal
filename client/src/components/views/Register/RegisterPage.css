@@ -72,3 +72,11 @@ html{
 .register_input {
     height: 22px;
 }
+
+/* desktop */
+@media screen and (min-width:800px) {
+    .RegisterPage_background {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
