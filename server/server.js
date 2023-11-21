@@ -24,6 +24,8 @@ const { UserInfo } = require("./models/userInfo");
 // app.use("/api/addToCart", cartRouter);
 
 
+const FeedbackRouter = require("./routes/feedback")
+
 app.use(express.static(path.join(__dirname, "../client/build")));
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -35,7 +37,7 @@ app.use(cookieParser());
 // router 연결
 var routes = require('./routes/index');
 app.use('/', routes);
-
+app.use('/api/feedback', FeedbackRouter)
 //몽고DB 연결
 mongoose.set("strictQuery", false);
 mongoose
@@ -52,7 +54,7 @@ mongoose
 // mongodb://localhost/<db-name>
 //mongoose.connect('mongodb://localhost/');
 
-app.post('/register', async (req, res) => {
+app.post('/api/register', async (req, res) => {
   const userInfo = new UserInfo(req.body)
 
   await userInfo
@@ -71,7 +73,7 @@ app.post('/register', async (req, res) => {
     });
 });
 
-app.post('/login', (req, res) => {
+app.post('/api/login', (req, res) => {
   // 요청된 이메일을 데이터베이스 찾기
   UserInfo.findOne({ id: req.body.id })
     .then(docs => {
@@ -98,7 +100,7 @@ app.post('/login', (req, res) => {
     })
 })
 
-app.get('/auth', auth, (req, res) => {
+app.get('/api/auth', auth, (req, res) => {
 
   res.status(200).json({
     _id: req.user._id,
@@ -115,7 +117,7 @@ app.get('/auth', auth, (req, res) => {
 
 })
 
-app.get('/logout', auth, (req, res) => {
+app.get('/api/logout', auth, (req, res) => {
   UserInfo
     .findOneAndUpdate({ _id: req.user._id }, { token: "" })
     .then((user) => {
@@ -128,6 +130,9 @@ app.get('/logout', auth, (req, res) => {
     })
 })
 
+app.post('/api/addToCart', (req, res) => {
+
+})
 app.listen(PORT, () => {
   console.log(`recruiting-site server listening on port ${PORT}`);
 });
