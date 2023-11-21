@@ -11,20 +11,30 @@ import './ProductDetail.css';
 
 function ProductDetail() {
 
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
     const { product } = location.state;
 
-    const dispatch = useDispatch();
+
     const [userId, setUserId] = useState(1);
+
 
     useEffect(() => {
         dispatch(auth()).then(response => {
-            console.log(response.payload.name);
-            console.log(response.payload.id);
-            setUserId(response.payload.id);
+            console.log(response);
+
+            if (response.payload.isAuth) {
+                setUserId(response.payload.id);
+                console.log(response.payload.id);
+                return
+            }
+            /*else {
+                navigate('/login');
+            }
+            */
         })
-    })
+    }, [])
 
     const addToCart = () => {
         axios.post('/api/addToCart', {

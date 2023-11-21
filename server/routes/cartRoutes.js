@@ -1,8 +1,15 @@
 const express = require('express');
 const cartRouter = express.Router();
+const cartController = require('../controllers/cartController');
+
 //var mongoose = require("mongoose");
-const { Cart } = require('./models/Cart');
-const { User } = require('./models/userInfo');
+//const { Cart } = require('./models/Cart');
+//const { User } = require('./models/userInfo');
+
+cartRouter.post('/api/addToCart', cartController.addToCart);
+cartRouter.get('/api/cart/:userId', cartController.getCart);
+
+/*
 
 // 장바구니에 상품 추가
 cartRouter.post('/addToCart', (req, res) => {
@@ -53,4 +60,5 @@ cartRouter.get('/checkCart/:userId', (req, res) => {
 
 // 다른 라우터들...
 
+*/
 module.exports = cartRouter;

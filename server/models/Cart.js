@@ -13,7 +13,6 @@ const cartItemSchema = new mongoose.Schema({
 const cartSchema = new mongoose.Schema({
     cartId: {
         type: Number,
-        unique: true,
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
