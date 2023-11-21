@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+
 import productTotalData from "./productsTotal.json";
 import products21Data from "./products21.json";
 import products22Data from "./products22.json"
@@ -48,7 +49,7 @@ function ProductDisplay() {
                     <button className="ProductDisplay_top_button1" onClick={() => handleButton1Click("버튼 1")}>전체</button>
                     <button className="ProductDisplay_top_button2" onClick={() => handleButton2Click("버튼 2")}>2023</button>
                     <button className="ProductDisplay_top_button3" onClick={() => handleButton3Click("버튼 3")}>2022</button>
-                    <button className="ProductDisplay_top_button4" onClick={() => handleButton3Click("버튼 4")}>~2020</button>
+                    <button className="ProductDisplay_top_button4" onClick={() => handleButton4Click("버튼 4")}>~2020</button>
                 </div>
                 <div className="ProductDisplay_inner_container">
                     {currentDisplay.map((product) => (

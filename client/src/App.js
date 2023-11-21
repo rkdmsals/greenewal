@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header />
+        <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/start" element={<StartPage />} />
