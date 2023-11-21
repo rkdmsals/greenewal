@@ -5,6 +5,7 @@ import { auth } from '../../_actions/user_action';
 import Axios from "axios";
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import LogOut from "../views/LogOut"
 function SideBar({ show }) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -18,19 +19,20 @@ function SideBar({ show }) {
             if (!response.payload.isAuth) {
                 return;
             } else {
-                // console.log(response.payload.name)
+                console.log(response.payload)
                 setUserName(response.payload.name);
-            }
-        })
-
-        dispatch(auth()).then(response => {
-            if (!response.payload.isAuth) {
-                return;
-            } else {
-                console.log(response.payload.Ticket);
                 setIsTicket(response.payload.Ticket);
             }
         })
+
+        // dispatch(auth()).then(response => {
+        //     if (!response.payload.isAuth) {
+        //         return;
+        //     } else {
+        //         console.log(response.payload.Ticket);
+        //         setIsTicket(response.payload.Ticket);
+        //     }
+        // })
     })
 
     return (
@@ -42,7 +44,7 @@ function SideBar({ show }) {
                         <div className="hello_name">
                             <div> {userName} 님</div>
                             <img src="/img/SideBar/ewhaian_icon.png" alt="icon" className="icon" />
-
+                            <LogOut />
                         </div>
                     </div> : <div className="hello"><div className="NavLogin" onClick={() => navigate("/login")}>로그인</div></div>}
 
