@@ -1,11 +1,11 @@
 const express = require('express');
-const CartRouter = express.Router();
+const cartRouter = express.Router();
 //var mongoose = require("mongoose");
 const { Cart } = require('./models/Cart');
 const { User } = require('./models/userInfo');
 
 // 장바구니에 상품 추가
-CartRouter.post('/api/addToCart', (req, res) => {
+cartRouter.post('/addToCart', (req, res) => {
 
     let userId = req.body.userId;
     let productId = req.body.productId;
@@ -34,7 +34,7 @@ CartRouter.post('/api/addToCart', (req, res) => {
 
 
 // 장바구니 조회
-CartRouter.get('/checkCart/:userId', (req, res) => {
+cartRouter.get('/checkCart/:userId', (req, res) => {
     const { userId } = req.params;
 
     Cart.findOne({ userId })
@@ -53,4 +53,4 @@ CartRouter.get('/checkCart/:userId', (req, res) => {
 
 // 다른 라우터들...
 
-module.exports = CartRouter;
+module.exports = cartRouter;

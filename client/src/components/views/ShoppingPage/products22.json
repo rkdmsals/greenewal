@@ -67,21 +67,10 @@
         "title": "레고 피규어",
         "originalPrice": 11000,
         "discountedPrice": 9000,
-        "describe": "초록 후드의 캐릭터, 공구템을 입고 있는 벗들의 모습 같지 않나요?",
+        "describe": "내용내용내용내용내용내용",
         "img": "../img/goods/goods_detail/5-1.png",
         "detailImg": [
             "../img/goods/goods_detail/5-2.png"
-        ]
-    },
-    {
-        "id": 6,
-        "title": "그립톡",
-        "originalPrice": 4000,
-        "discountedPrice": 3000,
-        "describe": "달콤한 바닐라맛의 아이스크림 그립톡, 보기만 해도 놀이동산이 가고 싶어지지 않나요?",
-        "img": "../img/goods/goods_detail/6-1.png",
-        "detailImg": [
-            "../img/goods/goods_detail/6-1.png"
         ]
     }
 ]
