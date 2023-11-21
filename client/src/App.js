@@ -29,10 +29,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header />
+        <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/start" element={<StartPage />} />
+          <Route exact path="/" element={<StartPage />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
           <Route path="/shop/product-detail/:productId" element={<ProductDetail />} />
           <Route exact path="/cart" element={<ShoppingCart />} />
@@ -43,7 +42,7 @@ function App() {
           <Route exact path="/testStart" element={<TestStart />} />
           <Route exact path="/testAnswers" element={<CheckAnswers />} />
           <Route exact path="/test" element={<Test />} />
-          <Route exact path="/menu" element={<Menu />} />
+          <Route exact path="/foods" element={<Menu />} />
           <Route exact path="/ticket" element={<Ticket />} />
           <Route exact path="/booth" element={<BoothInfo />} />
           <Route exact path="/quizgame" element={<Quizgame />} />
