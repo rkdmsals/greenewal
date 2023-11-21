@@ -5,52 +5,59 @@ import { auth } from '../../_actions/user_action';
 import Axios from "axios";
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import LogOut from "../views/LogOut"
 function SideBar({ show }) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [showSubMenu, setShowSubMenu] = useState(false)
     const [userName, setUserName] = useState("")
     const [isTicket, setIsTicket] = useState(false);
+    const [isAuth, setAuth] = useState(false);
     // const [showSideBar, setShowSideBar] = useState({ show })
 
     useEffect(() => {
         dispatch(auth()).then(response => {
             if (!response.payload.isAuth) {
+                setAuth(response.payload.isAuth)
                 return;
             } else {
-                console.log(response.payload)
+                // console.log(response.payload)
                 setUserName(response.payload.name);
                 setIsTicket(response.payload.Ticket);
+                setAuth(response.payload.isAuth)
             }
         })
-
-        // dispatch(auth()).then(response => {
-        //     if (!response.payload.isAuth) {
-        //         return;
-        //     } else {
-        //         console.log(response.payload.Ticket);
-        //         setIsTicket(response.payload.Ticket);
-        //     }
-        // })
     })
+    const onClickHandler = () => {
+        Axios.get('/api/logout')
+            .then(response => {
+                if (response.data.success) {
+                    // console.log("성공");
+                    navigate("/")
+                    return;
+                } else {
+                    alert('로그아웃 하는데 실패 했습니다.')
+                }
+            })
+    }
 
     return (
         <div className={show ? 'sidebar active' : 'sidebar'} >
             <div className="SideBar_inner">
                 <div className="SideBar_inner_header">
-                    {userName ? <div className="hello">
+                    {isAuth ? <div className="hello">
                         <div> 안녕하세요, </div>
                         <div className="hello_name">
                             <div> {userName} 님</div>
                             <img src="/img/SideBar/ewhaian_icon.png" alt="icon" className="icon" />
-                            <LogOut />
+                            <div className="LogOutBtn" onClick={onClickHandler}>
+                                로그아웃
+                            </div>
                         </div>
                     </div> : <div className="hello"><div className="NavLogin" onClick={() => navigate("/login")}>로그인</div></div>}
 
                     <div className="border"></div>
                 </div>
-                {isTicket ? <div className="sidebar_ticket" onClick={() => navigate('/ticket')}>
+                {isAuth && isTicket ? <div className="sidebar_ticket" onClick={() => navigate('/ticket')}>
                     <div className="ticket_title">
                         <img src="/img/SideBar/ticket_icon.png" alt="ticket" className="ticket_icon" />
                         <div>나의 티켓</div>

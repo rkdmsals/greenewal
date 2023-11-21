@@ -46,8 +46,9 @@
 
 .hello img {
     width: 31px;
-    height: auto;
+    height: 31px;
     margin-left: 12px;
+    margin-top: 2px;
 }
 
 .border {
@@ -143,4 +144,10 @@ ul li a.active {
     transition: 850ms;
     background-image: url("../../../public/img/ShoppingPage/DelBtn.svg");
     background-size: cover;
+}
+
+.LogOutBtn {
+    font-size: 16px;
+    margin-top: 14px;
+    margin-left: 30px;
 }
