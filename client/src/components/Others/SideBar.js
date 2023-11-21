@@ -10,6 +10,7 @@ function SideBar({ show }) {
     const navigate = useNavigate();
     const [showSubMenu, setShowSubMenu] = useState(false)
     const [userName, setUserName] = useState("")
+    const [isTicket, setIsTicket] = useState(false);
     // const [showSideBar, setShowSideBar] = useState({ show })
 
     useEffect(() => {
@@ -19,6 +20,15 @@ function SideBar({ show }) {
             } else {
                 // console.log(response.payload.name)
                 setUserName(response.payload.name);
+            }
+        })
+
+        dispatch(auth()).then(response => {
+            if (!response.payload.isAuth) {
+                return;
+            } else {
+                console.log(response.payload.Ticket);
+                setIsTicket(response.payload.Ticket);
             }
         })
     })
@@ -38,7 +48,7 @@ function SideBar({ show }) {
 
                     <div className="border"></div>
                 </div>
-                {userName ? <div className="sidebar_ticket" onClick={() => navigate('/ticket')}>
+                {isTicket ? <div className="sidebar_ticket" onClick={() => navigate('/ticket')}>
                     <div className="ticket_title">
                         <img src="/img/SideBar/ticket_icon.png" alt="ticket" className="ticket_icon" />
                         <div>나의 티켓</div>

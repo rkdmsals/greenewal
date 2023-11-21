@@ -34,9 +34,9 @@ const userSchema = mongoose.Schema({
     phoneNumber: {
         type: String,
     },
-    seatNumber: {
-        type: String,
-        defaul: 0,
+    Ticket: {
+        type: Boolean,
+        defaul: false,
     },
     role: {
         type: Number,
