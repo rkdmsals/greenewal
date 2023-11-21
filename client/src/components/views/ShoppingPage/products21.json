@@ -1,0 +1,46 @@
+[
+    {
+        "id": 6,
+        "title": "아크릴 코스터",
+        "originalPrice": 7500,
+        "discountedPrice": 3000,
+        "describe": "내용내용내용",
+        "img": "../img/goods/goods_detail/6-1.png",
+        "detailImg": [
+            "../img/goods/goods_detail/6-1.png"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "메탈 스티커",
+        "originalPrice": 2500,
+        "discountedPrice": 9000,
+        "describe": "내용내용내용",
+        "img": "../img/goods/goods_detail/5-1.png",
+        "detailImg": [
+            "../img/goods/goods_detail/5-2.png"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "리무버블 스티커",
+        "originalPrice": 3500,
+        "discountedPrice": 9000,
+        "describe": "내용내용내용",
+        "img": "../img/goods/goods_detail/5-1.png",
+        "detailImg": [
+            "../img/goods/goods_detail/5-2.png"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "띠부띠부씰+학생증",
+        "originalPrice": 3500,
+        "discountedPrice": 9000,
+        "describe": "내용내용내용",
+        "img": "../img/goods/goods_detail/5-1.png",
+        "detailImg": [
+            "../img/goods/goods_detail/5-2.png"
+        ]
+    }
+]

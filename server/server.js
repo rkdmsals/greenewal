@@ -18,15 +18,24 @@ const { UserInfo } = require("./models/userInfo");
 //Route 가져오기
 // const PayForGoodsRouter = require("./routes/payForGoods");
 // app.use("/api/payForGoods", PayForGoodsRouter);
+
+
+//const cartRouter = require("./routes/modifyCart"); //
+// app.use("/api/addToCart", cartRouter);
+
+
 const FeedbackRouter = require("./routes/feedback")
+
 app.use(express.static(path.join(__dirname, "../client/build")));
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+
+
 // router 연결
-var routes = require('./routes/index')
+var routes = require('./routes/index');
 app.use('/', routes);
 app.use('/api/feedback', FeedbackRouter)
 //몽고DB 연결
@@ -120,6 +129,7 @@ app.get('/api/logout', auth, (req, res) => {
       res.json({ success: false, err });
     })
 })
+
 app.post('/api/addToCart', (req, res) => {
 
 })
