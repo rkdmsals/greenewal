@@ -1,6 +1,8 @@
 .HeaderAll {
     display: flex;
     height: 50px;
+    background: #FBFBF4;
+    z-index: 10;
 }
 
 .BackBtn {

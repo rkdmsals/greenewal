@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./components/utilis/variables.css"
-import Home from "./components/views/Home";
+import LogOut from "./components/views/LogOut";
 import StartPage from "./components/views/StartPage/StartPage";
 import SpeakerPage from "./components/views/SpeakerPage/SpeakerPage";
 import SpeakerDetailPage from "./components/views/SpeakerPage/SpeakerDetailPage/SpeakerDeatailPage";
@@ -31,8 +31,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/start" element={<StartPage />} />
+          <Route exact path="/" element={<StartPage />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
           <Route path="/shop/product-detail/:productId" element={<ProductDetail />} />
           <Route exact path="/cart" element={<ShoppingCart />} />
@@ -43,7 +42,7 @@ function App() {
           <Route exact path="/testStart" element={<TestStart />} />
           <Route exact path="/testAnswers" element={<CheckAnswers />} />
           <Route exact path="/test" element={<Test />} />
-          <Route exact path="/menu" element={<Menu />} />
+          <Route exact path="/foods" element={<Menu />} />
           <Route exact path="/ticket" element={<Ticket />} />
           <Route exact path="/booth" element={<BoothInfo />} />
           <Route exact path="/quizgame" element={<Quizgame />} />

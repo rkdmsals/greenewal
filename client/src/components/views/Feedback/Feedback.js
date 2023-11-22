@@ -43,15 +43,15 @@ const Feedback = () => {
     }
     const deleteClick = (e) => {
         console.log(e.target.id)
-        axios.delete('/api/feedback/delete', { data: { _id: e.target.id } })
-            .then(() => {
-                console.log('delete성공');
-                window.location.reload()
-            })
-            .catch(() => {
-                console.log('delete실패');
-            })
-    }
+        axios.delete('/api/feedback/delete', { data : { _id : e.target.id } })
+        .then(() => {
+          console.log('delete성공');
+          window.location.reload(); // 삭제 성공 후 페이지 새로고침
+        })
+        .catch(() => {
+          console.log('delete실패');
+        })
+      }
     const onSubmitHandler = (event) => {
         //event.preventDefault();
 
@@ -76,39 +76,43 @@ const Feedback = () => {
             </div>
 
             <div className="fb_main_content_container">
-                <div className="fb_main_content_inner_container">
-                    <div className="fb_main_content_inner_inner_container">
-                        <ul className="fb_main_content_list">
-                            {feedbacks ? feedbacks.map((feedback, i) => (
-                                <li className="fb_main_content" key={feedback._id}>
-                                    {feedback.content} <button id={feedback._id} onClick={deleteClick}> 삭제 </button>
-                                </li>
-                            )) : <div></div>}
-                        </ul>
-                    </div>
+            <div className="fb_main_content_inner_container">
+            <div className="fb_main_content_inner_inner_container">
+                <ul className="fb_main_content_list">
+                {feedbacks ? feedbacks.map((feedback, i) => (
+                    <li className={`fb_main_content ${feedback.studentID === StudentID ? 'highlight' : ''}`} key={feedback._id}>
+                        {feedback.content} {feedback.studentID == StudentID && (
+                            <img id={feedback._id} onClick={deleteClick} className="fb_del_btn_img" 
+                            src="/img/Feedback/del_button.png" />
 
-
-                    <div className="add_feedback_container">
-                        <form className='add_feedback'
-                            onSubmit={onSubmitHandler}
-                        >
-                            <div className='fb_content_input_container'>
-                                <div className='fb_content_inputset'>
-
-                                    <input className="fb_content_input" type="text" minLength="5" maxLength="300"
-                                        placeholder="피드백을 입력해 주세요. (5-300자)"
-                                        value={Content} onChange={onContentHandler} />
-                                    <button className="btn_add_fb" type='submit'>
-                                        <img className="fb_btn_img" src="/img/Feedback/button.png" />
-                                    </button>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
+                        )}
+                    </li>
+                )): <div></div>}
+                </ul>
             </div>
-
+            
+             
+        <div className="add_feedback_container">
+        <form className='add_feedback'
+            onSubmit={onSubmitHandler}
+        >
+            <div className='fb_content_input_container'>
+            <div className='fb_content_inputset'>
+            
+           <input className="fb_content_input" type="text" minLength="5" maxLength="300"
+           placeholder="피드백을 입력해 주세요. (5-300자)"
+           value={Content} onChange={onContentHandler} />
+           <button className="btn_add_fb" type='submit'>
+               <img className="fb_btn_img" src="/img/Feedback/button.png" />
+           </button>
+            </div>
+            </div>
+           
+       </form>
+       </div>
+       </div>
+       </div>
+        
         </div>
 
     );

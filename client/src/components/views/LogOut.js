@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function Home(porps) {
+function LogOut(porps) {
 
     const navigate = useNavigate();
 
@@ -21,12 +21,10 @@ function Home(porps) {
 
     return (
         <div>
-            홈페이지
-
             <button onClick={onClickHandler}>
                 로그아웃
             </button>
         </div>
     )
 }
-export default Home;
+export default LogOut;

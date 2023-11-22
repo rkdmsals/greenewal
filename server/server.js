@@ -110,11 +110,9 @@ app.get('/api/auth', auth, (req, res) => {
     name: req.user.name,
     studentID: req.user.studentID,
     phoneNumber: req.user.phoneNumber,
-    seatNumber: req.user.seatNumber,
+    Ticket: req.user.Ticket,
     role: req.user.role,
-
   })
-
 })
 
 app.get('/api/logout', auth, (req, res) => {
