@@ -33,7 +33,8 @@ function ProductDetail() {
     }, []);
 
     const addToCart = () => {
-        axios.post('/api/addToCart', {
+        console.log('userid: ' + userId + ' product: '+ product.id);
+        axios.post('/api/addToCart/add', {
             userId: userId,
             productId: product.id,
             quantity: 1, // 장바구니에 추가하는 상품의 수량

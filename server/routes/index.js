@@ -9,6 +9,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.use('/api/feedback', require('./feedback'));
+router.use('/api/addToCart', require('./cartRoutes'));
 
 ////////
 //router.use('/api/addToCart', require('./cartRoutes'));

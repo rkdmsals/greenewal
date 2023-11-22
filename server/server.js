@@ -23,7 +23,7 @@ const { UserInfo } = require("./models/userInfo");
 
 /////////////////////
 const cartRouter = require("./routes/cartRoutes");
-app.use("/api/addToCart", cartRouter);
+//app.use("/api/addToCart", cartRouter);
 ////////////////////
 
 const FeedbackRouter = require("./routes/feedback")
