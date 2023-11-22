@@ -68,11 +68,11 @@ function LoginPage(props) {
                 <div className='login_container'>
                     <div className='inputset'>
                         <div className='login_label'>Ewhaian ID</div>
-                        <input className="ID_input" type="ID" value={ID} onChange={onIDHandler} />
+                        <input className="login_input" type="ID" value={ID} onChange={onIDHandler} />
                     </div>
                     <div className='inputset'>
                         <div className='login_label'>Password</div>
-                        <input className="Password_input" type="password" value={Password} onChange={onPasswordHandler} />
+                        <input className="login_input" type="password" value={Password} onChange={onPasswordHandler} />
                     </div>
 
                     <br />

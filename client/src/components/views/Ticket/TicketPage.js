@@ -5,30 +5,11 @@ import { auth } from '../../../_actions/user_action';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { ReactComponent as Dia } from "../../../assets/images/SpeakerPage/dia.svg";
+import { useNavigate } from 'react-router-dom';
 
 function TicketPage(props) {
 
-    const dispatch = useDispatch();
-
-    const [userseatnum, setuserseatnum] = useState("A1")
-    const [modal, setModal] = useState(false);
-
-    const toggleModal = () => {
-        setModal(!modal);
-    };
-
-
-    
-
-    useEffect(() => {
-
-        dispatch(auth()).then(response => {
-            console.log(response.payload.seatNumber)
-            setuserseatnum(response.payload.seatNumber);
-        })
-
-
-    }, [])
+    const navigate = useNavigate();
 
     return(
         <div className='TicketPage_background'>
@@ -37,24 +18,10 @@ function TicketPage(props) {
             <div className='dia'><Dia /></div>
             </div>
            <img src="/img/Ticket/ticket.png" alt='ticket' className='ticket' />
-           <img src='/img/Ticket/check_seat.png' alt='checkSeatNum' className='checkSeatNum' 
-            onClick={toggleModal}
+           <img src='/img/Ticket/nav_speaker.png' alt='nav_speaker' className='nav_speaker'
+           onClick={() =>navigate("/speaker")} 
            />
 
-            {modal && (
-            
-            <div className='modal'>
-               <div className='overlay' onClick={toggleModal}></div>
-               <div className='modal-content'>
-                   내 좌석번호는
-               {userseatnum} 입니다.
-               </div>
-               <img src='/img/SideBar/stop_icon.png' alt='stop' className='close-modal' 
-                onClick={toggleModal}
-               />
-           </div>
-            )}
-            
         </div>
     )
 }
