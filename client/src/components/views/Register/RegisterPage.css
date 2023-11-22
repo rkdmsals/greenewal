@@ -41,6 +41,9 @@ html{
 .register_label {
     font-size: var(--context-font-size);
     font-family: "kameron-bold";
+    text-align: left;
+
+
 }
 
 .register_label_confirm {
@@ -54,6 +57,7 @@ html{
     font-size: 10px;
     margin-top: -15px;
     color: rgba(0, 0, 0, 0.55);
+    font-family: "pretendard-medium";
 }
 
 
@@ -67,10 +71,13 @@ html{
     color: var(--toneDown-white);
     margin-top: 20px;
     line-height: 40px;
+    font-family: "pretendard-medium";
 }
 
 .register_input {
+    width: 200px;
     height: 22px;
+    font-family: "pretendard-medium";
 }
 
 /* desktop */

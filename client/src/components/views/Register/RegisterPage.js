@@ -89,23 +89,23 @@ function RegisterPage(props) {
              <div className='Register_container'>
              <div className='inputset'>
                  <div className='register_label'>Name</div>
-                <input type="text" value={Name} onChange={onNameHandler} />
+                <input className="register_input" type="text" value={Name} onChange={onNameHandler} />
             </div>
             <div className='inputset'>
                 <div className='register_label'>Ewhaian ID</div>
-                <input type="ID" value={ID} onChange={onIDHandler} />
+                <input className="register_input" type="ID" value={ID} onChange={onIDHandler} />
             </div>
             <div className='inputset'>
             <div className='register_label'>StudentID</div>
-            <input type="StudentID" value={StudentID} onChange={onStudentIDHandler} />
+            <input className="register_input" type="StudentID" value={StudentID} onChange={onStudentIDHandler} />
             </div>
             <div className='inputset'>
-            <div className='register_label'>phoneNumber</div>
-            <input type="phoneNumber" value={PhoneNumber} onChange={onPhoneNumberHandler} />
+            <div className='register_label'>Phone <br /> Number</div>
+            <input className="register_input" type="phoneNumber" value={PhoneNumber} onChange={onPhoneNumberHandler} />
             </div>
             <div className='inputset'>
             <div className='register_label'>Password</div>
-            <input type="password" value={Password} onChange={onPasswordHandler} />
+            <input className="register_input" type="password" value={Password} onChange={onPasswordHandler} />
             </div>
             <div className='inputset'>
             <div className='register_label_confirm'>Password Confirm</div>
