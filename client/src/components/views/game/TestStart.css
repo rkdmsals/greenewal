@@ -4,6 +4,8 @@
     height: 100vh;
     text-align: center;
     overflow: auto;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .StartRound {
@@ -12,7 +14,7 @@
     border-radius: 30px;
     border: 1px solid var(--toneDown-black);
     margin-left: 5%;
-    margin-top: 80px;
+    margin-top: 30px;
     margin-bottom: 20px;
     padding: 5px;
     box-sizing: border-box;
@@ -128,13 +130,13 @@
     opacity: 0.4;
 }
  */
-
+/* 
 @media screen and (min-width:800px) {
     .TestBackground {
         width: 500px;
         margin: 0 auto;
     }
-}
+} */
 
 @media screen and (max-height:690px) {
     .TestStartBtn {
