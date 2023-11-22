@@ -30,7 +30,7 @@ header {
 }
 
 .AllBooths button {
-    background-image: url("../../../../public/img/BoothBtn.svg");
+    background-image: url("../../../../public/img/Booth/BoothBtn.svg");
     width: 20px;
     height: 20px;
     background-size: cover;
