@@ -4,9 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import { auth } from '../../../_actions/user_action';
-
 import axios from 'axios';
-
 import './ProductDetail.css';
 
 function ProductDetail() {
@@ -16,9 +14,7 @@ function ProductDetail() {
     const location = useLocation();
     const { product } = location.state;
 
-
-    const [userId, setUserId] = useState(1);
-
+    const [userId, setUserId] = useState("");
 
     useEffect(() => {
         dispatch(auth()).then(response => {
@@ -34,10 +30,16 @@ function ProductDetail() {
             }
             */
         })
-    }, [])
+    }, []);
 
     const addToCart = () => {
-        axios.post('/api/addToCart', {
+        if (!userId) {
+            navigate('/login');
+            return;
+        }
+
+        console.log('userid: ' + userId + ' product: ' + product.id);
+        axios.post('/api/addToCart/add', {
             userId: userId,
             productId: product.id,
             quantity: 1, // 장바구니에 추가하는 상품의 수량
@@ -55,6 +57,7 @@ function ProductDetail() {
             });
     };
 
+    /*
     const directParchase = () => {
         axios.post('/api/addToCart', {
             userId: userId,
@@ -75,6 +78,7 @@ function ProductDetail() {
     };
 
 
+    */
 
     return (
         <div className='ProductDetail_background'>
@@ -120,7 +124,7 @@ function ProductDetail() {
                     <button className="ProductDetail_cart_button" onClick={addToCart}>
                         장바구니
                     </button>
-                    <button className="ProductDetail_buy_button" onClick={directParchase}>
+                    <button className="ProductDetail_buy_button" onClick={addToCart}>
                         구매하기
                     </button>
                 </div>

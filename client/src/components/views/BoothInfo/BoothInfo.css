@@ -16,6 +16,13 @@ header {
     margin-top: 20px;
 }
 
+.BoothTitle {
+    margin-top: 20px;
+    font-size: var(--title-font-size);
+    font-family: "kameron-bold";
+    margin-left: 5%;
+}
+
 .AllBooths {
     width: 90%;
     margin: 0 auto;
@@ -28,7 +35,7 @@ header {
     height: 20px;
     background-size: cover;
     position: relative;
-    top: -30px;
+    top: -20px;
     left: 85%;
     border: 0px;
 }
@@ -38,10 +45,13 @@ header {
     font-size: 11px;
     display: flex;
     height: 105px;
+    justify-content: space-evenly;
 }
 
 .EachBooth img {
-    width: 33%;
+    height: 100%;
+    max-width: 33%;
+    width: 100px;
 }
 
 .EachBoothInfo {
@@ -54,7 +64,9 @@ header {
 
 .EachBoothInfo div {
     margin-bottom: 8px;
-    padding-right: 20%;
+    padding-right: 11px;
+    /* padding-right: 20%; */
+    word-break: keep-all;
 }
 
 .BoothName {
@@ -66,3 +78,37 @@ header {
 .BoothTag {
     color: #058053;
 }
+
+@media screen and (max-width:340px) {
+    #LongTxt {
+        height: 120px;
+    }
+
+    #LongTxt .EachBoothInfo div {
+        padding-right: 20%;
+        box-sizing: border-box;
+    }
+
+    #LongTxt button {
+        top: -30px;
+    }
+}
+
+/* @media screen and (max-width:300px) {
+    .EachBoothInfo div {
+        padding-right: 15%;
+        box-sizing: border-box;
+    }
+
+    .EachBoothInfo {
+        height: 120px;
+    }
+
+    #LongTxt .BoothTag {
+        padding-right: 18%;
+    }
+
+    #LongTxt.EachBooth {
+        height: 130px;
+    }
+} */
