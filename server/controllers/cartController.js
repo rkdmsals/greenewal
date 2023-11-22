@@ -2,7 +2,7 @@ const { Cart } = require('../models/Cart');
 
 
 // 장바구니에 아이템 추가
-exports.addToCart = async (req, res) => {
+module.exports.addToCart = async (req, res) => {
     try {
         const userId = req.payload.userId;
         const productId = req.payload.productId;
