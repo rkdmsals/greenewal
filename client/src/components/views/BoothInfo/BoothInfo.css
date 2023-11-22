@@ -10,6 +10,13 @@ header {
     padding-top: 50px;
 }
 
+.BoothImg {
+    /* 이미지 클로버 레이아웃 설정 */
+    mask: url(../../../../public/img/Booth/cloberVec.svg);
+    mask-size: cover;
+    /* background: url("../../../../public/img/photo/greenpt.png"); */
+}
+
 .BoothMap {
     width: 90%;
     height: 300px;
@@ -51,8 +58,8 @@ header {
 }
 
 .EachBooth img {
-    height: 100%;
-    max-width: 33%;
+    height: 100px;
+    /* max-width: 33%; */
     width: 100px;
 }
 
