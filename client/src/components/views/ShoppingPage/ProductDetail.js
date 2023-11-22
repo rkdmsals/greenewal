@@ -33,7 +33,12 @@ function ProductDetail() {
     }, []);
 
     const addToCart = () => {
-        console.log('userid: ' + userId + ' product: '+ product.id);
+        if (!userId) {
+            navigate('/login');
+            return;
+        }
+
+        console.log('userid: ' + userId + ' product: ' + product.id);
         axios.post('/api/addToCart/add', {
             userId: userId,
             productId: product.id,
