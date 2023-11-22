@@ -1,6 +1,7 @@
 .photo-container{
   height:100vh;
-/* margin-top: 50px; */
+  padding-top: 50px; 
+  box-sizing: border-box;
 }
 .titletext{
   display: inline-block;
@@ -17,9 +18,10 @@
 .photo-item-button {
   border: 1.5px solid #080808;
   border-radius: 30px;
-  padding: 0px 20px 0px 20px;
+  height: 34px;       
+  padding: 0px 20px 0px 20px; 
+  margin-top: 10px;
   margin-right: 13px;
-  margin-top:29px;
   cursor: pointer;
   background-color: #fff;
   font-family: "pretendard";
@@ -38,21 +40,23 @@
   width: 89%; 
   height: 89%; 
 }
-.selected-item-text{
+.items{
   margin: 0 auto;
-  margin-top: 5.4%;
-  width:90%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.p-selected-item-text{
   font-size: 125%;
   font-family: "pretendard";
 }
-.selected-item-pricetext {
-  margin: 0 auto;
-  margin-top: 3px;
-  width:90%;
+.p-selected-item-pricetext {
   font-size: 113%;
   font-family: "pretendard";
 }
-.selected-item-contenttext {
+.p-selected-item-contenttext {
   margin: 0 auto;
   color: #7D7D7D;
   width:90%;

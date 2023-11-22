@@ -1,9 +1,13 @@
-.eventinformation-container{
-    margin-left: 9.5%;
-  }
+    .postertext,.date,.datetext, .map,.help,.aboutmanagement,.line-image{
+        margin: 0 auto;
+        width:90%;
 
+    }
+    .eventinformation-container{
+        width: 100%;
+        padding-top: 50px; 
+    }
   .titletext{
-      display: inline-block;
       margin-top: 5.2%;
       margin-left: 5.3%;
       font-size: 250%;
@@ -23,24 +27,25 @@
         width: 335px;
     }
 
-    .main{
+    .eiposter{
+        display: flex;
+        justify-content: space-between;
+        width:100%;
         margin-top: 40px;
-        margin: none; 
     }
     .leftposter-image{
         width: 45px;
-        height: 346px;
+        height: 348px;
     }
     .poster-image{
-        width: 248px;
-        height: 360px;
+        width: 242.405px;
+        height: 348px;
     }
     .rightposter-image{
         width: 45px;
         height: 348px;
     }
-    .maintext{
-        display: inline-block;
+    .postertext{
         margin-top: 20px;
         font-family: "pretendard";
     }

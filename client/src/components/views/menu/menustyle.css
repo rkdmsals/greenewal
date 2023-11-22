@@ -1,6 +1,7 @@
 .menu-container{
   height:100vh;
-/*  margin-top: 50px; */
+  padding-top: 50px; 
+  box-sizing: border-box;
 }
 .titletext{
   display: inline-block;
@@ -20,7 +21,7 @@
   border-radius: 30px;
   height: 34px;       
   padding: 0px 20px 0px 20px; 
-  margin-top: 29px;
+  margin-top: 20px;
   margin-right: 13px;
   cursor: pointer;
   background-color: #fff;
@@ -49,6 +50,7 @@
   font-family: "pretendard";
 }
 .selected-item-pricetext {
+  display: flex;
   margin: 0 auto;
   margin-top: 3px;
   font-size: 18px;
@@ -56,6 +58,7 @@
 }
 .selected-item-contenttext {
   margin: 0 auto;
+  width: 90%;
   color: #7D7D7D;
   font-size: 14px;
   margin-top: 2.8%;

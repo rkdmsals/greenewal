@@ -60,17 +60,20 @@ const Photo = () => {
           <button
             key={item.id}
             onClick={() => handleItemClick(item)}
-            className="menu-item-button"
+            className="photo-item-button"
           >
             <div>{item.text}</div>
           </button>
         ))}
       </div>
-      <div className="selected-item">
+      <div className="p-selected-item">
         <img src={selectedItem.image} alt={selectedItem.text} className="selected-item-img" />
-        <div className="selected-item-text">{selectedItem.text}</div>
-        <div className="selected-item-pricetext">{selectedItem.pricetext}</div>
-        <div className="selected-item-contenttext">{selectedItem.contenttext}</div>
+        <div className="items">
+          <span className="p-selected-item-text">{selectedItem.text}</span> 
+          <span className="p-selected-item-pricetext">{selectedItem.pricetext}</span>
+        </div>
+        <div className="p-selected-item-contenttext">{selectedItem.contenttext}</div>
+            
       </div>
     </div>
     </div>

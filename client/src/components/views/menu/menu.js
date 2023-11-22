@@ -61,8 +61,10 @@ const Menu = () => {
       </div>
       <div className="selected-item">
         <img src={selectedItem.image} alt={selectedItem.text} className="selected-item-img" />
-        <div className="selected-item-text">{selectedItem.text}</div>
-        <div className="selected-item-pricetext">{selectedItem.pricetext}</div>
+        <div className="items">
+          <span className="selected-item-text">{selectedItem.text}</span> 
+          <span className="selected-item-pricetext">{selectedItem.pricetext}</span>
+        </div>
         <div className="selected-item-contenttext">{selectedItem.contenttext}</div>
       </div>
     </div>
