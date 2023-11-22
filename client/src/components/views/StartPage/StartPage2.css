@@ -1,0 +1,46 @@
+.GrnPage {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.GrnTitle {
+    font-size: var(--title-font-size);
+    font-family: "kameron-bold";
+    /* height: fit-content; */
+    box-sizing: border-box;
+    display: inline-block;
+    height: 50px;
+}
+
+.GrnTitle span {
+    box-shadow: inset 0 -10px 0 rgba(52, 154, 107, 0.50);
+    margin-bottom: -55px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 71%;
+}
+
+.GrnTxt {
+    word-break: keep-all;
+}
+
+.GrnBanner {
+    width: 100%;
+    margin: 0 auto;
+    height: 120px;
+}
+
+.GrnBanE {
+    height: 113px;
+    width: 100%;
+    background: gray;
+}
+
+.GrnRoute {
+    display: block;
+    width: 100%;
+    height: 100px;
+    /* margin: 0 auto; */
+    border: 2px solid var(--toneDown-black);
+    border-radius: 15px;
+}

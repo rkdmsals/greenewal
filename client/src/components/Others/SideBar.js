@@ -71,6 +71,7 @@ function SideBar({ show }) {
                     <li className="booth">
                         <div className="booth_tap" onClick={() => setShowSubMenu(!showSubMenu)}>부스 정보</div>
                         <div className={showSubMenu ? 'submenu active' : 'submenu'}>
+                            <Link className="sub" to="/booth">전체 부스 정보</Link>
                             <Link className="sub" to="/photo">네컷사진 부스</Link>
                             <Link className="sub" to="/quizgame">퀴즈,게임 부스</Link>
                             <Link className="sub" to="/foods">먹거리 부스</Link>

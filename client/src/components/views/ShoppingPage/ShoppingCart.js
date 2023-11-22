@@ -13,7 +13,7 @@ function ShoppingCart() {
     const navigate = useNavigate();
     const location = useLocation();
     const dispatch = useDispatch();
-    const [userId, setUserId] = useState(1);
+    const [userId, setUserId] = useState("");
 
     useEffect(() => {
         dispatch(auth()).then(response => {

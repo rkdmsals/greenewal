@@ -33,15 +33,13 @@ function LoginPage(props) {
         }
 
         dispatch(loginUser(body))
-        .then(response => {
-            if(response.payload.loginSuccess) {
-              navigate('/');  
-            } else {
-                alert('Error')
-            }
-        })
-
-        
+            .then(response => {
+                if (response.payload.loginSuccess) {
+                    window.history.back();
+                } else {
+                    alert('Error')
+                }
+            })
 
     }
 
@@ -50,9 +48,9 @@ function LoginPage(props) {
         dispatch(auth()).then(response => {
             console.log(response)
 
-            if(!response.payload.isAuth) {
+            if (!response.payload.isAuth) {
                 return
-            } else{
+            } else {
                 navigate('/');
             }
         })
@@ -62,30 +60,30 @@ function LoginPage(props) {
 
 
     return (
-   <div className='LoginPage_background'>
-       <div className='LoginPage_title'> Login</div>
-       <form className='Login'
-            onSubmit={onSubmitHandler}
-        >
-            <div className='login_container'>
-            <div className='inputset'>
-            <div className='login_label'>Ewhaian ID</div>
-           <input className="ID_input" type="ID" value={ID} onChange={onIDHandler} />
-            </div>
-            <div className='inputset'>
-            <div className='login_label'>Password</div>
-           <input className="Password_input" type="password" value={Password} onChange={onPasswordHandler} />
-            </div>
-          
-           <br />
-           <button className="btn_login" type='submit'>
-               로그인
-           </button>
-           <Link className='nav_register' to="/register"> 회원가입 </Link>
-            </div>
-           
-       </form>
-   </div>
+        <div className='LoginPage_background'>
+            <div className='LoginPage_title'> Login</div>
+            <form className='Login'
+                onSubmit={onSubmitHandler}
+            >
+                <div className='login_container'>
+                    <div className='inputset'>
+                        <div className='login_label'>Ewhaian ID</div>
+                        <input className="ID_input" type="ID" value={ID} onChange={onIDHandler} />
+                    </div>
+                    <div className='inputset'>
+                        <div className='login_label'>Password</div>
+                        <input className="Password_input" type="password" value={Password} onChange={onPasswordHandler} />
+                    </div>
+
+                    <br />
+                    <button className="btn_login" type='submit'>
+                        로그인
+                    </button>
+                    <Link className='nav_register' to="/register"> 회원가입 </Link>
+                </div>
+
+            </form>
+        </div>
     )
 }
 export default LoginPage;

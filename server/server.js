@@ -14,15 +14,17 @@ var fs = require('fs')
 const path = require("path");
 
 const { UserInfo } = require("./models/userInfo");
+
 //const { feedback } = require("./models/feedback");
 //Route 가져오기
 // const PayForGoodsRouter = require("./routes/payForGoods");
 // app.use("/api/payForGoods", PayForGoodsRouter);
 
 
-//const cartRouter = require("./routes/cartRoutes");
+/////////////////////
+const cartRouter = require("./routes/cartRoutes");
 //app.use("/api/addToCart", cartRouter);
-
+////////////////////
 
 const FeedbackRouter = require("./routes/feedback")
 
@@ -31,7 +33,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(cookieParser());
-
 
 
 // router 연결
@@ -128,9 +129,6 @@ app.get('/api/logout', auth, (req, res) => {
     })
 })
 
-app.post('/api/addToCart', (req, res) => {
-
-})
 app.listen(PORT, () => {
   console.log(`recruiting-site server listening on port ${PORT}`);
 });
