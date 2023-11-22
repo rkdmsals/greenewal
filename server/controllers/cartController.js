@@ -1,14 +1,15 @@
 const { Cart } = require('../models/Cart');
 
+
 // 장바구니에 아이템 추가
 exports.addToCart = async (req, res) => {
     try {
-        const userId = req.payload.id;
+        const userId = req.payload.userId;
         const productId = req.payload.productId;
         const quantity = req.payload.quantity;
 
         // 장바구니가 있는지 확인하고 없으면 새로 생성
-        let cart = await Cart.findOne({ userId });
+        let cart = await Cart.findOne(userId);
         if (!cart) {
             cart = new Cart({ userId, productList: [{ productId, quantity }] });
         } else {
@@ -32,6 +33,7 @@ exports.addToCart = async (req, res) => {
 };
 
 
+/*
 exports.getCart = async (req, res) => {
     try {
         const { userId } = req.params;
@@ -48,3 +50,4 @@ exports.getCart = async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 };
+*/
