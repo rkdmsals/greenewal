@@ -1,55 +1,63 @@
 .menu-container{
-  margin-top:8.4%;
-  margin-left: 8.5%;
+  height:100vh;
+/*  margin-top: 50px; */
 }
-.headertxt{
-  margin-left: 25%;
-  margin-right: 25%;
-}
-
-
 .titletext{
   display: inline-block;
-  margin-top: 5.2%;
-  margin-left: 5.3%;
-  font-size: 250%;
+  margin-top: 20px;
+  margin-right: 2%;
+  font-size: var(--title-font-size);
   font-weight: bold;
+  font-family: "kameron-bold";
 }
-.title-image{
-  width: 6%;
-  height: 7%;
+.m-title-image{
+  width: 22px;
+  height: 26.565px;
 }
+
 .menu-item-button {
   border: 1.5px solid #080808;
   border-radius: 30px;
   height: 34px;       
-  padding: 0px 2.5% 0px 2.5%;
-  margin-top: 10%;
-  margin-right: 3%;
-  margin-left: 3%;
+  padding: 0px 20px 0px 20px; 
+  margin-top: 29px;
+  margin-right: 13px;
   cursor: pointer;
   background-color: #fff;
+  font-family: "pretendard";
 }
 .menu-item-button:hover {
   background-color: #080808;
   color: #fff;
 }
+.button-m{
+  margin-left: 5%;
+}
 .selected-item-img {
+  display: block;
+  margin: 0 auto;
   margin-top: 5%;
-  margin-left: 5px;
   width: 89%; 
   height: 89%; 
+  border-radius: 20px;
 }
 .selected-item-text{
+  margin: 0 auto;
   margin-top: 5.4%;
-  font-size: 125%;
+  width:90%;
+  font-size: 18px;
+  font-family: "pretendard";
 }
 .selected-item-pricetext {
+  margin: 0 auto;
   margin-top: 3px;
-  font-size: 113%;
+  font-size: 18px;
+  font-family: "pretendard";
 }
 .selected-item-contenttext {
+  margin: 0 auto;
   color: #7D7D7D;
-  font-size: 93%;
+  font-size: 14px;
   margin-top: 2.8%;
+  font-family: "pretendard";
 }

@@ -6,22 +6,22 @@ const Event = () => {
   return (
     <div>
     <div className="event-container">
-      <div className="titletext">Event Info</div>
-      <img src="/img/title.png" alt="bar" className="title-image" />
+      <div className="event-titletext">Event Info</div>
+      <img src="/img/event/title.png" alt="반짝이" className="event-title-image" />
     
       <div className="topep">
-            퀴즈 부스와 오프라인 부스에서 도장을 모으면<br></br>
-            화려한 구성의 선물이 주어집니다!
+        &lt;그-리뉴얼&gt; 에서 이화이언이 준비한 다양한 이벤트!<br></br>
+        참여하고 선물받자!
       </div>
 
       <div className="stamp">
-        <img src="/img/n1.png" alt="" className="n1-image" />
+        <img src="/img/event/n1.png" alt="" className="n1-image" />
         <div className="sort">
             <div className="stamp-sort">
                 오프라인
             </div>    
         </div>
-        <div className="title">
+        <div className="event-title">
             <div className="stamp-title">
                 모아모아 도장판
             </div>
@@ -32,19 +32,19 @@ const Event = () => {
             화려한 구성의 선물이 주어집니다!
             </div>
         </div>
-        <img src="/img/stamp.png" alt="스탬프 이미지" className="stamp-image"/>
+        <img src="/img/event/stamp.png" alt="스탬프 이미지" className="stamp-image"/>
             
 
       </div>
 
       <div className="bestdresser">
-            <img src="/img/n2.png" alt="" className="n2-image" />
+            <img src="/img/event/n2.png" alt="" className="n2-image" />
             <div className="sort">
                 <div className="bestdresser-sort">
                     오프라인
                 </div>    
             </div>
-            <div className="title">
+            <div className="event-title">
                 <div className="search-title">
                     베스트 드레서
                 </div>
@@ -58,13 +58,13 @@ const Event = () => {
         </div>  
 
       <div className="inssupl">
-            <img src="/img/n3.png" alt="" className="n3-image" />
+            <img src="/img/event/n3.png" alt="" className="n3-image" />
             <div className="sort">
                 <div className="inssupl-sort">
                     오프라인&온라인
                 </div>    
             </div>
-            <div className="title">
+            <div className="event-title">
                 <div className="inssupl-title">
                 인스타 스토리 업로드
                 </div>
@@ -74,12 +74,16 @@ const Event = () => {
                 이벤트 설명. 이벤트 설명. 이벤트 설명. 이벤트 설명.이벤트 설명. 이벤트 설명. 이벤트 설명. 이벤트 설명.
                 </div>
             </div>
-            <div className="instarlink">
-                <div className="instarlinktxt">
-                    이화이언 인스타그램<br></br>바로가기
-                </div>
-                <img src="/img/instarlink.png" alt="인스타 화살표" className="instarlink-image" />
+            <div className="instarlink">   
+                <a href="https://www.instagram.com/ewhaian_2001/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
+                    target="_blank" rel="noopener noreferrer">
+                    <div className="instarlinktxt">
+                        이화이언 인스타그램<br></br>바로가기
+                    </div>
+                    <img src="/img/event/instarlink.png" alt="인스타 화살표" className="instarlink-image" />
+                </a>
             </div>
+
         </div>  
     </div>
     </div>

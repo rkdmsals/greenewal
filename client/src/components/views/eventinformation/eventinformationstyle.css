@@ -1,27 +1,7 @@
 .eventinformation-container{
-    margin-top:8.4%;
-    margin-left: 7.5%;
+    margin-left: 9.5%;
   }
-  .headertxt{
-      margin-left: 25%;
-      margin-right: 25%;
-  }
-    
-  .previous-image{
-      display: inline-block;
-      width: 7.5%;
-      height: 5%;
-  }
-  .headertxt{
-      display: inline-block;
-      font-weight: bold;
-  }
-  .bar-image{
-      display: inline-block;
-      width: 5%;
-      height: 5%;
-  }
-  
+
   .titletext{
       display: inline-block;
       margin-top: 5.2%;
@@ -29,14 +9,15 @@
       font-size: 250%;
       font-weight: bold;
     }
-    .title-image{
+    .ei-title-image{
       width: 6%;
       height: 7%;
     }
 
-    .clover-image{
+    .ei-clover-image{
         width: 35px;
         height: 35px;
+        
     }
     .line-image{
         width: 335px;
@@ -44,30 +25,42 @@
 
     .main{
         margin-top: 40px;
+        margin: none; 
     }
     .leftposter-image{
         width: 45px;
-        height: 348px;
+        height: 346px;
     }
     .poster-image{
-        width: 245px;
-        height: 348px;
+        width: 248px;
+        height: 360px;
     }
     .rightposter-image{
         width: 45px;
         height: 348px;
     }
     .maintext{
+        display: inline-block;
         margin-top: 20px;
+        font-family: "pretendard";
+    }
+
+    .ei-title{
+        display: inline-block;
+        margin-left: 8%;
+        margin-bottom: 5%;
+        font-size: 22px;
+        font-weight: bold;
+        font-family: "kameron-bold";
     }
 
     .date{
-        margin-top: 22px;
+        margin-top: 7%;
+        font-family: "pretendard";
     }
 
     .datetext{
         margin-left: 40px;
-        margin-top: 30px;
         font-size: 16px;
     }
     .date1text{
@@ -81,12 +74,14 @@
 
     .map{
         margin-top: 20px;
+        font-family: "pretendard";
     }
     .maptext{
         margin-left: 40px;
-        margin-top: 30px;
+
     }
     .maptext1{
+        margin-top: 1%;
         font-weight: 550;
     }
     .map-image{
@@ -98,18 +93,20 @@
 
 
     .help{
+        font-family: "pretendard";
         margin-top: 20px;
     }
     .helplogo-image{
-        margin-top: 20px;
+        margin-top: 12%;
     }
 
     .aboutmanagement{
-        margin-top: 20px;
+        font-family: "pretendard";
+        margin-top: 5%;
         margin-bottom: 60px;
     }
     .amtext{
-        margin-top: 30px;
+        margin-top: 2%;
         margin-left: 46px;
     }
     .number{

@@ -53,9 +53,9 @@ const Photo = () => {
       <div className="titletext">
         4-Cut<br></br>Photo Booth
       </div>
-      <img src="/img/photo/title.png" alt="반짝이" className="title-image" />
+      <img src="/img/photo/title.png" alt="반짝이" className="pt-title-image" />
       
-      <div>
+      <div className='button-m'>
         {items.map((item) => (
           <button
             key={item.id}
