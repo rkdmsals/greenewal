@@ -35,7 +35,7 @@ function App() {
           <Route exact path="/" element={<StartPage2 />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
           <Route path="/shop/product-detail/:productId" element={<ProductDetail />} />
-          <Route exact path="/cart" element={<ShoppingCart />} />
+          <Route exact path="/cart/:userId" element={<ShoppingCart />} />
           <Route exact path="/speaker" element={<SpeakerPage />} />
           <Route exact path="/speaker/detail" element={<SpeakerDetailPage />} />
           <Route exact path="/login" element={<LoginPage />} />
