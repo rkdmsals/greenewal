@@ -1,15 +1,11 @@
 import React from 'react';
 import './eventstyle.css';
+import Header from "../../Others/Header"
 
 const Event = () => {
   return (
+    <div>
     <div className="event-container">
-      <div>
-        <img src="/img/previous.png" alt="뒤로가기" className="previous-image" />
-        <div className="headertxt">부스 상세보기</div>
-        <img src="/img/bar.png" alt="bar" className="bar-image" />
-      </div>
-      
       <div className="titletext">Event Info</div>
       <img src="/img/title.png" alt="bar" className="title-image" />
     
@@ -85,6 +81,7 @@ const Event = () => {
                 <img src="/img/instarlink.png" alt="인스타 화살표" className="instarlink-image" />
             </div>
         </div>  
+    </div>
     </div>
   );
 }

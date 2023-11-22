@@ -1,17 +1,15 @@
 import React from 'react';
-import './eventinformationstyle.css';
+import './eventinformationstyle.css'
+import Header from "../../Others/Header"
+
 
 const Eventinformation = () => {
   return (
+    <div>
     <div className="eventinformation-container">
-      <div>
-        <img src="/img/previous.png" alt="뒤로가기" className="previous-image" />
-        <div className="headertxt">행사 정보</div>
-        <img src="/img/bar.png" alt="bar" className="bar-image" />
-      </div>
       
-      <div className="titletext">About<br></br>Green-ewal</div>
-      <img src="/img/title.png" alt="bar" className="title-image" />
+      <div className="titletext_ei">About<br></br>Green-ewal</div>
+      <img src="/img/title.png" alt="반짝이" className="title-image" />
       <div className="main">
             <img src="/img/leftposter.png" alt="poster" className="leftposter-image"/>
             <img src="/img/poster.png" alt="poster" className="poster-image"/>
@@ -122,11 +120,14 @@ const Eventinformation = () => {
                 </div>   
             </div>     
       </div>  
-      <img src="img/logofooter.png" alt="logo" className="logofooter-image"/>
+    </div>
     </div>
   );
 }
 
 export default Eventinformation;
+
+
+
 
 
