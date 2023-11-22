@@ -1,19 +1,19 @@
 import React from 'react';
 import './eventinformationstyle.css'
 import Header from "../../Others/Header"
+import Footer from "../../Others/Footer";
 
 
 const Eventinformation = () => {
   return (
     <div>
     <div className="eventinformation-container">
-      
-      <div className="titletext_ei">About<br></br>Green-ewal</div>
-      <img src="/img/title.png" alt="반짝이" className="title-image" />
+      <div className="titletext">About<br></br>Green-ewal</div>
+      <img src="/img/eventinformation/title.png" alt="반짝이" className="ei-title-image" />
       <div className="main">
-            <img src="/img/leftposter.png" alt="poster" className="leftposter-image"/>
-            <img src="/img/poster.png" alt="poster" className="poster-image"/>
-            <img src="/img/rightposter.png" alt="poster" className="rightposter-image"/>
+            <img src="/img/eventinformation/leftposter.png" alt="poster" className="leftposter-image"/>
+            <img src="/img/eventinformation/poster.png" alt="poster" className="poster-image"/>
+            <img src="/img/eventinformation/rightposter.png" alt="poster" className="rightposter-image"/>
             <div className="maintext">
                 새로워진 이화이언!<br></br>
                 이화이언의 리뉴얼을 기념하여<br></br>
@@ -22,8 +22,8 @@ const Eventinformation = () => {
       </div>  
       
       <div className="date">
-        <img src="/img/clover.png" alt="클로버" className="clover-image"/>
-        <div className="title">
+        <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
+        <div className="ei-title">
             <div className="title1">
                 행사 일시
             </div>
@@ -44,11 +44,11 @@ const Eventinformation = () => {
 
 
        
-      <img src="/img/line.png" alt="구분선" className="line-image"/>
+      <img src="/img/eventinformation/line.png" alt="구분선" className="line-image"/>
       
       <div className="map">
-            <img src="/img/clover.png" alt="클로버" className="clover-image"/>
-            <div className="title">
+            <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
+            <div className="ei-title">
                 <div className="title2">
                     찾아오시는 길
                 </div>
@@ -61,14 +61,14 @@ const Eventinformation = () => {
                     : 스타벅스 ECC점 옆, ECC N번 출구 근처
                 </div>
             </div>
-            <img src="/img/map.png" alt="지도" className="map-image"/>
+            <img src="/img/eventinformation/map.png" alt="지도" className="map-image"/>
       </div>  
 
-      <img src="/img/line.png" alt="구분선" className="line-image"/>
+      <img src="/img/eventinformation/line.png" alt="구분선" className="line-image"/>
 
       <div className="help">
-            <img src="/img/clover.png" alt="클로버" className="clover-image"/>
-            <div className="title">
+            <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
+            <div className="ei-title">
                 <div className="title3">
                     도움주신 분들
                 </div>
@@ -76,10 +76,10 @@ const Eventinformation = () => {
             </div>
             <img src="hleplogo" alt="헬퍼로고" className="hleplogo-image"/>
       </div>
-      <img src="/img/line.png" alt="구분선" className="line-image"/>
+      <img src="/img/eventinformation/line.png" alt="구분선" className="line-image"/>
       <div className="aboutmanagement">
-            <img src="/img/clover.png" alt="클로버" className="clover-image"/>
-            <div className="title">    
+            <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
+            <div className="ei-title">    
                 <div className="title4">
                     어바웃 운영진
                 </div>
@@ -121,6 +121,7 @@ const Eventinformation = () => {
             </div>     
       </div>  
     </div>
+    <Footer />
     </div>
   );
 }
