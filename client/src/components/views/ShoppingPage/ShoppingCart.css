@@ -17,6 +17,8 @@
     width: 90px;
     height: 90px;
     /* padding: 20px 0px; */
+    mask: url(../../../../public/img/Booth/cloberVec.svg);
+    mask-size: cover;
 }
 
 .CartRight {

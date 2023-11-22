@@ -11,7 +11,7 @@ function BoothInfo() {
         <div className="AllBooths">
             {/* {'>'} 전체부스 */}
             <div className="EachBooth">
-                <img></img>
+                <img className="BoothImg" src="/img/menu/bp.png"></img>
                 <div className="EachBoothInfo">
                     <div className="BoothName">네컷 사진 부스</div>
                     <div >다양한 프레임으로 그리뉴얼에서의 추억을
@@ -21,7 +21,7 @@ function BoothInfo() {
                 </div>
             </div>
             <div className="EachBooth">
-                <img></img>
+                <img className="BoothImg" src="/img/menu/bp.png"></img>
                 <div className="EachBoothInfo">
                     <div className="BoothName">먹거리 부스</div>
                     <div >추운 겨울, 수업 가기 전 잠깐의 휴식! 따뜻한 핫초코와 미니붕어빵, 델리만쥬!</div>
@@ -30,7 +30,7 @@ function BoothInfo() {
                 </div>
             </div>
             <div className="EachBooth">
-                <img></img>
+                <img className="BoothImg" src="/img/menu/bp.png"></img>
                 <div className="EachBoothInfo">
                     <div className="BoothName">리뉴얼 부스</div>
                     <div >새롭게 단장한 이화이언! 무엇이 달라졌는지 알아볼까요?</div>
@@ -39,7 +39,7 @@ function BoothInfo() {
                 </div>
             </div>
             <div className="EachBooth" id="LongTxt">
-                <img></img>
+                <img className="BoothImg" src="/img/menu/bp.png"></img>
                 <div className="EachBoothInfo">
                     <div className="BoothName">퀴즈,게임 부스</div>
                     <div >이화이언에 대해 얼마나 알고있나요? 퀴즈 부스에서 다양한 활동 후 도장 받기!</div>
@@ -48,7 +48,7 @@ function BoothInfo() {
                 </div>
             </div>
             <div className="EachBooth" id="LongTxt">
-                <img></img>
+                <img className="BoothImg" src="/img/menu/bp.png"></img>
                 <div className="EachBoothInfo">
                     <div className="BoothName">이벤트 부스</div>
                     <div >모은 도장으로 다양한 상품으로 구성된 선물 교환! 추가 이벤트도 참여하기!</div>
