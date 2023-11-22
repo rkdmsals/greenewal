@@ -7,7 +7,7 @@ const Menu = () => {
     {
       id: 1,
       image: '/img/menu/bp.png',
-      text: '미니 붕어빵 5알',
+      text: '미니 붕어빵',
       pricetext: '2,500₩',
       contenttext: (
         <div style={{ whiteSpace: 'pre-line' }}>
@@ -19,7 +19,7 @@ const Menu = () => {
     {
       id: 2,
       image: '/img/menu/dm.png',
-      text: '델리만쥬 5알',
+      text: '델리만쥬',
       pricetext: '2500₩',
       contenttext: (
         <div style={{ whiteSpace: 'pre-line' }}>
@@ -48,7 +48,7 @@ const Menu = () => {
       <div className="titletext">Food Booth</div>
       <img src="/img/menu/title.png" alt="bar" className="m-title-image" />
       
-      <div>
+      <div className="button-m">
         {items.map((item) => (
           <button
             key={item.id}
