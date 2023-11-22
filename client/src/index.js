@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Provider} from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { applyMiddleware } from 'redux';
+import { legacy_createStore as createStore } from "redux";
 import promiseMiddleware from 'redux-promise';
 import ReduxThunk from 'redux-thunk';
 import Reducer from './_reducers';
@@ -16,10 +17,10 @@ root.render(
     <Provider store={createStoreWithMiddleware(Reducer,
       window.__REDUX_DEVTOOLS_EXTENSION__ &&
       window.__REDUX_DEVTOOLS_EXTENSION__()
-      )}>
-    <App />
+    )}>
+      <App />
     </Provider>
-  </React.StrictMode> 
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
