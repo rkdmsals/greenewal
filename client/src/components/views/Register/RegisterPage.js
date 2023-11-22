@@ -80,33 +80,45 @@ function RegisterPage(props) {
     }, [])
 
     return (
-        <div className='RegisterPage_background'> 
+        <div className='RegisterPage_background'>
+            <div className='RegisterPage_title'> Sign Up </div>
         <form className='Register'
              onSubmit={onSubmitHandler}
          >
-            <label>Name</label>
-            <input type="text" value={Name} onChange={onNameHandler} />
 
-            <label>Ewhaian ID</label>
-            <input type="ID" value={ID} onChange={onIDHandler} />
-
-            <label>StudentID</label>
+             <div className='Register_container'>
+             <div className='inputset'>
+                 <div className='register_label'>Name</div>
+                <input type="text" value={Name} onChange={onNameHandler} />
+            </div>
+            <div className='inputset'>
+                <div className='register_label'>Ewhaian ID</div>
+                <input type="ID" value={ID} onChange={onIDHandler} />
+            </div>
+            <div className='inputset'>
+            <div className='register_label'>StudentID</div>
             <input type="StudentID" value={StudentID} onChange={onStudentIDHandler} />
-
-            <label>phoneNumber</label>
+            </div>
+            <div className='inputset'>
+            <div className='register_label'>phoneNumber</div>
             <input type="phoneNumber" value={PhoneNumber} onChange={onPhoneNumberHandler} />
-
-            <label>Password</label>
-            <label>5자 이상이여야 합니다.</label>
+            </div>
+            <div className='inputset'>
+            <div className='register_label'>Password</div>
             <input type="password" value={Password} onChange={onPasswordHandler} />
-
-            <label>Confirm Password</label>
-            <input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} />
+            </div>
+            <div className='inputset'>
+            <div className='register_label_confirm'>Password Confirm</div>
+            <input className="register_input" type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} />
+            </div>
+            <div className='message'>비밀번호는 5자리 이상이여야 합니다.</div>
 
             <br />
-            <button type='submit'>
+            <button className="btn_register" type='submit'>
                 회원가입
             </button>
+             </div>
+           
         </form>
     </div>
     )

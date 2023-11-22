@@ -1,8 +1,10 @@
 import Footer from "../../Others/Footer"
 import "./BoothInfo.css"
+import Header from "../../Others/Header"
 function BoothInfo() {
     return (<div className="BoothInfo">
-        <header></header>
+        {/* <header></header> */}
+        <Header />
         <div className="BoothMap">여기에 부스 배치도 들어가도록</div>
         <div className="AllBooths">
             {'>'} 전체부스

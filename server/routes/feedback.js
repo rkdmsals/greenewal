@@ -1,9 +1,9 @@
 var express = require('express');
-var router = express.Router();
+const FeedbackRouter = express.Router();
 const feedbackController = require('../controllers/feedbackController');
 
-router.get('/', () => {
-    //logic
-});
+FeedbackRouter.get('/read', feedbackController.readAll);
+FeedbackRouter.post('/upload', feedbackController.write);
+FeedbackRouter.delete('/delete', feedbackController.delete);
 
-module.exports = router;
+module.exports = FeedbackRouter;

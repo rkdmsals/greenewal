@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Auth from '../../../hoc/auth';
 import { auth } from '../../../_actions/user_action';
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 
 function LoginPage(props) {
@@ -61,18 +62,28 @@ function LoginPage(props) {
 
 
     return (
-   <div className='LoginPage_background'> 
+   <div className='LoginPage_background'>
+       <div className='LoginPage_title'> Login</div>
        <form className='Login'
             onSubmit={onSubmitHandler}
         >
-           <label>Ewhaian ID</label>
-           <input type="ID" value={ID} onChange={onIDHandler} />
-           <label>Password</label>
-           <input type="password" value={Password} onChange={onPasswordHandler} />
+            <div className='login_container'>
+            <div className='inputset'>
+            <div className='login_label'>Ewhaian ID</div>
+           <input className="ID_input" type="ID" value={ID} onChange={onIDHandler} />
+            </div>
+            <div className='inputset'>
+            <div className='login_label'>Password</div>
+           <input className="Password_input" type="password" value={Password} onChange={onPasswordHandler} />
+            </div>
+          
            <br />
-           <button type='submit'>
-               Login
+           <button className="btn_login" type='submit'>
+               로그인
            </button>
+           <Link className='nav_register' to="/register"> 회원가입 </Link>
+            </div>
+           
        </form>
    </div>
     )
