@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import "./components/utilis/variables.css"
 import LogOut from "./components/views/LogOut";
 import StartPage from "./components/views/StartPage/StartPage";
@@ -30,9 +30,28 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<StartPage />} />
+          <Route
+            path="/*"
+            element={<MainLayout />}
+          />
+        </Routes>
+      </BrowserRouter>
+
+
+
+
+    </div>
+  );
+function MainLayout() {
+    return (
+      <div>
+        {/* MainLayout에서 사용하는 페이지들 */}
         <Header />
         <Routes>
-          <Route exact path="/" element={<StartPage2 />} />
+
+        <Route exact path="/start" element={<StartPage2 />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
           <Route path="/shop/product-detail/:productId" element={<ProductDetail />} />
           <Route exact path="/cart" element={<ShoppingCart />} />
@@ -53,13 +72,9 @@ function App() {
           <Route exact path="/feedback" element={<Feedback />} />
           <Route exact path="/paying" element={<PayingPage />} />
         </Routes>
-      </BrowserRouter>
-
-
-
-
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;

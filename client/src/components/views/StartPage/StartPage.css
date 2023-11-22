@@ -43,7 +43,14 @@
     text-align: left;
     vertical-align: bottom;
 }
-
-.startPage_restart {
+.startPage_restart_container{
+    display: flex;
     margin-top: 10%;
+    align-items: center;
+}
+
+.arr_white{
+    width: 31px;
+    height: 31px;
+    margin-left: 10%;
 }
