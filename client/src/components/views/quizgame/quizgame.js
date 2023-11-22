@@ -9,10 +9,10 @@ const Quizgame = () => {
       
       <div className="titletext">Quiz·Game<br></br> 
       Booth</div>
-      <img src="/img/title.png" alt="bar" className="title-image" />
+      <img src="img/title.png" alt="반짝이" className="title-image" />
 
       <div className="test">
-        <img src="/img/n1.png" alt="" className="n1-image" />
+        <img src="img/n1.png" alt="" className="n1-image" />
         <div className="sort">
             <div className="test-sort">
                 오프라인&온라인
@@ -37,12 +37,12 @@ const Quizgame = () => {
         </div>
         <div className="testmove">
             <div className="testmovetxt">응시하기</div>
-            <img src="/img/testmove.png" alt="" className="testmove-image" />
+            <img src="img/testmove.png" alt="" className="testmove-image" />
         </div>
       </div>
 
       <div className="search">
-            <img src="/img/n2.png" alt="" className="n2-image" />
+            <img src="img/n2.png" alt="" className="n2-image" />
             <div className="sort">
                 <div className="search-sort">
                     오프라인
@@ -65,7 +65,7 @@ const Quizgame = () => {
         </div>  
 
       <div className="match">
-            <img src="/img/n3.png" alt="" className="n3-image" />
+            <img src="img/n3.png" alt="" className="n3-image" />
             <div className="sort">
                 <div className="match-sort">
                     오프라인
