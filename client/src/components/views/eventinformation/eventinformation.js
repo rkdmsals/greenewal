@@ -1,6 +1,5 @@
 import React from 'react';
 import './eventinformationstyle.css'
-import Header from "../../Others/Header"
 import Footer from "../../Others/Footer";
 
 
@@ -21,11 +20,9 @@ const Eventinformation = () => {
                 Green-ewal 행사가 이삼봉홀에서 진행됩니다.
        </div>
       <div className="date">
-        <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
         <div className="ei-title">
-            <div className="title1">
-                행사 일시
-            </div>
+            <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
+            <div className="eitxt">행사 일시</div>
         </div>
 
         <div className="datetext">
@@ -46,11 +43,9 @@ const Eventinformation = () => {
       <img src="/img/eventinformation/line.png" alt="구분선" className="line-image"/>
       
       <div className="map">
-            <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
             <div className="ei-title">
-                <div className="title2">
-                    찾아오시는 길
-                </div>
+                <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
+                <div className="eitxt">찾아오시는 길</div>
             </div>
             <div className="maptext">
                 <div className="maptext1">
@@ -66,22 +61,17 @@ const Eventinformation = () => {
       <img src="/img/eventinformation/line.png" alt="구분선" className="line-image"/>
 
       <div className="help">
-            <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
             <div className="ei-title">
-                <div className="title3">
-                    도움주신 분들
-                </div>
-    
+                <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
+                <div className="eitxt">도움주신 분들</div>
             </div>
-            <img src="hleplogo" alt="헬퍼로고" className="hleplogo-image"/>
+            <img  alt="헬퍼로고" className="hleplogo-image"/>
       </div>
       <img src="/img/eventinformation/line.png" alt="구분선" className="line-image"/>
       <div className="aboutmanagement">
-            <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
             <div className="ei-title">    
-                <div className="title4">
-                    어바웃 운영진
-                </div>
+                <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
+                <div className="eitxt">어바웃 운영진</div>
             </div>   
             <div className="amtext"> 
                 <div className="item-41">
