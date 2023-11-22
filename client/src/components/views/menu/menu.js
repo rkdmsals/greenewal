@@ -1,28 +1,29 @@
 import React, { useState } from 'react';
 import './menustyle.css';
+import Header from "../../Others/Header"
 
 const Menu = () => {
   const [items, setItems] = useState([
     {
       id: 1,
       image: '/img/bp.png',
-      text: '미니 붕어빵',
+      text: '미니 붕어빵 5알',
       pricetext: '2,500₩',
-      contenttext:'제품설명1',
+      contenttext:'겨울엔 붕어빵! 따뜻한 미니 붕어빵 든든하게 먹고 수업 들으러~',
     },
     {
       id: 2,
       image: '/img/dm.png',
-      text: '델리만쥬',
-      pricetext: '2000₩',
-      contenttext:'제품설명1',
+      text: '델리만쥬 5알',
+      pricetext: '2500₩',
+      contenttext:'휴게소, 지하철에서의 추억이 새록새록~ 커스타드 크림이 들어있는 따뜻한 델리만쥬!',
     },
     {
       id: 3,
       image: '/img/hc.png',
       text: '핫초코',
-      pricetext: '1000₩',
-      contenttext:'제품설명1',
+      pricetext: '2500₩',
+      contenttext:'추운 겨울, 따뜻한 핫초코 한 잔으로 몸을 따뜻하게!',
     }
   ]);
 
@@ -33,13 +34,8 @@ const Menu = () => {
   };
 
   return (
+    <div>
     <div className="menu-container">
-      <div>
-        <img src="/img/previous.png" alt="뒤로가기" className="previous-image" />
-        <div className="headertxt">부스 상세보기</div>
-        <img src="/img/bar.png" alt="bar" className="bar-image" />
-      </div>
-      
       <div className="titletext">Food Booth</div>
       <img src="/img/title.png" alt="bar" className="title-image" />
       
@@ -60,6 +56,7 @@ const Menu = () => {
         <div className="selected-item-pricetext">{selectedItem.pricetext}</div>
         <div className="selected-item-contenttext">{selectedItem.contenttext}</div>
       </div>
+    </div>
     </div>
   );
 }

@@ -1,16 +1,14 @@
 import React from 'react';
 import './quizgamestyle.css';
+import Header from "../../Others/Header"
 
 const Quizgame = () => {
   return (
+    <div>
     <div className="quizgame-container">
-      <div>
-        <img src="/img/previous.png" alt="뒤로가기" className="previous-image" />
-        <div className="headertxt">부스 상세보기</div>
-        <img src="/img/bar.png" alt="bar" className="bar-image" />
-      </div>
       
-      <div className="titletext">Quiz·Game<br></br>Booth</div>
+      <div className="titletext">Quiz·Game<br></br> 
+      Booth</div>
       <img src="/img/title.png" alt="bar" className="title-image" />
 
       <div className="test">
@@ -90,6 +88,7 @@ const Quizgame = () => {
                 </div>
             </div>
         </div>  
+    </div>
     </div>
   );
 }
