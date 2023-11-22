@@ -50,12 +50,15 @@ function Header() {
             case "/foods":
             case "/photo":
             case "/quizgame":
-            case "/feedback":
+            case "/renewal":
                 setPageName("부스 상세보기")
                 break;
 
             case "/event":
                 setPageName("이벤트 정보");
+                break;
+            case "/feedback":
+                setPageName("피드백")
                 break;
         }
         if (window.location.pathname.includes("/shop/product-detail")) {

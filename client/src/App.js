@@ -24,6 +24,7 @@ import Photo from "./components/views/photo/photo"
 import Header from "./components/Others/Header";
 import StartPage2 from "./components/views/StartPage/StartPage2";
 import PayingPage from "./components/views/ShoppingPage/PayingPage";
+import Renewal from "./components/views/Renewal/Renewal";
 
 function App() {
 
@@ -44,14 +45,14 @@ function App() {
 
     </div>
   );
-function MainLayout() {
+  function MainLayout() {
     return (
       <div>
         {/* MainLayout에서 사용하는 페이지들 */}
         <Header />
         <Routes>
 
-        <Route exact path="/start" element={<StartPage2 />} />
+          <Route exact path="/start" element={<StartPage2 />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
           <Route path="/shop/product-detail/:productId" element={<ProductDetail />} />
           <Route exact path="/cart" element={<ShoppingCart />} />
@@ -71,6 +72,7 @@ function MainLayout() {
           <Route exact path="/photo" element={<Photo />} />
           <Route exact path="/feedback" element={<Feedback />} />
           <Route exact path="/paying" element={<PayingPage />} />
+          <Route exact path="/renewal" element={<Renewal />} />
         </Routes>
       </div>
     );
