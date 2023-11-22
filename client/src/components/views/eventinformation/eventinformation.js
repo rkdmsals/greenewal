@@ -10,17 +10,16 @@ const Eventinformation = () => {
     <div className="eventinformation-container">
       <div className="titletext">About<br></br>Green-ewal</div>
       <img src="/img/eventinformation/title.png" alt="반짝이" className="ei-title-image" />
-      <div className="main">
+      <div className="eiposter">
             <img src="/img/eventinformation/leftposter.png" alt="poster" className="leftposter-image"/>
             <img src="/img/eventinformation/poster.png" alt="poster" className="poster-image"/>
             <img src="/img/eventinformation/rightposter.png" alt="poster" className="rightposter-image"/>
-            <div className="maintext">
+      </div>  
+      <div className="postertext">
                 새로워진 이화이언!<br></br>
                 이화이언의 리뉴얼을 기념하여<br></br>
                 Green-ewal 행사가 이삼봉홀에서 진행됩니다.
-            </div>
-      </div>  
-      
+       </div>
       <div className="date">
         <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
         <div className="ei-title">
