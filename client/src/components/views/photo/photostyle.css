@@ -1,51 +1,61 @@
 .photo-container{
-  margin-left: 8%;
+  height:100vh;
+/* margin-top: 50px; */
 }
-
 .titletext{
   display: inline-block;
-  margin-top: 5.2%;
-  margin-left: 5.3%;
-  margin-right: 5px;
-  font-size: 250%;
+  margin-top: 20px;
+  margin-right: 2%;
+  font-size: var(--title-font-size);
   font-weight: bold;
   font-family: "kameron-bold";
 }
 .pt-title-image{
   width: 22px;
-  height: 30px;
+  height: 26.565px;
 }
 .photo-item-button {
   border: 1.5px solid #080808;
-  padding: 0px 5% 0px 5%;
-  margin-right: 5%;
-  margin-left: 5%;
+  border-radius: 30px;
+  padding: 0px 20px 0px 20px;
+  margin-right: 13px;
+  margin-top:29px;
   cursor: pointer;
   background-color: #fff;
   font-family: "pretendard";
+}
+.button-m{
+  margin-left: 5%;
 }
 .photo-item-button:hover {
   background-color: #080808;
   color: #fff;
 }
 .selected-item-img {
+  display: block;
+  margin: 0 auto;
   margin-top: 5%;
-  margin-left: 5px;
   width: 89%; 
   height: 89%; 
 }
 .selected-item-text{
+  margin: 0 auto;
   margin-top: 5.4%;
+  width:90%;
   font-size: 125%;
   font-family: "pretendard";
 }
 .selected-item-pricetext {
+  margin: 0 auto;
   margin-top: 3px;
+  width:90%;
   font-size: 113%;
   font-family: "pretendard";
 }
 .selected-item-contenttext {
+  margin: 0 auto;
   color: #7D7D7D;
+  width:90%;
   font-size: 93%;
   margin-top: 14px;
   font-family: "pretendard";

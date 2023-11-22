@@ -55,7 +55,7 @@ const Photo = () => {
       </div>
       <img src="/img/photo/title.png" alt="반짝이" className="pt-title-image" />
       
-      <div>
+      <div className='button-m'>
         {items.map((item) => (
           <button
             key={item.id}
