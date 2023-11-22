@@ -7,7 +7,7 @@ import { auth } from '../../../_actions/user_action';
 import axios from 'axios';
 import "./ShoppingCart.css"
 import CartEach from './CartEach';
-import Header from '../../Others/Header';
+
 function ShoppingCart() {
 
     const navigate = useNavigate();
@@ -22,6 +22,14 @@ function ShoppingCart() {
             setUserId(response.payload.id);
         })
     })
+    useEffect(() => {
+        axios.post('/api/addToCart/read', {
+            userId: userId
+        })
+            .then(response => {
+                console.log(response.data);
+            });
+    }, []);
     const setBillOpen = () => [
 
     ]
