@@ -1,0 +1,89 @@
+.RenewalBack {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 70px;
+    font-family: "pretendard-medium";
+    font-size: 14px;
+}
+
+.RenewalContainer {
+    width: 90%;
+    padding: 15px;
+    background-color: var(--greenewal-mint);
+    margin-bottom: 20px;
+    border-radius: 15px 15px 0 15px;
+}
+
+#yellowGreenC {
+    background-color: var(--greenewal-yellowgreen);
+}
+
+.RenewalTop {
+    /* margin-top: 70px; */
+    display: flex;
+}
+
+.RenewalTxt {
+    color: #7D7D7D;
+    /* font-size: 14px; */
+    margin-top: 14px;
+    margin-bottom: 16px;
+}
+
+.ReConMiddle {
+    display: flex;
+}
+
+.ReConMiddle img {
+    width: 67px;
+    height: auto;
+    margin-right: 16px;
+}
+
+.ReConSub {
+    padding-top: 11px;
+    /* font-size: 14px; */
+}
+
+.ReConTitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.ReContTxt {
+    margin-top: 20px;
+}
+
+.RenewalTitle {
+    font-family: "kameron-bold";
+    font-size: var(--title-font-size);
+    /* width: 50%; */
+    box-sizing: border-box;
+}
+
+.TitleImgRe {
+    width: 22px;
+    height: 30px;
+    padding-bottom: 6px;
+}
+
+.RenewalRoute {
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    width: fit-content;
+    margin: 15px 0 0 auto;
+}
+
+.RenewalRoute span {
+    margin-top: 4px;
+}
+
+.ReRouteImg {
+    background: url("../../../../public//img/common/routeBtn.svg");
+    width: 28px;
+    height: 28px;
+    background-size: cover;
+    margin-left: 13px;
+}

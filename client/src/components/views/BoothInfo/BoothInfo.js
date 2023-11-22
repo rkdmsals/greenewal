@@ -35,7 +35,7 @@ function BoothInfo() {
                     <div className="BoothName">리뉴얼 부스</div>
                     <div >새롭게 단장한 이화이언! 무엇이 달라졌는지 알아볼까요?</div>
                     <div className="BoothTag">#리뉴얼  #이화그린  #이화이언</div>
-                    <button onClick={() => navigate("/feedback")}></button>
+                    <button onClick={() => navigate("/renewal")}></button>
                 </div>
             </div>
             <div className="EachBooth" id="LongTxt">

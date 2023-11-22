@@ -6,6 +6,8 @@ header {
 .BoothInfo {
     font-family: "pretendard-medium";
     font-style: normal;
+    /* 헤더 자리 남겨두기 */
+    padding-top: 50px;
 }
 
 .BoothMap {
