@@ -22,7 +22,8 @@ import Event from "./components/views/event/event"
 import EventInformation from "./components/views/eventinformation/eventinformation"
 import Photo from "./components/views/photo/photo"
 import Header from "./components/Others/Header";
-
+import StartPage2 from "./components/views/StartPage/StartPage2";
+import PayingPage from "./components/views/ShoppingPage/PayingPage";
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={<StartPage />} />
+          <Route exact path="/" element={<StartPage2 />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
           <Route path="/shop/product-detail/:productId" element={<ProductDetail />} />
           <Route exact path="/cart" element={<ShoppingCart />} />
@@ -50,6 +51,7 @@ function App() {
           <Route exact path="/eventinfo" element={<EventInformation />} />
           <Route exact path="/photo" element={<Photo />} />
           <Route exact path="/feedback" element={<Feedback />} />
+          <Route exact path="/paying" element={<PayingPage />} />
         </Routes>
       </BrowserRouter>
 

@@ -1,14 +1,14 @@
-
-.startPage_background{
+.startPage_background {
     background-color: #349A6B;
     width: 100vw;
     height: 100vh;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 
 }
 
-.startPage_container{
+.startPage_container {
     height: 100%;
     background-color: #349A6B;
     display: block;
@@ -19,14 +19,15 @@
 
 }
 
-.clober_white{
+.clober_white {
     position: relative;
     left: 30%;
     width: 275px;
     height: 275px;
     transform: rotate(23deg);
 }
-.startPage_title_container{
+
+.startPage_title_container {
     height: 50%;
     margin-top: 10%;
     margin-bottom: 10%;
@@ -34,13 +35,15 @@
     flex-direction: column;
     justify-content: flex-end;
 }
-.startPage_title{
+
+.startPage_title {
     font-family: "kameron-bold";
     font-size: var(--bigger-title-font-size);
     color: white;
     text-align: left;
     vertical-align: bottom;
 }
-.startPage_restart{
+
+.startPage_restart {
     margin-top: 10%;
 }
