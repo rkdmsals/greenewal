@@ -11,11 +11,8 @@ const cartItemSchema = new mongoose.Schema({
 });
 
 const cartSchema = new mongoose.Schema({
-    cartId: {
-        type: Number,
-    },
     userId: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         ref: 'userInfo',
         required: true,
     },
