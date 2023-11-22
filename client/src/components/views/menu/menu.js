@@ -46,7 +46,7 @@ const Menu = () => {
     <div>
     <div className="menu-container">
       <div className="titletext">Food Booth</div>
-      <img src="/img/menu/title.png" alt="bar" className="title-image" />
+      <img src="/img/menu/title.png" alt="bar" className="m-title-image" />
       
       <div>
         {items.map((item) => (

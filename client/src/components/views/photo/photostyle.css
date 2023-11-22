@@ -1,18 +1,6 @@
 .photo-container{
-  margin-top:8.4%;
   margin-left: 8%;
 }
-.headertxt{
-  margin-left: 25%;
-  margin-right: 25%;
-}
-
-
-.headertxt{
-  display: inline-block;
-  font-weight: bold;
-}
-
 
 .titletext{
   display: inline-block;
@@ -21,8 +9,9 @@
   margin-right: 5px;
   font-size: 250%;
   font-weight: bold;
+  font-family: "kameron-bold";
 }
-.title-image{
+.pt-title-image{
   width: 22px;
   height: 30px;
 }
@@ -33,6 +22,7 @@
   margin-left: 5%;
   cursor: pointer;
   background-color: #fff;
+  font-family: "pretendard";
 }
 .photo-item-button:hover {
   background-color: #080808;
@@ -47,13 +37,16 @@
 .selected-item-text{
   margin-top: 5.4%;
   font-size: 125%;
+  font-family: "pretendard";
 }
 .selected-item-pricetext {
   margin-top: 3px;
   font-size: 113%;
+  font-family: "pretendard";
 }
 .selected-item-contenttext {
   color: #7D7D7D;
   font-size: 93%;
   margin-top: 14px;
+  font-family: "pretendard";
 }
