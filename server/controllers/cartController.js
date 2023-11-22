@@ -4,17 +4,9 @@ const { Cart } = require('../models/Cart');
 // 장바구니에 아이템 추가
 module.exports.addToCart = async (req, res) => {
     try {
-        const userId = req.body && req.body.userId;
-        const productId = req.body && req.body.productId;
-        const quantity = req.body && req.body.quantity;
-
-        if (!userId || !productId || !quantity) {
-            return res.status(400).json({ error: '요청이 올바르지 않습니다.' });
-        }
-        console.log("여기까지");
-        /*const userId = req.body.userId;
+        const userId = req.body.userId;
         const productId = req.body.productId;
-        const quantity = req.body.quantity;*/
+        const quantity = req.body.quantity;
 
         // 장바구니가 있는지 확인하고 없으면 새로 생성
         let cart = await Cart.findOne({ userId: userId });
