@@ -9,9 +9,10 @@ function Header() {
     const { pathname } = useLocation()
 
     useEffect(() => {
+        //pathname 가져오는 코드 
         switch (pathname) {
-            case "/":
-                setPageName("첫 페이지")
+            case "/start":
+                setPageName("Green-ewal")
                 break;
             case "/login":
                 setPageName("로그인")
@@ -36,15 +37,16 @@ function Header() {
                 setPageName("지난 굿즈 상점")
                 break;
             case "/cart":
+            case "/paying":
                 setPageName("장바구니");
                 break;
-
 
             case "/testStart":
             case "/test":
             case "/testAnswers":
                 setPageName("이화이언 만점고사")
                 break;
+
             case "/foods":
             case "/photo":
             case "/quizgame":
@@ -77,7 +79,7 @@ function Header() {
 
         <div className="BackBtn" onClick={goBack}></div>
         <div className="PageName">{pageName}</div>
-        <img src="/img/menu_navigation.png" alt='sidebaricon' className="sidebaricon"
+        <img src="/img/Header/menu_navigation.png" alt='sidebaricon' className="sidebaricon"
             onClick={() => {
                 setShowSideBar(true);
                 setTimeout(() => {
