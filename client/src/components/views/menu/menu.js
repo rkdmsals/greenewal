@@ -6,21 +6,30 @@ const Menu = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      image: '/img/bp.png',
+      image: '/img/menu/bp.png',
       text: '미니 붕어빵 5알',
       pricetext: '2,500₩',
-      contenttext:'겨울엔 붕어빵! 따뜻한 미니 붕어빵 든든하게 먹고 수업 들으러~',
+      contenttext: (
+        <div style={{ whiteSpace: 'pre-line' }}>
+          겨울엔 붕어빵!<br /> 따뜻한 미니 붕어빵 든든하게 먹고 수업 들으러~
+        </div>
+      ),
+      
     },
     {
       id: 2,
-      image: '/img/dm.png',
+      image: '/img/menu/dm.png',
       text: '델리만쥬 5알',
       pricetext: '2500₩',
-      contenttext:'휴게소, 지하철에서의 추억이 새록새록~ 커스타드 크림이 들어있는 따뜻한 델리만쥬!',
+      contenttext: (
+        <div style={{ whiteSpace: 'pre-line' }}>
+          휴게소, 지하철에서의 추억이 새록새록~<br />커스타드 크림이 들어있는 따뜻한 델리만쥬!
+        </div>
+      ),
     },
     {
       id: 3,
-      image: '/img/hc.png',
+      image: '/img/menu/hc.png',
       text: '핫초코',
       pricetext: '2500₩',
       contenttext:'추운 겨울, 따뜻한 핫초코 한 잔으로 몸을 따뜻하게!',
@@ -37,7 +46,7 @@ const Menu = () => {
     <div>
     <div className="menu-container">
       <div className="titletext">Food Booth</div>
-      <img src="/img/title.png" alt="bar" className="title-image" />
+      <img src="/img/menu/title.png" alt="bar" className="title-image" />
       
       <div>
         {items.map((item) => (

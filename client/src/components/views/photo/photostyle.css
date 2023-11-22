@@ -7,35 +7,28 @@
   margin-right: 25%;
 }
 
-.previous-image{
-  display: inline-block;
-  width: 7.5%;
-  height: 5%;
-}
+
 .headertxt{
   display: inline-block;
   font-weight: bold;
 }
-.bar-image{
-  display: inline-block;
-  width: 5%;
-  height: 5%;
-}
+
+
 .titletext{
   display: inline-block;
   margin-top: 5.2%;
   margin-left: 5.3%;
+  margin-right: 5px;
   font-size: 250%;
   font-weight: bold;
 }
 .title-image{
-  width: 6%;
-  height: 7%;
+  width: 22px;
+  height: 30px;
 }
 .photo-item-button {
   border: 1.5px solid #080808;
   padding: 0px 5% 0px 5%;
-  margin-top: 10%;
   margin-right: 5%;
   margin-left: 5%;
   cursor: pointer;
