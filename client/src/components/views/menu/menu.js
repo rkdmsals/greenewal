@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './menustyle.css';
-import Header from "../../Others/Header"
 
 const Menu = () => {
   const [items, setItems] = useState([

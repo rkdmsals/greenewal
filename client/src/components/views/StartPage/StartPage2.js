@@ -30,6 +30,7 @@ function StartPage2() {
 
     return (
         <div className="GrnPage">
+        <div className="GrnPage_container">
         <div className="GrnPage_Title_container">
             <div className="Grn_img_container">
                 <div className="GrnTitle">Ewahaian</div>
@@ -72,6 +73,7 @@ function StartPage2() {
             </div>
             <div className="Grn_line"></div>
             </div>
+        </div>
         </div>
     </div>
     )

@@ -25,9 +25,6 @@ const Feedback = () => {
                 navigate('/login');
             }
         })
-        // axios.post("/api/login", (req, res) => {
-        //     console.log(res)
-        // })
 
     }, [])
     useEffect(() => {

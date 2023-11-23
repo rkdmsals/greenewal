@@ -1,6 +1,5 @@
 import React from 'react';
 import './eventstyle.css';
-import Header from "../../Others/Header"
 
 const Event = () => {
   return (

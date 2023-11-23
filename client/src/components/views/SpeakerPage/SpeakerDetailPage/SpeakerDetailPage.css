@@ -4,7 +4,7 @@ html{
 
 .speakerDetailPage_background{
     display: block;
-    margin: 10% 10%;
+    margin: 17% 10% 10% 10%;
     font-size: var(--content-font-size);
     text-align: center;
     color: var(--toneDown-black);
@@ -69,19 +69,29 @@ html{
 
 .speaker_detail_svg1{
     position: absolute;
-    top: 13%;
+    top: 17%;
     left: 5%;
 
 }
-
+.speaker_detail_img1{
+    width:140px;
+}
 .speaker_detail_svg2{
     position: absolute;
-    top: 11%;
-    left: 42%;
+    top: 12%;
+    left: 44%;
 }
 
 .speaker_detail_svg3{
     position: absolute;
-    top: 13%;
+    top: 19%;
     left: 5%;
+}
+
+/* desktop */
+@media screen and (min-width:800px) {
+    .speakerPage_background {
+        width: 500px;
+        margin: 0 auto;
+    }
 }
