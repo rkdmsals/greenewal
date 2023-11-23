@@ -1,4 +1,4 @@
-function CartEach({ values }) {
+function CartEach(values) {
 
     const productId = values.productId;
     const quantity = values.quantity;
