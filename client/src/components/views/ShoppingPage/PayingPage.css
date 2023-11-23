@@ -3,6 +3,7 @@
     font-size: 13px;
     margin: 0 auto;
     width: 90%;
+    padding-top: 50px;
 }
 
 .PayingTitle {
@@ -12,8 +13,30 @@
 }
 
 .PayContainer {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     margin-top: 20px;
+}
+
+.PayContainer img {
+    width: 100%;
+    height: auto;
+}
+
+.PayingInfo div {
+    margin-bottom: 10px;
+}
+
+.PayingInfo input {
+    margin-left: 19px;
+    border: 1px solid var(--toneDown-black);
+}
+
+.PayingInfo span {
+    display: inline-block;
+    width: 76px;
+    position: relative;
+    right: 0;
+    text-align: end;
 }
 
 .BuyingEach {
@@ -33,6 +56,8 @@
 
 .PayingTxt {
     line-height: 2;
+    margin-bottom: 13px;
+    box-sizing: border-box;
 }
 
 .PayCheckBtn {
@@ -46,4 +71,5 @@
     vertical-align: middle;
     box-sizing: border-box;
     padding-top: 24px;
+    margin-bottom: 20px;
 }
