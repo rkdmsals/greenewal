@@ -31,9 +31,11 @@ function PayingPage() {
                 * 송금 확인 버튼을 누르지 않으면 정보가 저장되지 않습니다.<br />
                 * 송금하신 후, 꼭 송금 확인 버튼을 눌러주세요
             </div>
-            <div>
+            <div className="PayingInfo">
                 <div><span>입금자명</span><input type="text" title="입금자명" ></input></div>
                 <div><span>입금 시각</span><input type="text" title="입금 시각"></input></div>
+                <div><span>환불계좌</span><input type="text" title="환불계좌" ></input></div>
+                <div><span>환불계좌 은행</span><input type="text" title="환불계좌 은행"></input></div>
             </div>
         </div>
 
@@ -42,7 +44,7 @@ function PayingPage() {
             <div className="PayingTitle">장소/시간 안내</div>
             <div className="PayingTxt">수령 장소: ECC 이삼봉홀 굿즈 부스<br />
                 수령 가능 시간: 11/27(월) 9:00-17:00</div>
-            <img></img>
+            <img src="/img/eventinformation/map.png"></img>
         </div>
 
         <div className="PayCheckBtn">송금 확인</div>
