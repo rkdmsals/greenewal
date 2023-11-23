@@ -46,8 +46,14 @@
 }
 
 .eventep{
-    margin: 15px 0px 0px 15px;
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 15px;
     font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
     font-family: "pretendard";
 }
 
@@ -96,7 +102,8 @@
     margin-top: 5%;
     padding-bottom: 20px;
     border-radius: 5% 5% 0px 5%;
-    background-color: #C5E9BF
+    background-color: #C5E9BF;
+    font-family: "pretendard";
 }
 
 .inssupl{
@@ -108,6 +115,7 @@
     padding-bottom: 72px;
     border-radius: 5% 5% 0px 5%;
     background-color: #C0DFCC;
+    font-family: "pretendard";
 }
 .instarlink{
     float:right;
