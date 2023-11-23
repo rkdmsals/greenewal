@@ -1,4 +1,7 @@
-function CartEach() {
+function CartEach({ values }) {
+
+    const productId = values.productId;
+    const quantity = values.quantity;
     return (
         <div className='CartEach'>
             <img className="CartProductImg"></img>
@@ -9,8 +12,9 @@ function CartEach() {
             <div className="DelBtn"></div>
             <div className="CartNum">
                 <div className="MinusBtn"></div>
-                01
+                {quantity}
                 <div className="PlusBtn"></div>
+                {/* 01 */}
             </div>
         </div>
     )
