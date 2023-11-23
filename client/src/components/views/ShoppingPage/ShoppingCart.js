@@ -15,7 +15,7 @@ function ShoppingCart() {
     const location = useLocation();
     const dispatch = useDispatch();
     const [userId, setUserId] = useState("");
-    const [cartItems, setCartItems] = useState([{ "productId": 0, "quantity": 1 }]);
+    const [cartItems, setCartItems] = useState([{ "productId": 1, "quantity": 0 }]);
     // const [isCartItems, setIsCartItems] = useState(false);
     // const [theArray, setTheArray] = useState({[]});
     useEffect(() => {
@@ -38,63 +38,68 @@ function ShoppingCart() {
             axios.get(`/api/addToCart/read/${userId}`)
                 .then(response => {
                     // console.log(response.data.productList[0])
+                    var productListCopy = [{ "productId": 1, "quantity": 3 }];
+                    response.data.productList ? response.data.productList.map((a, idx) => {
 
-                    return setCartItems(response.data.productList)
+                        productListCopy[idx] = Object.assign({}, a);
 
-                })
+                    }) : console.log("productListCopy", productListCopy);
+                    return setCartItems(productListCopy);
+                }
+                )
                 .catch(err => {
                     console.error('장바구니 불러오기 중 오류 발생', err);
                 });
         }
     }, [userId]);
 
+    useEffect(() => {
+        return showCartList;
+        // showCartList();
+        // return calQuantity, callPrice;
+    }, [cartItems])
+
+    const showCartList = () => {
+
+        // cartItems ? cartItems.map((a) => {
+        //     $(".CartContainer").append(<CartEach productId={2} quantity={2} />)
+        //     return <CartEach productId={a.productId} quantity={a.quantity} />
+        // }) : console.log("안됨")
+
+    }
     var total_price = 0, total_quantity = 0;
-    const callPrice = () => {
-        total_price = 0;
-        cartItems.map((a) => {
-            total_price += a.quantity;//이거 계산하려면 가격정보도 DB에 있어야 할 듯?
-        })
-        return total_price;
-    }
-    const calQuantity = () => {
-        total_quantity = 0;
-        cartItems.map((a) => {
-            total_quantity += a.quantity;
-        })
-        return total_quantity;
-    }
+    // const callPrice = () => {
+    //     total_price = 0;
+    //     cartItems.map((a) => {
+    //         total_price += a.quantity;//이거 계산하려면 가격정보도 DB에 있어야 할 듯?
+    //     })
+    //     return total_price;
+    // }
+    // const calQuantity = () => {
+    //     total_quantity = 0;
+    //     cartItems.map((a) => {
+    //         total_quantity += a.quantity;
+    //     })
+    //     return total_quantity;
+    // }
     const setBillOpen = () => [
         //결제창 열도록 navigate
     ]
 
-    useEffect(() => {
-        // showCartList();
-        return calQuantity, callPrice;
-    }, [cartItems])
 
-    // const showCartList = () => {
-
-    //     cartItems ? cartItems.map((a, idx) => {
-    //         $(".CartContainer").append()
-    //         return <CartEach productId={a.productId} quantity={a.quantity} />
-    //     }) : console.log("안됨")
-
-    // }
-
+    // $(".CartContainer").append(<CartEach productId={3} quantity={3} />)
     return (
         <div className='Cart'>
 
             {/* <Header /> */}
             {/* 카트에 들어있는 개수만큼 CartEach 반환해서 사용하면 됨 */}
-            {/* {setTimeout(() => { */}
             {console.log("cartItems:", cartItems)}
-            (<div className='CartContainer'>
-                {cartItems.map((a) => {
-                    <CartEach productId={a.productId} quantity={a.quantity} />
-                })}
-            </div>)
-            {/* }, 30000)} */}
 
+            <div className='CartContainer'>
+                {cartItems ? cartItems.map((a) => {
+                    return <CartEach productId={a.productId} quantity={a.quantity} />
+                }) : showCartList()}
+            </div>
             <div className='ShopBill' onClick={setBillOpen}>
                 <div className='BillLine1'>
                     <span>결제할 상품 </span>
