@@ -16,8 +16,10 @@ function ShoppingCart() {
     const dispatch = useDispatch();
     const [userId, setUserId] = useState("");
     const [cartItems, setCartItems] = useState([{ "productId": 1, "quantity": 0 }]);
+
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalQuantity, setTotalQuantity] = useState(0);
+
     useEffect(() => {
         dispatch(auth()).then(response => {
             console.log(response);
@@ -58,6 +60,7 @@ function ShoppingCart() {
         // showCartList();
         return calQuantity, callPrice
 
+
     }, [cartItems])
 
     const showCartList = () => {
@@ -68,6 +71,7 @@ function ShoppingCart() {
         // }) : console.log("안됨")
 
     }
+
     const callPrice = () => {
         var price = 0;
         cartItems.map((a) => {
