@@ -14,26 +14,35 @@ function ShoppingCart() {
     const location = useLocation();
     const dispatch = useDispatch();
     const [userId, setUserId] = useState("");
+    const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
         dispatch(auth()).then(response => {
-            console.log(response.payload.name);
-            console.log(response.payload.id);
-            setUserId(response.payload.id);
-        })
-    })
+            console.log(response);
 
-    /*
-    useEffect(() => {
-        axios.post('/api/addToCart/read', {
-            userId: userId
+            if (response.payload.isAuth) {
+                setUserId(response.payload.id);
+                console.log(response.payload.id);
+                return;
+            }
+            else {
+                navigate('/login');
+            }
         })
-            .then(response => {
-                console.log(response.data);
-            });
     }, []);
 
-    */
+    useEffect(() => {
+        if (userId) {
+            axios.get(`/api/addToCart/read/${userId}`)
+                .then(response => {
+                    setCartItems(response.data.cart.productList);
+                })
+                .catch(err => {
+                    console.error('장바구니 불러오기 중 오류 발생', err);
+                });
+        }
+    }, [userId]);
+
     const setBillOpen = () => [
 
     ]
