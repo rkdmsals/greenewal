@@ -6,7 +6,8 @@ import productTotalData from "./productsTotal.json";
 import products21Data from "./products21.json";
 import products22Data from "./products22.json"
 import productsPastData from "./productsPast.json";
-
+import { useDispatch } from 'react-redux';
+import { auth } from '../../../_actions/user_action';
 import './ProductDisplay.css';
 
 function ProductDisplay() {
@@ -36,6 +37,7 @@ function ProductDisplay() {
         navigate(`/shop/product-detail/${productId}`, { state: { product: clickedProduct } });
     };
 
+    const dispatch = useDispatch();
 
     return (
         <div className="ProductDisplay_background">
@@ -82,7 +84,15 @@ function ProductDisplay() {
                     ))}
                 </div>
                 <div className="ProductDisplay_cart_button_container">
-                    <button className="ProductDisplay_cart_button" onClick={() => navigate('/cart')}>
+                    <button className="ProductDisplay_cart_button" onClick={() => {
+                        dispatch(auth()).then(response => {
+                            console.log(response);
+                            if (response.payload.isAuth) {
+                                // setUserId(response.payload.id);
+                                navigate(`/cart/${response.payload.id}`);
+                            }
+                        })
+                    }}>
                         장바구니 가기
                     </button>
                 </div>
