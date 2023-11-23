@@ -7,6 +7,8 @@ module.exports.addToCart = async (req, res) => {
         const userId = req.body.userId;
         const productId = req.body.productId;
         const quantity = req.body.quantity;
+        const title = req.body.title;
+        const price = req.body.price;
 
         // 장바구니가 있는지 확인하고 없으면 새로 생성
         let cart = await Cart.findOne({ userId: userId });
@@ -21,7 +23,7 @@ module.exports.addToCart = async (req, res) => {
             if (existingProductIndex !== -1) {
                 cart.productList[existingProductIndex].quantity += quantity || 1;
             } else {
-                cart.productList.push({ productId, quantity: quantity || 1 });
+                cart.productList.push({ productId, quantity: quantity || 1, title: title, price: price });
             }
         }
 

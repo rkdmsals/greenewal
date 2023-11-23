@@ -8,9 +8,12 @@ const purchaseItemSchema = new mongoose.Schema({
         type: Number,
         default: 1,
     },
-    // price: {
-    //     type: Number,
-    // }
+    title: {
+        type: String,
+    },
+    price: {
+        type: Number,
+    }
 });
 
 const purchaseSchema = new mongoose.Schema({
