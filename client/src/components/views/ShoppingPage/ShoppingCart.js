@@ -16,8 +16,10 @@ function ShoppingCart() {
     const dispatch = useDispatch();
     const [userId, setUserId] = useState("");
     const [cartItems, setCartItems] = useState([{ "productId": 1, "quantity": 0 }]);
-    // const [isCartItems, setIsCartItems] = useState(false);
-    // const [theArray, setTheArray] = useState({[]});
+
+    const [totalPrice, setTotalPrice] = useState(0);
+    const [totalQuantity, setTotalQuantity] = useState(0);
+
     useEffect(() => {
         dispatch(auth()).then(response => {
             console.log(response);
@@ -54,9 +56,11 @@ function ShoppingCart() {
     }, [userId]);
 
     useEffect(() => {
-        return showCartList;
+        // return showCartList;
         // showCartList();
-        // return calQuantity, callPrice;
+        return calQuantity, callPrice
+
+
     }, [cartItems])
 
     const showCartList = () => {
@@ -67,21 +71,21 @@ function ShoppingCart() {
         // }) : console.log("안됨")
 
     }
-    var total_price = 0, total_quantity = 0;
-    // const callPrice = () => {
-    //     total_price = 0;
-    //     cartItems.map((a) => {
-    //         total_price += a.quantity;//이거 계산하려면 가격정보도 DB에 있어야 할 듯?
-    //     })
-    //     return total_price;
-    // }
-    // const calQuantity = () => {
-    //     total_quantity = 0;
-    //     cartItems.map((a) => {
-    //         total_quantity += a.quantity;
-    //     })
-    //     return total_quantity;
-    // }
+
+    const callPrice = () => {
+        var price = 0;
+        cartItems.map((a) => {
+            price = price + a.quantity;//이거 계산하려면 가격정보도 DB에 있어야 할 듯?
+        })
+        return setTotalPrice(price);
+    }
+    const calQuantity = () => {
+        var quantity = 0;
+        cartItems.map((a) => {
+            quantity = quantity + a.quantity;
+        })
+        return setTotalQuantity(quantity);
+    }
     const setBillOpen = () => [
         //결제창 열도록 navigate
     ]
@@ -103,11 +107,11 @@ function ShoppingCart() {
             <div className='ShopBill' onClick={setBillOpen}>
                 <div className='BillLine1'>
                     <span>결제할 상품 </span>
-                    <span style={{ color: "#7D7D7D" }}>총 {total_quantity}개</span></div>
+                    <span style={{ color: "#7D7D7D" }}>총 {totalQuantity}개</span></div>
                 <div className='BillLine2'>
                     <span style={{ fontSize: "14px" }}>총 결제 금액  {">"}</span>
-                    <span>{total_price}w</span></div>
-                <button>결제하기</button>
+                    <span>{totalPrice}w</span></div>
+                <button onClick={() => navigate("/paying")}>결제하기</button>
             </div>
         </div>)
 
