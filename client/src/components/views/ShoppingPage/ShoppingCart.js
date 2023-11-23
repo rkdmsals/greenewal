@@ -22,6 +22,8 @@ function ShoppingCart() {
             setUserId(response.payload.id);
         })
     })
+
+    /*
     useEffect(() => {
         axios.post('/api/addToCart/read', {
             userId: userId
@@ -30,6 +32,8 @@ function ShoppingCart() {
                 console.log(response.data);
             });
     }, []);
+
+    */
     const setBillOpen = () => [
 
     ]
