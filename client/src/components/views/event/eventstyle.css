@@ -32,7 +32,9 @@
     display: inline-block;
     margin: 0 auto;
     margin-left: 16px;
+    vertical-align: 9px;
 }
+
 .sort{
     font-size: 14px;
     font-weight: 550;

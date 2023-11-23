@@ -14,15 +14,17 @@ const Event = () => {
       </div>
 
       <div className="stamp">
-        <img src="/img/event/n1.png" alt="" className="n1-image" />
-        <div className="e-t-txt">
-            <div className="sort">
-                오프라인
-            </div>
-            <div className="event-title">
-                모아모아 도장판
-            </div>
-        </div>    
+            <div className="e-up">    
+                <img src="/img/event/n1.png" alt="" className="n1-image" />
+                <div className="e-t-txt">
+                    <div className="sort">
+                        오프라인
+                    </div>
+                    <div className="event-title">
+                        모아모아 도장판
+                    </div>
+                </div>    
+            </div>    
         <div className="eventep">
             <div className="stamp-eventep">
             퀴즈 부스와 오프라인 부스에서 도장을 모으면<br></br>
@@ -32,15 +34,17 @@ const Event = () => {
       </div>
 
       <div className="bestdresser">
-            <img src="/img/event/n2.png" alt="" className="n2-image" />
-            <div className="e-t-txt">
-                <div className="sort">
-                    오프라인
-                </div>
-                <div className="event-title">
-                    베스트 드레서
-                </div>
-            </div>    
+            <div className="e-up"> 
+                <img src="/img/event/n2.png" alt="" className="n2-image" />
+                <div className="e-t-txt">
+                    <div className="sort">
+                        오프라인
+                    </div>
+                    <div className="event-title">
+                        베스트 드레서
+                    </div>
+                </div>    
+            </div>
             <div className="eventep">
                 <div className="bestdresser-eventep">
                     이화이언의 뉴 컬러, 이화그린!<br></br>
@@ -50,18 +54,23 @@ const Event = () => {
         </div>  
 
       <div className="inssupl">
-            <img src="/img/event/n3.png" alt="" className="n3-image" />
-            <div className="e-t-txt">
-                <div className="sort">
-                    오프라인&온라인   
-                </div>
-                <div className="event-title">
-                    인스타 스토리 업로드
-                </div>
-            </div>    
+            <div className="e-up"> 
+                <img src="/img/event/n3.png" alt="" className="n3-image" />
+                <div className="e-t-txt">
+                    <div className="sort">
+                        오프라인&온라인   
+                    </div>
+                    <div className="event-title">
+                        인스타 스토리 업로드
+                    </div>
+                </div>  
+            </div>      
             <div className="eventep">
                 <div className="inssupl-eventep">
-                    이벤트 설명. 이벤트 설명. 이벤트 설명. 이벤트 설명.이벤트 설명. 이벤트 설명. 이벤트 설명. 이벤트 설명.
+                교내를 지나다니는 ‘버섯이’를 찾아라!<br></br>
+                이화이언의 마스코트 ‘버섯이’와 함께 찍은 사진이나<br></br>
+                ’버섯이’를 목격했다는 인증샷을<br></br>
+                인스타그램 스토리에 이화이언을 태그하여 업로드!
                 </div>
             </div>
             <div className="instarlink">   
