@@ -1,22 +1,97 @@
 import "./PayingPage.css"
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { auth } from '../../../_actions/user_action';
+import $ from "jquery"
 
 function PayingPage() {
     var goods_name = "2022 배꽃정원 굿즈 - 말랑 비즈 인형";//굿즈 이름
     var goods_num = 2//굿즈 수량
     var goods_price = 14000//굿즈 가격
     var total_price = 214000 //총 가격
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [userId, setUserId] = useState("");
+    const [cartItems, setCartItems] = useState([{ "productId": 1, "quantity": 0 }]);
+
+    useEffect(() => {
+        dispatch(auth()).then(response => {
+            // console.log(response);
+
+            if (response.payload.isAuth) {
+                setUserId(response.payload.id);
+                // console.log(response.payload.id);
+                return;
+            }
+            else {
+                navigate('/login');
+            }
+        })
+    }, []);
+
+    /*장바구니 DB에 담긴 물품들 가져오는 코드 */
+    useEffect(() => {
+        if (userId) {
+            axios.get(`/api/addToCart/read/${userId}`)
+                .then(response => {
+                    // console.log(response.data.productList[0])
+                    var productListCopy = [{ "productId": 1, "quantity": 3 }];
+                    response.data.productList ? response.data.productList.map((a, idx) => {
+
+                        productListCopy[idx] = Object.assign({}, a);
+
+                    }) : console.log("productListCopy", productListCopy);
+                    return setCartItems(productListCopy);
+                })
+                .catch(err => {
+                    console.error('장바구니 불러오기 중 오류 발생', err);
+                });
+        }
+    }, [userId]);
+
+
+
+    const DoPurchase = () => {
+        //장바구니 DB에서 똑같이 읽어와서 다르게 보여주고,
+        //유저 정보를 post해주면 됨!
+        const orderName = document.getElementById('OrderName').value;
+        const orderTime = document.getElementById('OrderTime').value;
+        const refundBank = document.getElementById('RefundBank').value;
+        const refundAccount = document.getElementById('RefundAccount').value;
+
+        console.log("값은", orderName, orderTime, refundBank, refundAccount)
+
+        axios.post('/api/addToCart/uploadPurchase', {
+            userId: userId,
+            productList: cartItems,
+            orderName: orderName,
+            orderTime: orderTime,
+            refundBank: refundBank,
+            refundAccount: refundAccount,
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
     return (<div className="PayingBack">
         {/* 구매 내역 */}
         <div className="PayContainer BuyingList">
             <div className="PayingTitle">구매 내역</div>
-            <div className="BuyingEach">
-                <div>{goods_name}({goods_num})</div>
-                <div>{goods_price}￦</div>
-            </div>
-            <div className="BuyingEach">
-                <div>{goods_name}({goods_num})</div>
-                <div>{goods_price}￦</div>
-            </div>
+            {cartItems ? cartItems.map((a) => {
+                return (
+                    <div className="BuyingEach">
+                        <div>{goods_name}({a.quantity})</div>
+                        <div>{goods_price}￦</div>
+                    </div>)
+            }) : console.log("전부 됨")}
+
             {/* 굿즈 다 반환하고 나서 */}
             <div className="PayTotal">
                 <div>총 결제 금액 {">"}</div>
@@ -26,16 +101,16 @@ function PayingPage() {
         {/* 계좌 송금 안내 */}
         <div className="PayContainer">
             <div className="PayingTitle">계좌 송금 안내</div>
-            <div className="PayingTxt">신한 000-0000-000000 (이화이언)으로
+            <div className="PayingTxt">신한 100-026-784849 (예금주명:이화이언)으로
                 위의 금액을 송금후, 아래 정보를 작성해주세요.<br />
                 * 송금 확인 버튼을 누르지 않으면 정보가 저장되지 않습니다.<br />
                 * 송금하신 후, 꼭 송금 확인 버튼을 눌러주세요
             </div>
             <div className="PayingInfo">
-                <div><span>입금자명</span><input type="text" title="입금자명" ></input></div>
-                <div><span>입금 시각</span><input type="text" title="입금 시각"></input></div>
-                <div><span>환불계좌</span><input type="text" title="환불계좌" ></input></div>
-                <div><span>환불계좌 은행</span><input type="text" title="환불계좌 은행"></input></div>
+                <div><span>입금자명</span><input type="text" id="OrderName" ></input></div>
+                <div><span>입금 시각</span><input type="text" id="OrderTime"></input></div>
+                <div><span>환불계좌</span><input type="text" id="RefundAccount" ></input></div>
+                <div><span>- 은행</span><input type="text" id="RefundBank"></input></div>
             </div>
         </div>
 
@@ -47,7 +122,7 @@ function PayingPage() {
             <img src="/img/eventinformation/map.png"></img>
         </div>
 
-        <div className="PayCheckBtn">송금 확인</div>
+        <div className="PayCheckBtn" onClick={DoPurchase}>송금 확인</div>
     </div>)
 }
 
