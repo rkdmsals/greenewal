@@ -1,4 +1,4 @@
-html{
+html {
     background-color: var(--background-yellow);
 }
 
@@ -28,7 +28,7 @@ html{
 }
 
 .ticket {
-    
+
     margin: 0 auto;
     width: 100%;
     height: auto;
@@ -36,14 +36,13 @@ html{
 }
 
 .nav_speaker {
-    width: 93%;
+    width: 100%;
     height: auto;
     margin-top: 10px;
 }
 
-.nav_speaker{
-    padding: 10px 10px;
-
+.nav_speaker {
+    /* padding: 10px 10px; */
     display: block;
     margin: 10px auto 0;
     font-size: 18px;
