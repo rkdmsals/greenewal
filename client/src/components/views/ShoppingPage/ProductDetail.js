@@ -24,6 +24,8 @@ function ProductDetail() {
                 setUserId(response.payload.id);
                 console.log(response.payload.id);
                 return
+            } else {
+                navigate('/login');
             }
             /*else {
                 navigate('/login');
@@ -33,10 +35,9 @@ function ProductDetail() {
     }, []);
 
     const addToCart = () => {
-        if (!userId) {
-            navigate('/login');
-            return;
-        }
+        // if (!userId) {
+        //     navigate('/login');
+        // }
 
         console.log('userid: ' + userId + ' product: ' + product.id);
         axios.post('/api/addToCart/add', {
@@ -55,6 +56,8 @@ function ProductDetail() {
             .catch(error => {
                 console.error('장바구니 요청 중 오류 발생:', error);
             });
+
+
     };
 
     /*

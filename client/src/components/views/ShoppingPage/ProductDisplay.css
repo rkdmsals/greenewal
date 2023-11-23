@@ -16,6 +16,7 @@
     font-family: "kameron-bold";
     font-size: 40px;
     font-weight: bold;
+    padding-top: 20px;
 }
 
 .ProductDisplay_top_button_container {
@@ -72,6 +73,7 @@
     /* 3개의 열 */
     grid-gap: 20px;
     /* 열과 행 사이의 간격 설정 */
+    margin-bottom: 100px;
 }
 
 .ProductDisplay_content_container {
@@ -134,4 +136,7 @@
     margin-top: 5%;
     margin-bottom: 5%;
     font-size: 16px;
+    position: fixed;
+    bottom: 0px;
+    left: 5%;
 }
