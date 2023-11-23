@@ -1,7 +1,7 @@
 function CartEach() {
     return (
         <div className='CartEach'>
-            <img></img>
+            <img className="CartProductImg"></img>
             <div className='CartRight'>
                 <div style={{ fontWeight: "700" }}>스티커팩</div>
                 <div>1000</div>

@@ -1,5 +1,6 @@
 .Cart {
     font-family: "pretendard-medium";
+    padding-top: 50px;
 }
 
 .CartEach {
@@ -17,6 +18,8 @@
     width: 90px;
     height: 90px;
     /* padding: 20px 0px; */
+    mask: url(../../../../public/img/Booth/cloberVec.svg);
+    mask-size: cover;
 }
 
 .CartRight {

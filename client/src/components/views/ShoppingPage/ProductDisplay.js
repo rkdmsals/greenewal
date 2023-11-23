@@ -55,9 +55,9 @@ function ProductDisplay() {
                     {currentDisplay.map((product) => (
                         <div key={product.id} className="ProductDisplay_content_container"
                             onClick={() => handleProductClick(product.id)}>
-                            <div className="ProductDisplay_content_img_container">
-                                임시이미지
-                            </div>
+                            <img className="ProductDisplay_content_img_container">
+
+                            </img>
                             <div className="ProductDisplay_content_detail_container">
                                 <div className="ProductDisplay_content_left_container">
                                     <div className='ProductDisplay_content_title'>

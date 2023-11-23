@@ -33,13 +33,14 @@ module.exports.addToCart = async (req, res) => {
 };
 
 
-/*
-exports.getCart = async (req, res) => {
+
+module.exports.getCart = async (req, res) => {
     try {
-        const { userId } = req.params;
+        // const { userId } = req.params;
+        const userId = req.body.userId;
 
         // 해당 유저의 장바구니를 찾아서 반환
-        const cart = await Cart.findOne({ userId }).populate('productList.productId');
+        const cart = await Cart.findOne({ userId: userId }).populate('productList.productId');
 
         if (!cart) {
             return res.status(404).json({ message: '장바구니가 존재하지 않습니다.' });
@@ -50,4 +51,3 @@ exports.getCart = async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 };
-*/
