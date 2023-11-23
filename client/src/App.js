@@ -25,6 +25,7 @@ import Header from "./components/Others/Header";
 import StartPage2 from "./components/views/StartPage/StartPage2";
 import PayingPage from "./components/views/ShoppingPage/PayingPage";
 import Renewal from "./components/views/Renewal/Renewal";
+import PayingForDirect from "./components/views/ShoppingPage/PayingForDirect";
 
 function App() {
 
@@ -72,6 +73,7 @@ function App() {
           <Route exact path="/photo" element={<Photo />} />
           <Route exact path="/feedback" element={<Feedback />} />
           <Route exact path="/paying" element={<PayingPage />} />
+          <Route exact path="/payingdirect" element={<PayingForDirect />} />
           <Route exact path="/renewal" element={<Renewal />} />
         </Routes>
       </div>

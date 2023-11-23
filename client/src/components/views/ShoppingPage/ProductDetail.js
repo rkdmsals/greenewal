@@ -59,28 +59,28 @@ function ProductDetail() {
 
     };
 
-    /*
-    const directParchase = () => {
-        axios.post('/api/addToCart', {
-            userId: userId,
-            productId: product.id,
-            quantity: 1, // 장바구니에 추가하는 상품의 수량
-        })
-            .then(response => {
-                if (response.status === 200) {
-                    console.log('장바구니에 상품이 추가되었습니다.');
-                    navigate('/cart');  // 장바구니로 이동 -----> 구글폼으로..
-                } else {
-                    console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
-                }
-            })
-            .catch(error => {
-                console.error('장바구니 요청 중 오류 발생:', error);
-            });
-    };
+
+    // const directParchase = () => {
+    //     axios.post('/api/addToCart/direct', {
+    //         userId: userId,
+    //         productId: product.id,
+    //         quantity: 1, // 장바구니에 추가하는 상품의 수량
+    //     })
+    //         .then(response => {
+    //             if (response.status === 200) {
+    //                 console.log('장바구니에 상품이 추가되었습니다.');
+    //                 navigate('/cart');  // 장바구니로 이동 -----> 구글폼으로..
+    //             } else {
+    //                 console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
+    //             }
+    //         })
+    //         .catch(error => {
+    //             console.error('장바구니 요청 중 오류 발생:', error);
+    //         });
+    // };
 
 
-    */
+
 
     return (
         <div className='ProductDetail_background'>
@@ -106,7 +106,7 @@ function ProductDetail() {
                         <div className="ProductDetail_sub_description_details_wrapper">
                             {product.describe}
                         </div>
-                        <div className="ProductDetail_sub_description_content_container">
+                        {/* <div className="ProductDetail_sub_description_content_container">
                             <div className="ProductDetail_sub_description_content_title_container">
                                 Details &gt;
                             </div>
@@ -118,7 +118,7 @@ function ProductDetail() {
                                 제작 : 00기 디자인팀 000
                             </div>
 
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
@@ -126,7 +126,14 @@ function ProductDetail() {
                     <button className="ProductDetail_cart_button" onClick={addToCart}>
                         장바구니
                     </button>
-                    <button className="ProductDetail_buy_button" onClick={addToCart}>
+                    <button className="ProductDetail_buy_button" onClick={() => {
+                        navigate('/payingdirect', {
+                            state: {
+                                productName: product.title, productId: product.id,
+                                productPrice: product.discountedPrice
+                            }
+                        })
+                    }}>
                         구매하기
                     </button>
                 </div>
