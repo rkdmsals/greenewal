@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './photostyle.css';
-import Header from "../../Others/Header"
 
 const Photo = () => {
   const [items, setItems] = useState([

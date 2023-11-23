@@ -63,7 +63,7 @@
   border-radius: 15px 15px 15px 0;
   clear: both;
   float: left;
-  word-break: keep-all;
+  word-break: break-all;
 }
 
 .highlight {
