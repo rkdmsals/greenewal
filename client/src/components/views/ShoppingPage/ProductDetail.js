@@ -24,8 +24,6 @@ function ProductDetail() {
                 setUserId(response.payload.id);
                 console.log(response.payload.id);
                 return
-            } else {
-                navigate('/login');
             }
             /*else {
                 navigate('/login');
@@ -35,9 +33,10 @@ function ProductDetail() {
     }, []);
 
     const addToCart = () => {
-        // if (!userId) {
-        //     navigate('/login');
-        // }
+        if (!userId) {
+            navigate('/login');
+            return;
+        }
 
         console.log('userid: ' + userId + ' product: ' + product.id);
         axios.post('/api/addToCart/add', {
