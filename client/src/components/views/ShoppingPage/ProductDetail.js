@@ -13,6 +13,7 @@ function ProductDetail() {
     const navigate = useNavigate();
     const location = useLocation();
     const { product } = location.state;
+    console.log(product)
 
     const [userId, setUserId] = useState("");
 
@@ -43,6 +44,8 @@ function ProductDetail() {
             userId: userId,
             productId: product.id,
             quantity: 1, // 장바구니에 추가하는 상품의 수량
+            title: product.title,
+            price: product.discountedPrice
         })
             .then(response => {
                 if (response.status === 200) {
