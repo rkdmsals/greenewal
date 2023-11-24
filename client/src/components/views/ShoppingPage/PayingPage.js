@@ -7,16 +7,12 @@ import { auth } from '../../../_actions/user_action';
 import $ from "jquery"
 
 function PayingPage() {
-    var goods_name = "2022 배꽃정원 굿즈 - 말랑 비즈 인형";//굿즈 이름
-    var goods_num = 2//굿즈 수량
-    var goods_price = 14000//굿즈 가격
-    var total_price = 214000 //총 가격
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [userId, setUserId] = useState("");
     const [cartItems, setCartItems] = useState([{ "productId": 1, "quantity": 0 }]);
-
+    const [totalPrice, setTotalPrice] = useState(0)
     useEffect(() => {
         dispatch(auth()).then(response => {
             // console.log(response);
@@ -51,7 +47,13 @@ function PayingPage() {
                 });
         }
     }, [userId]);
-
+    useEffect(() => {
+        var total_price = 0
+        cartItems.map((a) => [
+            total_price = total_price + a.price * a.quantity
+        ])
+        setTotalPrice(total_price)
+    }, [cartItems])
 
 
     const DoPurchase = () => {
@@ -87,15 +89,15 @@ function PayingPage() {
             {cartItems ? cartItems.map((a) => {
                 return (
                     <div className="BuyingEach">
-                        <div>{goods_name}({a.quantity})</div>
-                        <div>{goods_price}￦</div>
+                        <div>{a.title}({a.quantity})</div>
+                        <div>{a.price}￦</div>
                     </div>)
             }) : console.log("전부 됨")}
 
             {/* 굿즈 다 반환하고 나서 */}
             <div className="PayTotal">
                 <div>총 결제 금액 {">"}</div>
-                <div>{total_price}￦</div>
+                <div>{totalPrice}￦</div>
             </div>
         </div>
         {/* 계좌 송금 안내 */}

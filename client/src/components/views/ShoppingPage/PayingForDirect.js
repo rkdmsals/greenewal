@@ -51,6 +51,8 @@ function PayingForDirect() {
             productList: {
                 productId: productId,
                 quantity: 1,
+                title: goods_name,
+                price: goods_price,
             },
             orderName: orderName,
             orderTime: orderTime,
