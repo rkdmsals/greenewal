@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { auth } from '../../../_actions/user_action';
-import $ from "jquery"
+// import $ from "jquery"
 
 function PayingPage() {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [userId, setUserId] = useState("");
-    const [cartItems, setCartItems] = useState([{ "productId": 1, "quantity": 0 }]);
+    const [cartItems, setCartItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0)
     useEffect(() => {
         dispatch(auth()).then(response => {
@@ -65,21 +65,24 @@ function PayingPage() {
         const refundAccount = document.getElementById('RefundAccount').value;
 
         console.log("값은", orderName, orderTime, refundBank, refundAccount)
-
-        axios.post('/api/addToCart/uploadPurchase', {
-            userId: userId,
-            productList: cartItems,
-            orderName: orderName,
-            orderTime: orderTime,
-            refundBank: refundBank,
-            refundAccount: refundAccount,
-        })
-            .then(function (response) {
-                console.log(response);
+        if (orderName && orderTime && refundBank && refundAccount) {
+            axios.post('/api/addToCart/uploadPurchase', {
+                userId: userId,
+                productList: cartItems,
+                orderName: orderName,
+                orderTime: orderTime,
+                refundBank: refundBank,
+                refundAccount: refundAccount,
             })
-            .catch(function (error) {
-                console.log(error);
-            });
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        } else {
+            alert("주문에 필요한 정보를 모두 작성해주세요")
+        }
     }
 
     return (<div className="PayingBack">
