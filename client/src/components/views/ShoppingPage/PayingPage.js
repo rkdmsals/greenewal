@@ -49,9 +49,9 @@ function PayingPage() {
     }, [userId]);
     useEffect(() => {
         var total_price = 0
-        cartItems.map((a) => [
+        cartItems.map((a) => {
             total_price = total_price + a.price * a.quantity
-        ])
+        })
         setTotalPrice(total_price)
     }, [cartItems])
 
