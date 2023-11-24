@@ -49,17 +49,20 @@ function ProductDisplay() {
                 </div>
                 <div className="ProductDisplay_top_button_container">
                     <button className="ProductDisplay_top_button1" onClick={() => handleButton1Click("버튼 1")}>전체</button>
-                    <button className="ProductDisplay_top_button2" onClick={() => handleButton2Click("버튼 2")}>2023</button>
-                    <button className="ProductDisplay_top_button3" onClick={() => handleButton3Click("버튼 3")}>2022</button>
+                    <button className="ProductDisplay_top_button2" onClick={() => handleButton2Click("버튼 2")}>2022</button>
+                    <button className="ProductDisplay_top_button3" onClick={() => handleButton3Click("버튼 3")}>2021</button>
                     <button className="ProductDisplay_top_button4" onClick={() => handleButton4Click("버튼 4")}>~2020</button>
                 </div>
                 <div className="ProductDisplay_inner_container">
                     {currentDisplay.map((product) => (
                         <div key={product.id} className="ProductDisplay_content_container"
                             onClick={() => handleProductClick(product.id)}>
-                            <img className="ProductDisplay_content_img_container">
-
-                            </img>
+                            <div className="ProductDisplay_content_img_container">
+                                <img
+                                    className="product_main_img"
+                                    src={`/img/ShoppingPage/productsDetail/${product.id}-1.png`}
+                                />
+                            </div>
                             <div className="ProductDisplay_content_detail_container">
                                 <div className="ProductDisplay_content_left_container">
                                     <div className='ProductDisplay_content_title'>
@@ -75,11 +78,8 @@ function ProductDisplay() {
                                     </div>
                                 </div>
                                 <div className="ProductDisplay_content_right_container">
-
                                 </div>
-
                             </div>
-
                         </div>
                     ))}
                 </div>

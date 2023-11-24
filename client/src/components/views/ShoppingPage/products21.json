@@ -3,44 +3,45 @@
         "id": 6,
         "title": "아크릴 코스터",
         "originalPrice": 7500,
-        "discountedPrice": 3000,
+        "discountedPrice": 6500,
         "describe": "내용내용내용",
-        "img": "../img/goods/goods_detail/6-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/6-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/6-1.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/6-1.png"
         ]
     },
     {
         "id": 7,
         "title": "메탈 스티커",
         "originalPrice": 2500,
-        "discountedPrice": 9000,
+        "discountedPrice": 2000,
         "describe": "내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/7-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/7-2.png"
         ]
     },
     {
         "id": 8,
         "title": "리무버블 스티커",
         "originalPrice": 3500,
-        "discountedPrice": 9000,
+        "discountedPrice": 2000,
         "describe": "내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/8-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/8-2.png"
         ]
     },
     {
         "id": 9,
         "title": "띠부띠부씰+학생증",
         "originalPrice": 3500,
-        "discountedPrice": 9000,
+        "discountedPrice": 2500,
         "describe": "내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/9-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/9-1.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/9-2.png"
         ]
     }
 ]
