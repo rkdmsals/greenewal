@@ -3,154 +3,126 @@
         "id": 10,
         "title": "전자파 차단 스티커",
         "originalPrice": 10000,
-        "discountedPrice": 9000,
+        "discountedPrice": 8000,
         "describe": "내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/10-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/10-1.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/10-2.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/10-3.png"
         ]
     },
     {
         "id": 11,
         "title": "시리얼컵",
         "originalPrice": 7500,
-        "discountedPrice": 9000,
+        "discountedPrice": 6500,
         "describe": "내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/11-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/11-1.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/11-2.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/11-3.png"
         ]
     },
     {
         "id": 12,
         "title": "스마트톡",
         "originalPrice": 6500,
-        "discountedPrice": 9000,
+        "discountedPrice": 5000,
         "describe": "내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/12-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/12-1.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/12-2.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/12-3.png"
         ]
     },
     {
         "id": 13,
         "title": "노트북 스티커",
         "originalPrice": 3000,
-        "discountedPrice": 9000,
+        "discountedPrice": 2500,
         "describe": "내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/13-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/13-1.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/13-2.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/13-3.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/13-4.png"
         ]
     },
     {
         "id": 14,
-        "title": "금속 키링(꿀단지)",
-        "originalPrice": 7000,
-        "discountedPrice": 9000,
+        "title": "띠부띠부씰 8종+책갈피",
+        "originalPrice": 3000,
+        "discountedPrice": 2500,
         "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/14-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/14-1.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/14-2.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/14-3.png"
         ]
     },
     {
         "id": 15,
-        "title": "금속 뱃지(나침반)",
-        "originalPrice": 4500,
-        "discountedPrice": 9000,
+        "title": "금속 키링(꿀단지)",
+        "originalPrice": 7000,
+        "discountedPrice": 3000,
         "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/15-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/15-1.png"
         ]
     },
     {
         "id": 16,
-        "title": "에코백",
-        "originalPrice": 9000,
-        "discountedPrice": 9000,
+        "title": "금속 뱃지(나침반)",
+        "originalPrice": 4500,
+        "discountedPrice": 1500,
         "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/16-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/16-1.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/16-2.png"
         ]
     },
     {
         "id": 17,
-        "title": "아크릴 키링",
-        "originalPrice": 4500,
-        "discountedPrice": 9000,
+        "title": "에코백",
+        "originalPrice": 9000,
+        "discountedPrice": 6000,
         "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/17-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/17-1.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/17-2.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/17-3.png"
         ]
     },
     {
         "id": 18,
-        "title": "시크릿 가든 스트랩",
-        "originalPrice": 4000,
-        "discountedPrice": 9000,
+        "title": "아크릴 키링",
+        "originalPrice": 4500,
+        "discountedPrice": 3000,
         "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/18-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/18-1.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/18-2.png",
+            "../../../../public/img/ShoppingPage/products/productsDetail/18-3.png"
         ]
     },
     {
         "id": 19,
         "title": "마스킹 테이프",
         "originalPrice": 3000,
-        "discountedPrice": 9000,
+        "discountedPrice": 1000,
         "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
+        "img": "../../../../public/img/ShoppingPage/products/productsDetail/19-1.png",
         "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
-        ]
-    },
-    {
-        "id": 20,
-        "title": "떡메모지(말풍선)",
-        "originalPrice": 2500,
-        "discountedPrice": 9000,
-        "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
-        "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
-        ]
-    },
-    {
-        "id": 21,
-        "title": "떡메모지(그리드)",
-        "originalPrice": 2500,
-        "discountedPrice": 9000,
-        "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
-        "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
-        ]
-    },
-    {
-        "id": 22,
-        "title": "금속 키링(팝콘)",
-        "originalPrice": 8000,
-        "discountedPrice": 9000,
-        "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
-        "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
-        ]
-    },
-    {
-        "id": 23,
-        "title": "금속뱃지(집)",
-        "originalPrice": 5000,
-        "discountedPrice": 9000,
-        "describe": "내용내용내용내용내용내용",
-        "img": "../img/goods/goods_detail/5-1.png",
-        "detailImg": [
-            "../img/goods/goods_detail/5-2.png"
+            "../../../../public/img/ShoppingPage/products/productsDetail/19-1.png"
         ]
     }
 ]
