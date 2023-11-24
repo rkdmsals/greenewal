@@ -26,7 +26,7 @@ import StartPage2 from "./components/views/StartPage/StartPage2";
 import PayingPage from "./components/views/ShoppingPage/PayingPage";
 import Renewal from "./components/views/Renewal/Renewal";
 import PayingForDirect from "./components/views/ShoppingPage/PayingForDirect";
-
+import OrderCheck from "./components/views/ShoppingPage/OrderCheck";
 function App() {
 
   return (
@@ -75,6 +75,7 @@ function App() {
           <Route exact path="/paying" element={<PayingPage />} />
           <Route exact path="/payingdirect" element={<PayingForDirect />} />
           <Route exact path="/renewal" element={<Renewal />} />
+          <Route exact path="/checkOrder" element={<OrderCheck />} />
         </Routes>
       </div>
     );
