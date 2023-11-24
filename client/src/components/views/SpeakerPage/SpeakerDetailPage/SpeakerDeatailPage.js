@@ -9,12 +9,13 @@ function SpeakerDetailPage() {
 
     return(
         <div className="speakerDetailPage_background">
+            <div className="speakerDetailPage_container">
             <div className="speakerInfo_title">
                 <div>Speaker Info</div>
                 <div className="dia_svg"><Dia /></div>
             </div>
             <div className="speakerDetailInfo" id="speakerInfo_1">
-                    <div className="speakerInfo_content">
+                    <div className="speakerDetailInfo_content">
                         <div className="speakerInfo_detail_name">이주미<div className="speakerInfo_job">변호사</div></div>
                         <div className="speakerInfo_detail_content">
                             現 법무법인 두우 <br />
@@ -28,8 +29,10 @@ function SpeakerDetailPage() {
                     </div>
                     
                 </div>
-                <div className="speakerDetailInfo" id="speakerInfo_2">
-                    <div className="speakerInfo_content">
+                <div className="speakerDetailInfo" >
+                    
+                    <div className="speakerDetailInfo_content">
+                    <div id="speakerInfo_2">
                         <div className="speakerInfo_detail_name speakerInfo_detail_name_2">전효진<div className="speakerInfo_job">강사·변호사</div></div>
                         <div className="speakerInfo_detail_content speakerInfo_detail_content_2">
                             現 메가 공무원 강사 <br />
@@ -39,6 +42,7 @@ function SpeakerDetailPage() {
                         </div>
                         <div className="speakerInfo_detail_topic">강연 주제</div>
                         <div className="speakerInfo_detail_topic_content">변호사 합격, 그 이후</div>
+                        </div>
                         <div className="speaker_detail_svg2"><Speaker_2 /></div>
 
 
@@ -46,7 +50,7 @@ function SpeakerDetailPage() {
                     
                 </div>
                 <div className="speakerDetailInfo" id="speakerInfo_3">
-                    <div className="speakerInfo_content">
+                    <div className="speakerDetailInfo_content">
                         <div className="speakerInfo_detail_name">노슈니<div className="speakerInfo_job">크리에이터</div></div>
                         <div className="speakerInfo_detail_content">
                         現 유튜브 ‘슈니는 못말려’ 운영 <br />
@@ -58,6 +62,7 @@ function SpeakerDetailPage() {
                     </div>
                     
                 </div>
+            </div>
 
 
 

@@ -121,3 +121,12 @@
   width: 10px;
   height: 10px;
 }
+
+/* desktop */
+@media screen and (min-width:800px) {
+  .fb_main_container{
+      position: relative;
+      width: 500px;
+      margin: 0 auto;
+  }
+}

@@ -87,3 +87,12 @@
     height: 2px;
     margin: 0 auto;
 }
+
+/* desktop */
+@media screen and (min-width:800px) {
+    .GrnPage {
+        position: relative;
+        width: 500px;
+        margin: 0 auto;
+    }
+}

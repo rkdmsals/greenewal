@@ -4,7 +4,7 @@ html{
 
 .speakerDetailPage_background{
     display: block;
-    margin: 17% 10% 10% 10%;
+    padding: 20% 3% 3% 3% 3%;
     font-size: var(--content-font-size);
     text-align: center;
     color: var(--toneDown-black);
@@ -19,12 +19,15 @@ html{
 .speakerDetailInfo{
     position: relative;
     background-color: #EFEFEF;
-    margin: 10% 0;
+    margin: 7% auto;
     border-radius: 20px;
     text-align: right;
     box-shadow: 5px 5px gray;
-    width: 100%;
+    width: 90%;
     height: 240px;
+}
+.speakerDetailInfo_content{
+    padding: 5% 10% 5% 10%;
 }
 
 .speakerInfo_detail_content{
@@ -90,8 +93,45 @@ html{
 
 /* desktop */
 @media screen and (min-width:800px) {
-    .speakerPage_background {
+    .speakerDetailPage_background{
+        margin-top: 4%;
+    
+    }
+    .speakerDetailPage_container {
         width: 500px;
         margin: 0 auto;
     }
+.speakerDetailInfo{
+    margin: 5% 0 0 0;
+}
+    .speakerDetailInfo_content{
+        padding: 5% 10% 5% 10%;
+    }
+
+    .speaker_detail_svg1{
+        position: absolute;
+        top: 17%;
+        left: 10%;
+    
+    }
+    .speaker_detail_img1{
+        width:140px;
+    }
+    .speaker_detail_svg2{
+        position: absolute;
+        top: 12%;
+        left: 55%;
+    }
+    
+    .speaker_detail_svg3{
+        position: absolute;
+        top: 19%;
+        left: 10%;
+    }
+    .speakerInfo_detail_topic{
+        margin-top: 5%;
+        font-size: var(--content-font-size);
+        font-weight: bold;
+    }
+    
 }

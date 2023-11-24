@@ -54,3 +54,11 @@
     height: 31px;
     margin-left: 10%;
 }
+
+/* desktop */
+@media screen and (min-width:800px) {
+    .startPage_container  {
+        width: 500px;
+        margin: 0 auto;
+    }
+}
