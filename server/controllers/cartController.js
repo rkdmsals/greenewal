@@ -112,3 +112,31 @@ module.exports.getOrder = async (req, res) => {
         res.status(500).json({ error: '서버에서 장바구니 불러오기 에러 발생' });
     }
 };
+
+module.exports.removeFromCart = async (req, res) => {
+    try {
+        const userId = req.body.userId;
+        const productId = req.body.productId;
+
+        let cart = await Cart.findOne({ userId });
+
+        if (!cart) {
+            return res.status(404).json({ message: '장바구니를 찾을 수 없습니다.' });
+        }
+
+        const existingProductIndex = cart.productList.findIndex(
+            (product) => product.productId === productId
+        );
+
+        if (existingProductIndex !== -1) {
+            cart.productList.splice(existingProductIndex, 1);
+        } else {
+            return res.status(404).json({ message: '해당 상품을 장바구니에서 찾을 수 없습니다.' });
+        }
+
+        await cart.save();
+        res.status(200).json({ message: '상품이 장바구니에서 삭제되었습니다.', cart });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
