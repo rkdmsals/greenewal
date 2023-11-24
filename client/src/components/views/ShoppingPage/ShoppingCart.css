@@ -15,26 +15,31 @@
 }
 
 .CartEach img {
-    width: 90px;
-    height: 90px;
+    width: 25vw;
+    height: 25vw;
     /* padding: 20px 0px; */
     mask: url(../../../../public/img/Booth/cloberVec.svg);
     mask-size: cover;
 }
 
 .CartRight {
-    /* width: 60%; */
+    width: 66%;
+    display: flex;
     margin-left: 12px;
     font-size: var(--content-font-size);
     vertical-align: middle;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.CartRight div {
-    margin-bottom: 10px;
+.CartRight div div {
+    line-height: 1.4;
+}
+
+.CartEachButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .CartNum {
@@ -42,9 +47,6 @@
     /* border: 3px solid var(--toneDown-black); */
     font-weight: 600;
     display: flex;
-    position: relative;
-    left: 24%;
-    top: 60px
 }
 
 .MinusBtn,
@@ -70,8 +72,8 @@
     background-size: cover;
     width: 10px;
     height: 10px;
-    position: relative;
-    left: 49%;
+    margin: 0 0 0 auto;
+
 }
 
 .ShopBill {
