@@ -32,9 +32,9 @@ function SpeakerPage() {
                         </div>
                     </div>
                     <div className="timeTable_break">
-                        <div class="division_line"></div>
+                        <div className="division_line"></div>
                         <div>Break Time</div>
-                        <div class="division_line"></div>
+                        <div className="division_line"></div>
                     </div>
                     <div className="timeTable_content">
                         <div>18:30 - 19:20</div>
@@ -44,9 +44,9 @@ function SpeakerPage() {
                         </div>
                     </div>
                     <div className="timeTable_break">
-                    <div class="division_line"></div>
+                    <div className="division_line"></div>
                         <div>Break Time</div>
-                        <div class="division_line"></div>
+                        <div className="division_line"></div>
                     </div>
                     <div className="timeTable_content">
                         <div>19:30 - 20:20</div>
