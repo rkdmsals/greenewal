@@ -56,8 +56,8 @@ function ProductDisplay() {
                 </div>
                 <div className="ProductDisplay_inner_container">
                     {currentDisplay.map((product) => (
-                        <div key={product.id} className="ProductDisplay_content_container"
-                            onClick={() => handleProductClick(product.id)}>
+                        <div className="ProductDisplay_content_container"
+                            key={product.id} onClick={() => handleProductClick(product.id)}>
                             <div className="ProductDisplay_content_img_container">
                                 <img
                                     className="product_main_img"
