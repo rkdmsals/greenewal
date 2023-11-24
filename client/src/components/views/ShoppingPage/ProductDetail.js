@@ -83,8 +83,6 @@ function ProductDetail() {
     //         });
     // };
 
-
-
     const settings = {
         dots: true,
         infinite: true,

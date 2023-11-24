@@ -89,6 +89,7 @@ function ShoppingCart() {
 
         return setDataChange(true);
     }
+
     return (
         <div className='Cart'>
             {/* 카트에 들어있는 개수만큼 CartEach 반환해서 사용하면 됨 */}
