@@ -76,6 +76,9 @@ function PayingPage() {
             })
                 .then(function (response) {
                     console.log(response);
+                    alert("주문이 완료되었습니다!");
+                    //이때 cartDB 삭제하기
+                    navigate("/shop");
                 })
                 .catch(function (error) {
                     console.log(error);
