@@ -90,6 +90,9 @@ function ProductDisplay() {
                             if (response.payload.isAuth) {
                                 // setUserId(response.payload.id);
                                 navigate(`/cart/${response.payload.id}`);
+                            } else {
+                                alert('로그인 후 이용 가능합니다.');
+                                navigate('/login');
                             }
                         })
                     }}>
