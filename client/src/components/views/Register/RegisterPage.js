@@ -7,7 +7,7 @@ import { auth } from '../../../_actions/user_action';
 import { useEffect } from 'react';
 
 
-function RegisterPage(props) {
+function RegisterPage() {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -59,7 +59,7 @@ function RegisterPage(props) {
             if(response.payload.success) {
               navigate('/login');  
             } else {
-                alert('Failed to sign up')
+                alert('모든 항목을 입력해주세요.')
             }
         })
     }

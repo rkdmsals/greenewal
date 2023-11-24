@@ -73,8 +73,8 @@ header {
 
 .EachBoothInfo div {
     margin-bottom: 8px;
-    padding-right: 11px;
-    /* padding-right: 20%; */
+    /* padding-right: 11px; */
+    padding-right: 20%;
     word-break: keep-all;
 }
 
@@ -94,7 +94,7 @@ header {
     }
 
     #LongTxt .EachBoothInfo div {
-        padding-right: 20%;
+        padding-right: 11px;
         box-sizing: border-box;
     }
 

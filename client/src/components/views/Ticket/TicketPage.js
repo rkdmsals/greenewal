@@ -1,13 +1,13 @@
 import React from 'react';
 import "./TicketPage.css";
-import { useState } from "react";
-import { auth } from '../../../_actions/user_action';
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+//import { useState } from "react";
+//import { auth } from '../../../_actions/user_action';
+//import { useDispatch } from 'react-redux';
+//import { useEffect } from 'react';
 import { ReactComponent as Dia } from "../../../assets/images/SpeakerPage/dia.svg";
 import { useNavigate } from 'react-router-dom';
 
-function TicketPage(props) {
+function TicketPage() {
 
     const navigate = useNavigate();
 
