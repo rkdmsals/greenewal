@@ -20,6 +20,7 @@ function ShoppingCart() {
 
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalQuantity, setTotalQuantity] = useState(0);
+    const [dataChange, setDataChange] = useState(false);
 
     useEffect(() => {
         dispatch(auth()).then(response => {
@@ -54,20 +55,40 @@ function ShoppingCart() {
                     console.error('장바구니 불러오기 중 오류 발생', err);
                 });
         }
-    }, [userId]);
+    }, [userId, dataChange]);
 
     useEffect(() => {
         var total_price = 0
         var total_quantity = 0
+
         cartItems.length ? cartItems.map((a) => [
             total_price = total_price + a.price * a.quantity,
             total_quantity = total_quantity + a.quantity
         ]) : console.log("장바구니에 담긴 상품이 존재x")
-        setTotalPrice(total_price)
-        setTotalQuantity(total_quantity)
+
+        return setTotalPrice(total_price), setTotalQuantity(total_quantity)
     }, [cartItems])
 
+    useEffect(() => {
+        if (dataChange) {
+            var total_price = 0
+            var total_quantity = 0
+            console.log("실행되는지?")
+            cartItems.length ? cartItems.map((a) => [
+                total_price = total_price + a.price * a.quantity,
+                total_quantity = total_quantity + a.quantity
+            ]) : console.log("장바구니에 담긴 상품이 존재x")
 
+            return setTotalPrice(total_price), setTotalQuantity(total_quantity), setDataChange(false);
+        } else { console.log("이상함...") }
+
+    }, [dataChange])
+    const updateTotal = () => {
+
+        console.log("값이 변경됨!!")
+
+        return setDataChange(true);
+    }
     return (
         <div className='Cart'>
             {/* 카트에 들어있는 개수만큼 CartEach 반환해서 사용하면 됨 */}
@@ -75,7 +96,7 @@ function ShoppingCart() {
 
             <div className='CartContainer'>
                 {cartItems.length ? cartItems.map((a) => {
-                    return <CartEach userId={userId} productId={a.productId} quantity={a.quantity} productName={a.title} price={a.price} />
+                    return <CartEach userId={userId} productId={a.productId} quantityFirst={a.quantity} productName={a.title} price={a.price} updateTotal={updateTotal} />
                 }) : console.log("안됨")}
             </div>
             <div className='ShopBill' >

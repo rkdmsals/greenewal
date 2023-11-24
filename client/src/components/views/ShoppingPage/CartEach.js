@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-function CartEach(values) {
-    const userId = values.userId;
-    const productId = values.productId;
-    const quantityfirst = values.quantity;
-    const productName = values.productName;
-    const price = values.price;
-    const [quantity, setQuantity] = useState(quantityfirst);
-    // useEffect(() => {
-    //     setQuantityRe(quantity)
-    // }, [quantity])
+
+function CartEach({ userId, productId, quantityFirst, productName, price, updateTotal }) {
+    // const userId = values.userId;
+    // const productId = values.productId;
+    // const quantityfirst = values.quantity;
+    // const productName = values.productName;
+    // const price = values.price;
+    // const updateTotal = () => { values.updateTotal(true) }
+
+    const [quantity, setQuantity] = useState(quantityFirst);
+
     const minusQuantity = () => {
 
         if (quantity > 1) {
@@ -19,7 +20,8 @@ function CartEach(values) {
                 productId: productId,
                 quantity: reQuantity,
             })
-            return setQuantity(reQuantity)
+                ;
+            return setQuantity(reQuantity), updateTotal()
         }
 
     }
@@ -32,7 +34,8 @@ function CartEach(values) {
                 productId: productId,
                 quantity: reQuantity,
             })
-            return setQuantity(reQuantity)
+
+            return setQuantity(reQuantity), updateTotal();
         }
     }
     return (
