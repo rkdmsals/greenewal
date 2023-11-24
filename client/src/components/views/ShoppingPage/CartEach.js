@@ -3,10 +3,10 @@ import axios from "axios";
 function CartEach(values) {
     const userId = values.userId;
     const productId = values.productId;
-    // const quantity = values.quantity;
+    const quantityfirst = values.quantity;
     const productName = values.productName;
     const price = values.price;
-    const [quantity, setQuantity] = useState(values.quantity);
+    const [quantity, setQuantity] = useState(quantityfirst);
     // useEffect(() => {
     //     setQuantityRe(quantity)
     // }, [quantity])

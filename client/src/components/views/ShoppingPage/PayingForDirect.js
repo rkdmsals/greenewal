@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { auth } from '../../../_actions/user_action';
 import { useLocation } from "react-router-dom";
-import $ from "jquery"
+// import $ from "jquery"
 
 function PayingForDirect() {
     const navigate = useNavigate();
@@ -45,26 +45,29 @@ function PayingForDirect() {
         const refundAccount = document.getElementById('RefundAccount').value;
 
         console.log("값은", orderName, orderTime, refundBank, refundAccount)
-
-        axios.post('/api/addToCart/uploadPurchase', {
-            userId: userId,
-            productList: {
-                productId: productId,
-                quantity: 1,
-                title: goods_name,
-                price: goods_price,
-            },
-            orderName: orderName,
-            orderTime: orderTime,
-            refundBank: refundBank,
-            refundAccount: refundAccount,
-        })
-            .then(function (response) {
-                console.log(response);
+        if (orderName && orderTime && refundBank && refundAccount) {
+            axios.post('/api/addToCart/uploadPurchase', {
+                userId: userId,
+                productList: {
+                    productId: productId,
+                    quantity: goods_num,
+                    title: goods_name,
+                    price: goods_price,
+                },
+                orderName: orderName,
+                orderTime: orderTime,
+                refundBank: refundBank,
+                refundAccount: refundAccount,
             })
-            .catch(function (error) {
-                console.log(error);
-            });
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        } else {
+            alert("주문에 필요한 정보를 모두 작성해주세요")
+        }
     }
 
     return (<div className="PayingBack">
