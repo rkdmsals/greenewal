@@ -10,14 +10,10 @@ import ProductDetail from "./components/views/ShoppingPage/ProductDetail";
 import ShoppingCart from "./components/views/ShoppingPage/ShoppingCart";
 import LoginPage from "./components/views/Login/LoginPage";
 import RegisterPage from "./components/views/Register/RegisterPage";
-import TestStart from "./components/views/game/TestStart";
-import Test from "./components/views/game/Test"
-import CheckAnswers from "./components/views/game/CheckAnswers";
 import Menu from "./components/views/menu/menu";
 import Ticket from "./components/views/Ticket/TicketPage"
 import BoothInfo from "./components/views/BoothInfo/BoothInfo";
 import Feedback from "./components/views/Feedback/Feedback";
-import Quizgame from "./components/views/quizgame/quizgame";
 import Event from "./components/views/event/event"
 import EventInformation from "./components/views/eventinformation/eventinformation"
 import Photo from "./components/views/photo/photo"
@@ -40,10 +36,6 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
-
-
-
-
     </div>
   );
   function MainLayout() {
@@ -61,13 +53,9 @@ function App() {
           <Route exact path="/speaker/detail" element={<SpeakerDetailPage />} />
           <Route exact path="/login" element={<LoginPage />} />
           <Route exact path="/register" element={<RegisterPage />} />
-          <Route exact path="/testStart" element={<TestStart />} />
-          <Route exact path="/testAnswers" element={<CheckAnswers />} />
-          <Route exact path="/test" element={<Test />} />
           <Route exact path="/foods" element={<Menu />} />
           <Route exact path="/ticket" element={<Ticket />} />
           <Route exact path="/booth" element={<BoothInfo />} />
-          <Route exact path="/quizgame" element={<Quizgame />} />
           <Route exact path="/event" element={<Event />} />
           <Route exact path="/eventinfo" element={<EventInformation />} />
           <Route exact path="/photo" element={<Photo />} />
