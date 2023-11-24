@@ -62,7 +62,7 @@
         margin: 0 auto;
     }
 }
-/* 375px */
+/* 381px */
 @media screen and (max-width:375px) {
     .startPage_title {
         font-size: var(--title-font-size);
