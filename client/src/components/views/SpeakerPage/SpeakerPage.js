@@ -13,7 +13,6 @@ function SpeakerPage() {
         navigate('/speaker/detail');
     };
     return (
-<<<<<<< HEAD
         <div className="speakerPage_background">
             <div className="speakerPage_main_container">
                 <div className="timeTable_container">
@@ -33,9 +32,9 @@ function SpeakerPage() {
                                 </div>
                             </div>
                             <div className="timeTable_break">
-                                <div class="division_line"></div>
+                                <div className="division_line"></div>
                                 <div>Break Time</div>
-                                <div class="division_line"></div>
+                                <div className="division_line"></div>
                             </div>
                             <div className="timeTable_content">
                                 <div>18:30 - 19:20</div>
@@ -45,14 +44,14 @@ function SpeakerPage() {
                                 </div>
                             </div>
                             <div className="timeTable_break">
-                                <div class="division_line"></div>
+                                <div className="division_line"></div>
                                 <div>Break Time</div>
-                                <div class="division_line"></div>
+                                <div className="division_line"></div>
                             </div>
                             <div className="timeTable_content">
                                 <div>19:30 - 20:20</div>
                                 <div className="timeTable_content_name">
-                                    <img className="clober_img" src="/img/SpeakerPage/clober2.png" />
+                                    <img className="clober_img" src="img/SpeakerPage/clober2.png" />
                                     <div>노슈니 크리에이터</div>
                                 </div>
                             </div>
@@ -90,59 +89,17 @@ function SpeakerPage() {
                                 <div className="speaker_svg3"><Speaker_3 /></div>
                             </div>
 
-=======
-    <div className="speakerPage_background">
-                                <div className="speakerPage_main_container">
-                                    <div className="timeTable_container">
-                                        <div className="timeTable_title">
-                                            <div>Timeline</div>
-                                            <div className="dia_svg"><Dia /></div>
-                                        </div>
-                                        <div className="timeTable_background" style={{
-                                            backgroundImage: `url("/img/SpeakerPage/clober1.png")`
-                                        }}>
-                                            <div className="timeTable_content_container">
-                                                <div className="timeTable_content">
-                                                    <div>17:30 - 18:20</div>
-                                                    <div className="timeTable_content_name">
-                                                        <img className="clober_img" src="img/SpeakerPage/clober2.png" />
-                                                        <div>전효진 변호사</div>
-                                                    </div>
-                                                </div>
-                                                <div className="timeTable_break">
-                                                    <div className="division_line"></div>
-                                                    <div>Break Time</div>
-                                                    <div className="division_line"></div>
-                                                </div>
-                                                <div className="timeTable_content">
-                                                    <div>18:30 - 19:20</div>
-                                                    <div className="timeTable_content_name">
-                                                        <img className="clober_img" src="img/SpeakerPage/clober2.png" />
-                                                        <div>이주미 변호사</div>
-                                                    </div>
-                                                </div>
-                                                <div className="timeTable_break">
-                                                    <div className="division_line"></div>
-                                                    <div>Break Time</div>
-                                                    <div className="division_line"></div>
-                                                </div>
-                                                <div className="timeTable_content">
-                                                    <div>19:30 - 20:20</div>
-                                                    <div className="timeTable_content_name">
-                                                        <img className="clober_img" src="img/SpeakerPage/clober2.png" />
-                                                        <div>노슈니 크리에이터</div>
->>>>>>> 748b785592d89466d8f2bd24b4d8ad0b9262d0b1
-                                                    </div>
-                                                </div>
+                        </div>
+                    </div>
 
 
 
 
 
-                                            </div>
-                                        </div>
-                                    </div>
+                </div>
+            </div>
+        </div>
 
-                                    )
+    )
 }
-                                    export default SpeakerPage;
+export default SpeakerPage;
