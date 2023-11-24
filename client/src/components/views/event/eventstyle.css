@@ -1,6 +1,4 @@
 .event-container{
-
-
     height:100vh;
     padding-top: 50px; 
     box-sizing: border-box;
@@ -136,4 +134,14 @@
 .instarlink-image{
     width: 28px;
     height: 28px;
+}
+@media screen and (min-width: 281px) and (max-width: 320px) {
+    .event-title{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 280px) {
+    .event-title{
+        font-size: 15.3px;
+    }
 }
