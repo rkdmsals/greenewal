@@ -7,11 +7,13 @@
 }
 
 .RenewalContainer {
-    width: 90%;
+    width: 100%;
+    margin: 0 auto;
     padding: 15px;
     background-color: var(--greenewal-mint);
     margin-bottom: 20px;
     border-radius: 15px 15px 0 15px;
+    box-sizing: border-box;
 }
 
 #yellowGreenC {
@@ -52,7 +54,12 @@
 }
 
 .ReContTxt {
-    margin-top: 20px;
+
+    width: 100%;
+    margin-top: 16px;
+    line-height: 1.6;
+    word-break: keep-all;
+    margin-bottom: 15px;
 }
 
 .RenewalTitle {
@@ -73,7 +80,7 @@
     font-size: 16px;
     font-weight: 600;
     width: fit-content;
-    margin: 15px 0 0 auto;
+    margin: 0 0 0 auto;
 }
 
 .RenewalRoute span {
@@ -86,4 +93,12 @@
     height: 28px;
     background-size: cover;
     margin-left: 13px;
+}
+
+@media screen and (min-width:500px) {
+
+    .RenewalBack {
+        width: 500px;
+        margin: 0 auto;
+    }
 }
