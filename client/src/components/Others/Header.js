@@ -41,12 +41,6 @@ function Header() {
                 setPageName("장바구니");
                 break;
 
-            case "/testStart":
-            case "/test":
-            case "/testAnswers":
-                setPageName("이화이언 만점고사")
-                break;
-
             case "/foods":
             case "/photo":
             case "/quizgame":
@@ -68,9 +62,6 @@ function Header() {
             setShowSideBar(false);
             $(".HideSide").css("display", "none");
             $(".HeaderAll").css("background-color", "#FBFBF4")
-        }
-        if ((pathname === "/testStart") || (pathname === "/test") || (pathname === "/testAnswers")) {
-            $(".HeaderAll").css("background-color", "#E1DAD4")
         }
 
     }, [pathname])
