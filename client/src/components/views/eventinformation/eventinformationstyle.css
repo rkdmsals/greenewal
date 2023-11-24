@@ -35,16 +35,16 @@
         margin-top: 40px;
     }
     .leftposter-image{
-        width: 45px;
-        height: 348px;
+        width: 10%;
+        height: auto;
     }
     .poster-image{
-        width: 242.405px;
-        height: 348px;
+        width: 58.5%;
+        height: auto
     }
     .rightposter-image{
-        width: 45px;
-        height: 348px;
+        width: 10%;
+        height:  auto;
     }
     .postertext{
         margin-top: 20px;
@@ -137,18 +137,10 @@
 }
 
 @media screen and (max-width: 365px) {
-    .leftposter-image{
-        width: 45px;
-        height: 348px;
-    }
     .poster-image{
         width: 242.405px;
         height: 348px;
         margin: 0px 15px 0px 15px;
-    }
-    .rightposter-image{
-        width: 45px;
-        height: 348px;
     }
 }
 
