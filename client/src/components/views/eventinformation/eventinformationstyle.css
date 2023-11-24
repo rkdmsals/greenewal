@@ -136,11 +136,3 @@
     margin-left: 50px;
 }
 
-@media screen and (max-width: 365px) {
-    .poster-image{
-        width: 242.405px;
-        height: 348px;
-        margin: 0px 15px 0px 15px;
-    }
-}
-
