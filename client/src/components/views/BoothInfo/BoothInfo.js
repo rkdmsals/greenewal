@@ -41,19 +41,19 @@ function BoothInfo() {
             <div className="EachBooth" id="LongTxt">
                 <img className="BoothImg" src="/img/menu/bp.png"></img>
                 <div className="EachBoothInfo">
-                    <div className="BoothName">퀴즈,게임 부스</div>
-                    <div >이화이언에 대해 얼마나 알고있나요? 퀴즈 부스에서 다양한 활동 후 도장 받기!</div>
-                    <div className="BoothTag">#이화이언_만점고사  #접속자수  #조회수</div>
-                    <button onClick={() => navigate("/quizgame")}></button>
+                    <div className="BoothName">운영진 부스 - 이벤트</div>
+                    <div >모은 도장으로 다양한 상품으로 구성된 선물 교환! 추가 이벤트도 참여하기!</div>
+                    <div className="BoothTag">#선물  #베스트드레서  #인스타스토리</div>
+                    <button onClick={() => navigate("/event")}></button>
                 </div>
             </div>
             <div className="EachBooth" id="LongTxt">
                 <img className="BoothImg" src="/img/menu/bp.png"></img>
                 <div className="EachBoothInfo">
-                    <div className="BoothName">이벤트 부스</div>
-                    <div >모은 도장으로 다양한 상품으로 구성된 선물 교환! 추가 이벤트도 참여하기!</div>
-                    <div className="BoothTag">#선물  #베스트드레서  #인스타스토리</div>
-                    <button onClick={() => navigate("/event")}></button>
+                    <div className="BoothName">운영진 부스 - 지난 굿즈</div>
+                    <div >역대 이화이언 굿즈! 이화이언의 지난 굿즈들을 만나보세요!</div>
+                    <div className="BoothTag">#지난굿즈  #전차스  #말랑인형</div>
+                    <button onClick={() => navigate("/shop")}></button>
                 </div>
             </div>
         </div>
