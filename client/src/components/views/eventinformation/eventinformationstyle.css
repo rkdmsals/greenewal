@@ -35,16 +35,16 @@
         margin-top: 40px;
     }
     .leftposter-image{
-        width: 45px;
-        height: 348px;
+        width: 10%;
+        height: auto;
     }
     .poster-image{
-        width: 242.405px;
-        height: 348px;
+        width: 58.5%;
+        height: auto
     }
     .rightposter-image{
-        width: 45px;
-        height: 348px;
+        width: 10%;
+        height:  auto;
     }
     .postertext{
         margin-top: 20px;
@@ -134,21 +134,5 @@
 .item-41, .item-42, .item-43, .item-44 {
     margin-bottom: 20px;
     margin-left: 50px;
-}
-
-@media screen and (max-width: 365px) {
-    .leftposter-image{
-        width: 45px;
-        height: 348px;
-    }
-    .poster-image{
-        width: 242.405px;
-        height: 348px;
-        margin: 0px 15px 0px 15px;
-    }
-    .rightposter-image{
-        width: 45px;
-        height: 348px;
-    }
 }
 
