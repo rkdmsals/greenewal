@@ -10,7 +10,7 @@ function SpeakerDetailPage() {
     return(
         <div className="speakerDetailPage_background">
             <div className="speakerDetailPage_container">
-            <div className="speakerInfo_title">
+            <div className="speakerDetailInfo_title">
                 <div>Speaker Info</div>
                 <div className="dia_svg"><Dia /></div>
             </div>

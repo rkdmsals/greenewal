@@ -8,6 +8,7 @@ html{
     font-size: var(--content-font-size);
     text-align: center;
     color: var(--toneDown-black);
+    padding-top: 50px;
 
 }
 
@@ -45,12 +46,11 @@ html{
 
 .btn_login,
 .nav_register {
-    width: 85%;
+    width: 100%;
     height: 40px;
     background-color: var(--toneDown-black);
     border-radius: 7px;
     border: none;
-    margin: 0 auto;
     color: var(--toneDown-white);
     margin-top: 20px;
     line-height: 40px;
@@ -79,4 +79,10 @@ html{
         width: 500px;
         margin: 0 auto;
     }
+}
+
+@media screen and (max-width:320px) {
+.login_input{
+    width: 150px;
+}
 }

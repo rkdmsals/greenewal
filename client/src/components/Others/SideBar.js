@@ -73,7 +73,7 @@ function SideBar({ show }) {
                         <div className={showSubMenu ? 'submenu active' : 'submenu'}>
                             <Link className="sub" to="/booth">전체 부스 정보</Link>
                             <Link className="sub" to="/photo">네컷사진 부스</Link>
-                            <Link className="sub" to="/quizgame">퀴즈,게임 부스</Link>
+                            {/* <Link className="sub" to="/quizgame">퀴즈,게임 부스</Link> */}
                             <Link className="sub" to="/foods">먹거리 부스</Link>
                             <Link className="sub" to="/renewal">리뉴얼 부스</Link>
                             {/* <Link className="sub" to="/login">운영진 부스</Link> */}

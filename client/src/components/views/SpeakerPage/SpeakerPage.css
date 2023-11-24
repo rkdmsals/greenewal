@@ -174,3 +174,31 @@ html{
         margin: 0 auto;
     }
 }
+
+/* 375px */
+@media screen and (max-width:381px) {
+    .speakerPage_background{
+        font-size: 13px;
+    }
+    .timeTable_title{
+        font-size: 30px;    
+    }
+
+    .timeTable_background{
+        width: 234px;
+        height: 234px;
+        background-size: 234px;
+    }
+    .timeTable_content_name{
+        font-size: 15px;
+    
+    }
+    .speakerInfo_title{
+        font-size: 30px;
+    }
+    .arrow_img{
+        margin: 0 0 0 10px;
+        width: 31px;
+        height: 31px;
+    }
+}
