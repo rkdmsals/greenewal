@@ -94,3 +94,21 @@ module.exports.modifyQuantity = async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 };
+
+module.exports.getOrder = async (req, res) => {
+    try {
+        const userId = req.params.userId; // 요청에서 userId를 가져옴
+
+        const order = await Order.findOne({ userId }).populate('productList.productId'); // 해당 userId의 장바구니 데이터 조회
+
+        /*
+        if (!cart) {
+            return res.status(404).json({ message: '장바구니가 존재하지 않습니다.' });
+        }
+        */
+        res.status(200).json(order); // 장바구니 데이터를 JSON 형태로 응답
+    } catch (error) {
+        // 에러 발생 시 클라이언트에 에러 메시지를 응답
+        res.status(500).json({ error: '서버에서 장바구니 불러오기 에러 발생' });
+    }
+};
