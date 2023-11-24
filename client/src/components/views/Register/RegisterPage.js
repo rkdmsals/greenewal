@@ -7,7 +7,7 @@ import { auth } from '../../../_actions/user_action';
 import { useEffect } from 'react';
 
 
-function RegisterPage(props) {
+function RegisterPage() {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();

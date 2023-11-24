@@ -9,6 +9,7 @@ html {
     flex-direction: column;
     margin-top: 10px;
     overflow: hidden;
+    padding-top: 50px;
 
 }
 
