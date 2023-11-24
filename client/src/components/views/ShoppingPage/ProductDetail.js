@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import { auth } from '../../../_actions/user_action';
 import axios from 'axios';
+import Slider from 'react-slick';
 import './ProductDetail.css';
 
 function ProductDetail() {
@@ -84,13 +85,27 @@ function ProductDetail() {
 
 
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        className: "ProductDetail_custom_slides"
+    };
 
     return (
         <div className='ProductDetail_background'>
             <div className='ProductDetail_main_container'>
                 <div className="ProductDetial_inner_container">
                     <div className="ProductDetail_img_container">
-                        임시이미지
+                        <Slider {...settings}>
+                            {product.detailImg.map((image, index) => (
+                                <div key={index}>
+                                    <img className="detailImg_wrapper" src={image} alt={`Image ${index + 1}`} />
+                                </div>
+                            ))}
+                        </Slider>
                     </div>
                     <div className="ProductDetail_main_description_container">
                         <div className="ProductDetail_description_title_container">

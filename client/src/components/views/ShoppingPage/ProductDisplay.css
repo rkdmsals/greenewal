@@ -126,6 +126,11 @@
     width: 15%;
 }
 
+.product_main_img {
+    width: 100%;
+    height: auto;
+}
+
 .ProductDisplay_cart_button_container {
     text-align: center;
 }

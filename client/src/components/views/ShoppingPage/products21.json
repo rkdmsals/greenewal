@@ -5,9 +5,9 @@
         "originalPrice": 7500,
         "discountedPrice": 6500,
         "describe": "내용내용내용",
-        "img": "../../../../public/img/ShoppingPage/products/productsDetail/6-1.png",
+        "img": "/img/ShoppingPage/productsDetail/6-1.png",
         "detailImg": [
-            "../../../../public/img/ShoppingPage/products/productsDetail/6-1.png"
+            "/img/ShoppingPage/productsDetail/6-1.png"
         ]
     },
     {
@@ -16,9 +16,9 @@
         "originalPrice": 2500,
         "discountedPrice": 2000,
         "describe": "내용내용내용",
-        "img": "../../../../public/img/ShoppingPage/products/productsDetail/7-1.png",
+        "img": "/img/ShoppingPage/productsDetail/7-1.png",
         "detailImg": [
-            "../../../../public/img/ShoppingPage/products/productsDetail/7-2.png"
+            "/img/ShoppingPage/productsDetail/7-2.png"
         ]
     },
     {
@@ -27,9 +27,9 @@
         "originalPrice": 3500,
         "discountedPrice": 2000,
         "describe": "내용내용내용",
-        "img": "../../../../public/img/ShoppingPage/products/productsDetail/8-1.png",
+        "img": "/img/ShoppingPage/productsDetail/8-1.png",
         "detailImg": [
-            "../../../../public/img/ShoppingPage/products/productsDetail/8-2.png"
+            "/img/ShoppingPage/productsDetail/8-2.png"
         ]
     },
     {
@@ -38,10 +38,10 @@
         "originalPrice": 3500,
         "discountedPrice": 2500,
         "describe": "내용내용내용",
-        "img": "../../../../public/img/ShoppingPage/products/productsDetail/9-1.png",
+        "img": "/img/ShoppingPage/productsDetail/9-1.png",
         "detailImg": [
-            "../../../../public/img/ShoppingPage/products/productsDetail/9-1.png",
-            "../../../../public/img/ShoppingPage/products/productsDetail/9-2.png"
+            "/img/ShoppingPage/productsDetail/9-1.png",
+            "/img/ShoppingPage/productsDetail/9-2.png"
         ]
     }
 ]

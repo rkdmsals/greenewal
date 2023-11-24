@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-
 import productTotalData from "./productsTotal.json";
 import products21Data from "./products21.json";
 import products22Data from "./products22.json"
 import productsPastData from "./productsPast.json";
 import { useDispatch } from 'react-redux';
 import { auth } from '../../../_actions/user_action';
+import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 import './ProductDisplay.css';
 
 function ProductDisplay() {
@@ -78,6 +79,10 @@ function ProductDisplay() {
                                     </div>
                                 </div>
                                 <div className="ProductDisplay_content_right_container">
+                                    <img
+                                        className="product_main_img"
+                                        src="/img/ShoppingPage/addButton.png"
+                                    />
                                 </div>
                             </div>
                         </div>
