@@ -8,6 +8,7 @@ html{
     font-size: var(--content-font-size);
     text-align: center;
     color: var(--toneDown-black);
+    padding-top: 50px;
 
 }
 
@@ -79,4 +80,10 @@ html{
         width: 500px;
         margin: 0 auto;
     }
+}
+
+@media screen and (max-width:320px) {
+.login_input{
+    width: 150px;
+}
 }

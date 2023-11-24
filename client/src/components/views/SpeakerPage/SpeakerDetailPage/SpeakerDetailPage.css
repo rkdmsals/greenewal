@@ -144,3 +144,10 @@ html{
     }
     
 }
+
+/* 375px */
+@media screen and (max-width:375px) {
+    .speakerDetailInfo_title {
+        font-size: 35px;
+    }
+}

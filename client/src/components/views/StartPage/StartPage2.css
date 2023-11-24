@@ -96,3 +96,27 @@
         margin: 0 auto;
     }
 }
+
+/* 375px */
+@media screen and (max-width:375px) {
+    .GrnTitle {
+        font-size: var(--title-font-size);
+    }
+    .GrnTitle span {
+        box-shadow: inset 0px -25px 0 rgba(52, 154, 107, 0.50);
+        height: 80%;
+    }
+    .GrnBanner {
+
+        height: 110px;
+    }
+    .GrnBanE {
+        height: 100px;
+    }
+    .GrnRoute {
+        height: 31vh;
+    }
+    .GrnRoute_inner_container{
+        font-size: 18px;
+    }
+}

@@ -8,6 +8,7 @@ html{
     font-size: var(--content-font-size);
     text-align: center;
     color: var(--toneDown-black);
+    padding-top: 50px;
 
 }
 
@@ -87,3 +88,9 @@ html{
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width:320px) {
+    .register_input{
+        width: 150px;
+    }
+    }

@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import "./LoginPage.css";
-import Axios from 'axios';
+//import Axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../../_actions/user_action';
 import { useNavigate } from 'react-router-dom';
-import Auth from '../../../hoc/auth';
 import { auth } from '../../../_actions/user_action';
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 
-function LoginPage(props) {
+function LoginPage() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
