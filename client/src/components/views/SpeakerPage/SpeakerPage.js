@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as Dia } from "../../../assets/images/SpeakerPage/dia.svg";
 import { ReactComponent as Speaker_2 } from "../../../assets/images/SpeakerPage/speaker2.svg";
-import { ReactComponent as Speaker_3 } from "../../../assets/images/SpeakerPage/speaker3.svg";
+// import { ReactComponent as Speaker_3 } from "../../../assets/images/SpeakerPage/speaker3.svg";
 
 function SpeakerPage() {
     const navigate = useNavigate();
@@ -86,7 +86,8 @@ function SpeakerPage() {
                             <div className="speakerInfo_content">
                                 <div className="speakerInfo_name speakerInfo_name_3">노슈니</div>
                                 <div className="speakerInfo_topic_content">노션 초보자들을 <br /> 위한 포트폴리오 작성 꿀팁</div>
-                                <div className="speaker_svg3"><Speaker_3 /></div>
+                                {/* <div className="speaker_svg3"><Speaker_3 /></div> */}
+                                <div className="speaker_svg3"><img className="speaker_img3" src="/img/SpeakerPage/speaker3.png" /></div>
                             </div>
 
                         </div>
