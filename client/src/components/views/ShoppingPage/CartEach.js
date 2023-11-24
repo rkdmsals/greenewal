@@ -8,14 +8,18 @@ function CartEach(values) {
         <div className='CartEach'>
             <img className="CartProductImg"></img>
             <div className='CartRight'>
-                <div style={{ fontWeight: "700" }}>{productName}</div>
-                <div>{price}</div>
-            </div>
-            <div className="DelBtn"></div>
-            <div className="CartNum">
-                <div className="MinusBtn"></div>
-                {quantity}
-                <div className="PlusBtn"></div>
+                <div>
+                    <div style={{ fontWeight: "700" }}>{productName}</div>
+                    <div>{price}</div>
+                </div>
+                <div className="CartEachButtons">
+                    <div className="DelBtn"></div>
+                    <div className="CartNum">
+                        <div className="MinusBtn"></div>
+                        {quantity}
+                        <div className="PlusBtn"></div>
+                    </div>
+                </div>
             </div>
         </div>
     )
