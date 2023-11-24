@@ -4,11 +4,20 @@ html{
 
 .speakerDetailPage_background{
     display: block;
+    margin-top: 17%;
     padding: 20% 3% 3% 3% 3%;
     font-size: var(--content-font-size);
     text-align: center;
     color: var(--toneDown-black);
 
+}
+.speakerDetailInfo_title{
+    display: flex;
+    justify-content: flex-start;
+    font-size: var(--title-font-size);
+    font-weight: bold;
+    margin-left: 5%;
+    font-family: "kameron-bold";
 }
 
 #speakerInfo_2{
