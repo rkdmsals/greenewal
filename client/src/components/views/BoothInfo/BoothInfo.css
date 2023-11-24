@@ -1,20 +1,25 @@
-header {
+/* header {
     display: block;
     height: 50px;
-}
+} */
 
 .BoothInfo {
     font-family: "pretendard-medium";
     font-style: normal;
     /* 헤더 자리 남겨두기 */
     padding-top: 50px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .BoothImg {
+    height: 100px;
+    width: 100px;
     /* 이미지 클로버 레이아웃 설정 */
     mask: url(../../../../public/img/Booth/cloberVec.svg);
     mask-size: cover;
-    /* background: url("../../../../public/img/photo/greenpt.png"); */
+    mask-border-outset: 2px;
+
 }
 
 .BoothMap {
@@ -57,11 +62,6 @@ header {
     justify-content: space-evenly;
 }
 
-.EachBooth img {
-    height: 100px;
-    /* max-width: 33%; */
-    width: 100px;
-}
 
 .EachBoothInfo {
     width: 66%;
@@ -103,12 +103,20 @@ header {
     }
 }
 
-/* @media screen and (max-width:300px) {
+@media screen and (min-width:800px) {
+    .BoothInfo {
+        width: 500px;
+    }
+}
+
+
+@media screen and (max-width:300px) {
     .EachBoothInfo div {
-        padding-right: 15%;
+        padding-right: 18%;
         box-sizing: border-box;
     }
 
+    /* 
     .EachBoothInfo {
         height: 120px;
     }
@@ -116,8 +124,35 @@ header {
     #LongTxt .BoothTag {
         padding-right: 18%;
     }
+*/
+
+    .BoothImg {
+        height: 77px;
+        width: 77px;
+        margin: auto 0;
+    }
+
+    .EachBooth {
+        height: 130px;
+    }
 
     #LongTxt.EachBooth {
         height: 130px;
     }
-} */
+
+    .AllBooths button {
+        left: 80%;
+    }
+
+    /* #LongTxt button {
+        top: -10%
+    } */
+
+    #LongTxt .EachBoothInfo div {
+        padding-right: 20%;
+    }
+
+    #LongTxt .EachBoothInfo .BoothName {
+        padding-right: 11px;
+    }
+}
