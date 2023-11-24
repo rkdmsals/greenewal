@@ -9,11 +9,11 @@ module.exports.addToCart = async (req, res) => {
         const quantity = req.body.quantity;
         const title = req.body.title;
         const price = req.body.price;
-
+        console.log("컨트롤러에서", title, price)
         // 장바구니가 있는지 확인하고 없으면 새로 생성
         let cart = await Cart.findOne({ userId: userId });
         if (!cart) {
-            cart = new Cart({ userId, productList: [{ productId, quantity }] });
+            cart = new Cart({ userId, productList: [{ productId, quantity, title, price }] });
         } else {
             // 이미 장바구니가 있는 경우, 해당 아이템을 추가하거나 수량 증가
             const existingProductIndex = cart.productList.findIndex(
