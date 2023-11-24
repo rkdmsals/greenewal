@@ -46,7 +46,7 @@ html{
 
 .btn_login,
 .nav_register {
-    width: 85%;
+    width: 100%;
     height: 40px;
     background-color: var(--toneDown-black);
     border-radius: 7px;
