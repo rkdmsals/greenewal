@@ -97,7 +97,7 @@
     }
 }
 
-/* 375px */
+/* 381px */
 @media screen and (max-width:375px) {
     .GrnTitle {
         font-size: var(--title-font-size);

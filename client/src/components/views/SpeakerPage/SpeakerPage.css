@@ -176,7 +176,7 @@ html{
 }
 
 /* 375px */
-@media screen and (max-width:375px) {
+@media screen and (max-width:381px) {
     .speakerPage_background{
         font-size: 13px;
     }
