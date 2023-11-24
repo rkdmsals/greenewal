@@ -59,7 +59,7 @@ function RegisterPage() {
             if(response.payload.success) {
               navigate('/login');  
             } else {
-                alert('Failed to sign up')
+                alert('모든 항목을 입력해주세요.')
             }
         })
     }
