@@ -41,8 +41,6 @@ const Photo = () => {
 
   const [selectedItem, setSelectedItem] = useState(items[0]);
   const [initialState, setInitialState] = useState(true);
-
-
   const handleItemClick = (item) => {
     setSelectedItem(item);
     setInitialState(false);
@@ -50,14 +48,13 @@ const Photo = () => {
 
   return (
     <div>
+      <div className="photo-container">
+        <div className="titletext">
+          4-Cut<br></br>Photo Booth
+        </div>
+        <img src="/img/photo/title.png" alt="반짝이" className="pt-title-image" />
 
-    <div className="photo-container">
-      <div className="titletext">
-        4-Cut<br></br>Photo Booth
-      </div>
-      <img src="/img/photo/title.png" alt="반짝이" className="pt-title-image" />
-
-      <div className='button-m'>
+        <div className='button-m'>
           {items.map((item) => (
             <button
               key={item.id}
@@ -68,7 +65,6 @@ const Photo = () => {
             </button>
           ))}
         </div>
-
         <div className="p-selected-item">
           <img src={selectedItem.image} alt={selectedItem.text} className="selected-item-img" />
           <div className="items">

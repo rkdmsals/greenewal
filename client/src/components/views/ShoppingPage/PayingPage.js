@@ -27,7 +27,7 @@ function PayingPage() {
                 navigate('/login');
             }
         })
-    }, []);
+    });
 
     /*장바구니 DB에 담긴 물품들 가져오는 코드 */
     useEffect(() => {
@@ -53,7 +53,7 @@ function PayingPage() {
         cartItems.map((a) => {
             total_price = total_price + a.price * a.quantity
         })
-        setTotalPrice(total_price)
+        return setTotalPrice(total_price)
     }, [cartItems])
 
 
