@@ -5,7 +5,7 @@ html {
 .speakerDetailPage_background {
     display: block;
     margin-top: 17%;
-    padding: 20% 3% 3% 3% 3%;
+    padding: 1% 3% 3% 3% 3%;
     font-size: var(--content-font-size);
     text-align: center;
     color: var(--toneDown-black);

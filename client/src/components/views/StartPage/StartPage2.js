@@ -43,7 +43,7 @@ function StartPage2() {
         <div className="GrnBanner">
         <Slider {...settings}>
             <div>
-                <img className="GrnBanE" onClick={() => redirectToExternalLink('https://naver.com')}></img>
+                <img className="GrnBanE" src="/img/StartPage/banner1.png"onClick={() => redirectToExternalLink('https://www.beplain.co.kr/')}></img>
             </div>
             <div>
                 <img className="GrnBanE" id="GrnBanE_2" onClick={() => redirectToExternalLink('https://naver.com')}></img>
