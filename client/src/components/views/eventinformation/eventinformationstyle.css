@@ -25,7 +25,8 @@
         
     }
     .line-image{
-        width: 335px;
+        width: 90%;
+        margin-left: 5%;
     }
 
     .eiposter{
@@ -83,7 +84,7 @@
         font-family: "pretendard";
     }
     .maptext{
-        margin-left: 35px;
+        margin-left: 18px;
     }
     .maptext1{
         font-size: 16px;
@@ -133,6 +134,6 @@
 
 .item-41, .item-42, .item-43, .item-44 {
     margin-bottom: 20px;
-    margin-left: 50px;
+    margin-left: 18px;
 }
 

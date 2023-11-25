@@ -7,7 +7,7 @@ const Menu = () => {
       id: 1,
       image: '/img/menu/bp.png',
       text: '미니 붕어빵',
-      downtext: '미니 붕어빵(5개)',
+      downtext: '미니 붕어빵(4개)',
       pricetext: '3,000₩',
       contenttext: (
         <div style={{ whiteSpace: 'pre-line' }}>
