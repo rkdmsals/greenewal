@@ -7,7 +7,7 @@ const Photo = () => {
       id: 1,
       image: '/img/photo/greenpt.png',
       text: '그린네컷',
-      pricetext: '4000₩',
+      pricetext: '5000₩',
       contenttext: (
         <div style={{ whiteSpace: 'pre-line' }}>
           이화여자대학교를 대표하는 고유 색, 이화그린! <br />
