@@ -44,10 +44,7 @@ function SpeakerDetailPage() {
                             <div className="speakerInfo_detail_topic_content">변호사 합격, 그 이후</div>
                         </div>
                         <div className="speaker_detail_svg2"><Speaker_2 /></div>
-
-
                     </div>
-
                 </div>
                 <div className="speakerDetailInfo" id="speakerInfo_3">
                     <div className="speakerDetailInfo_content">
@@ -59,7 +56,7 @@ function SpeakerDetailPage() {
                         <div className="speakerInfo_detail_topic">강연 주제</div>
                         <div className="speakerInfo_detail_topic_content">노션 초보자들을 위한 <br />포트폴리오 작성 꿀팁</div>
                         {/* <div className="speaker_detail_svg3"><Speaker_3 /></div> */}
-                        <div className="speaker_detail_svg3"><img className="speaker_detail_img3" src="/img/SpeakerPage/speaker3.png" /></div>
+                        <div className="speaker_detail_svg3"><img className="speaker_detail_img3" src="/img/SpeakerPage/speaker3.png" alt="노슈니님 이미지" /></div>
                     </div>
 
                 </div>

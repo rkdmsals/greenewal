@@ -8,7 +8,6 @@ import productsPastData from "./productsPast.json";
 import { useDispatch } from 'react-redux';
 import { auth } from '../../../_actions/user_action';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import './ProductDisplay.css';
 
@@ -16,7 +15,6 @@ function ProductDisplay() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [userId, setUserId] = useState("");
-    const [productInfo, setProduct] = useState({})
 
     const [currentDisplay, setCurrentDisplay] = useState(productTotalData)
     const handleButton1Click = (e) => {

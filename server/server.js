@@ -6,12 +6,11 @@ const { auth } = require('./middleware/auth');
 const app = express();
 //const { PORT, MONGO_URI } = process.env;
 const config = require('./config/key');
-
 const PORT = 3005;
 const MongoStore = require("connect-mongo");
 var fs = require('fs')
 const path = require("path");
-
+//로그인 DB 가져오기
 const { UserInfo } = require("./models/userInfo");
 
 //Route 가져오기
@@ -39,10 +38,17 @@ app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(cookieParser());
+
+//호스팅 에러 해결?
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+//라우터 연결
 app.use('/api/feedback', FeedbackRouter)
 app.use('/api/addToCart', cartRouter);
 
-
+//로그인 관련 함수
 app.post('/api/register', async (req, res) => {
   const userInfo = new UserInfo(req.body)
 
