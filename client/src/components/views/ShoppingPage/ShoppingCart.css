@@ -1,6 +1,8 @@
 .Cart {
     font-family: "pretendard-medium";
-    padding-top: 50px;
+    margin-top: 50px;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .CartEach {
@@ -78,7 +80,7 @@
 
 .ShopBill {
     height: 230px;
-    width: 100vw;
+    width: 100%;
     border-radius: 30px 30px 0px 0px;
     background-color: white;
     box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.25);
@@ -88,6 +90,7 @@
     box-sizing: border-box;
     font-size: 18px;
     font-weight: 600;
+    box-sizing: border-box;
 }
 
 .ShopBill button {
@@ -123,4 +126,16 @@
     height: calc(100vh - 300px);
     padding-top: 20px;
     overflow: scroll;
+}
+
+@media screen and (min-width:840px) {
+    .Cart {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .ShopBill {
+        width: 500px;
+        margin: 0 auto;
+    }
 }

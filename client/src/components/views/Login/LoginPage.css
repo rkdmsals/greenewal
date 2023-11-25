@@ -27,7 +27,7 @@ html {
 }
 
 .login_container {
-    margin-top: 50px;
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
 }
@@ -71,6 +71,14 @@ html {
 .login_input {
     font-family: "pretendard-medium";
     width: 200px;
+}
+
+.LoginText {
+    word-break: keep-all;
+    width: 100%;
+    margin: 20px auto;
+    font-size: 14px;
+    text-align: left;
 }
 
 /* desktop */
