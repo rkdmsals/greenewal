@@ -27,6 +27,10 @@
   background-color: #fff;
   font-family: "pretendard";
 }
+.menu-item-button.initial {
+  background-color: black;
+  color: white;
+}
 .menu-item-button:hover {
   background-color: #080808;
   color: #fff;

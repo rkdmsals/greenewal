@@ -40,9 +40,12 @@ const Photo = () => {
   ]);
 
   const [selectedItem, setSelectedItem] = useState(items[0]);
+  const [initialState, setInitialState] = useState(true);
+
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
+    setInitialState(false);
   };
 
   return (
@@ -53,28 +56,28 @@ const Photo = () => {
         4-Cut<br></br>Photo Booth
       </div>
       <img src="/img/photo/title.png" alt="반짝이" className="pt-title-image" />
-      
+
       <div className='button-m'>
-        {items.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => handleItemClick(item)}
-            className="photo-item-button"
-          >
-            <div>{item.text}</div>
-          </button>
-        ))}
-      </div>
-      <div className="p-selected-item">
-        <img src={selectedItem.image} alt={selectedItem.text} className="selected-item-img" />
-        <div className="items">
-          <span className="p-selected-item-text">{selectedItem.text}</span> 
-          <span className="p-selected-item-pricetext">{selectedItem.pricetext}</span>
+          {items.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => handleItemClick(item)}
+              className={`photo-item-button ${initialState && item.id === 1 ? 'initial' : ''}`}
+            >
+              <div>{item.text}</div>
+            </button>
+          ))}
         </div>
-        <div className="p-selected-item-contenttext">{selectedItem.contenttext}</div>
-            
+
+        <div className="p-selected-item">
+          <img src={selectedItem.image} alt={selectedItem.text} className="selected-item-img" />
+          <div className="items">
+            <span className="p-selected-item-text">{selectedItem.text}</span>
+            <span className="p-selected-item-pricetext">{selectedItem.pricetext}</span>
+          </div>
+          <div className="p-selected-item-contenttext">{selectedItem.contenttext}</div>
+        </div>
       </div>
-    </div>
     </div>
   );
 }
