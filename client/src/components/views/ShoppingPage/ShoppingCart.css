@@ -7,8 +7,10 @@
 
 .CartEach {
     display: flex;
-    width: 90%;
-    height: 130px;
+    width: fit-content;
+    min-width: 300px;
+    max-width: 90%;
+    height: 28vw;
     /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 20px 0px;
@@ -17,11 +19,14 @@
 }
 
 .CartEach img {
+    /* width: 100px;
+    height: 100px; */
     width: 25vw;
     height: 25vw;
     /* padding: 20px 0px; */
     mask: url(../../../../public/img/Booth/cloberVec.svg);
     mask-size: cover;
+    /* margin-bottom: 20px; */
 }
 
 .CartRight {
@@ -137,5 +142,17 @@
     .ShopBill {
         width: 500px;
         margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:300px) {
+    .CartEach {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .ShopBill {
+        width: 100%;
+        /* margin: 0 auto; */
     }
 }

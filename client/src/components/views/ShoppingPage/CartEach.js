@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import $ from "jquery"
-function CartEach({ userId, productId, quantityFirst, productName, price, updateTotal }) {
+function CartEach({ userId, productId, quantityFirst, productName, price, updateTotal, img }) {
     // const userId = values.userId;
     // const productId = values.productId;
     // const quantityfirst = values.quantity;
@@ -66,7 +66,7 @@ function CartEach({ userId, productId, quantityFirst, productName, price, update
 
     return (
         <div className='CartEach' id={`cart${productId}`}>
-            <img className="CartProductImg"></img>
+            <img className="CartProductImg" src={img}></img>
             <div className='CartRight'>
                 <div>
                     <div style={{ fontWeight: "700" }}>{productName}</div>

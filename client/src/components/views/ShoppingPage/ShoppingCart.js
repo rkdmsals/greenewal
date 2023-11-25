@@ -96,8 +96,9 @@ function ShoppingCart() {
             {console.log("cartItems:", cartItems)}
 
             <div className='CartContainer'>
-                {cartItems.length ? cartItems.map((a) => {
-                    return <CartEach userId={userId} productId={a.productId} quantityFirst={a.quantity} productName={a.title} price={a.price} updateTotal={updateTotal} />
+                {cartItems.length ? cartItems.map((a, i) => {
+                    return <CartEach userId={userId} productId={a.productId} quantityFirst={a.quantity}
+                        productName={a.title} price={a.price} updateTotal={updateTotal} img={productTotalData[i].img} />
                 }) : console.log("안됨")}
             </div>
             <div className='ShopBill' >
