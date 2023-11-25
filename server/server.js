@@ -39,6 +39,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.use(express.static(path.join('../client/public)));
 //호스팅 에러 해결?
 
 
@@ -122,9 +123,22 @@ app.get('/api/logout', auth, (req, res) => {
       res.json({ success: false, err });
     })
 })
-app.get('/', (req, res) => {
-  res.sendFile(express.static(path.join(__dirname, '../client/build/')));
+
+app.get('/*', function(req, res) {
+  res.sendFile(express.static(path.join(__dirname, '../client/build/'))), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
+
+/*app.use(express.static('client/build'))*/;
+/*
+app.get('/*', function(req, res) {
+   res.sendFile('../client/build/index.html');
 });
+*/
 app.listen(PORT, () => {
   console.log(`greenewal server listening on port ${PORT}`);
 });
