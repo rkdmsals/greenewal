@@ -26,6 +26,7 @@
   cursor: pointer;
   background-color: #fff;
   font-family: "pretendard";
+  color: #080808;
 }
 .menu-item-button.initial {
   background-color: black;
