@@ -33,7 +33,7 @@ mongoose
   })
   .catch((e) => console.error(e));
 
-app.use(express.static(path.join(__dirname, "../client/build")));
+// app.use(express.static(path.join(__dirname, "../client/build")));
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
@@ -124,5 +124,5 @@ app.get('/api/logout', auth, (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`recruiting-site server listening on port ${PORT}`);
+  console.log(`greenewal server listening on port ${PORT}`);
 });
