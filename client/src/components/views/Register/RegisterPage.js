@@ -108,7 +108,7 @@ function RegisterPage() {
                         <input className="register_input" type="password" value={Password} onChange={onPasswordHandler} />
                     </div>
                     <div className='inputset'>
-                        <div className='register_label_confirm'>Password Confirm</div>
+                        <div className='register_label'>Password Confirm</div>
                         <input className="register_input" type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler} />
                     </div>
                     <div className='message'>비밀번호는 5자리 이상이여야 합니다.</div>
