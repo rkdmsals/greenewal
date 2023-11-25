@@ -151,7 +151,7 @@
     z-index: 10;
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:840px) {
     .ProductDisplay_background {
         width: 500px;
         margin: 0 auto;
