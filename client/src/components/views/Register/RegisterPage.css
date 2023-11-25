@@ -47,11 +47,6 @@ html {
 
 }
 
-.register_label_confirm {
-    font-size: var(--context-font-size);
-    font-family: "kameron-bold";
-    text-align: left;
-}
 
 .message {
     text-align: left;
