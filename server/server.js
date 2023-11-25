@@ -43,7 +43,8 @@ app.use(cookieParser());
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
-
+app.use("/api/feedback", FeedbackRouter);
+app.use("/api/addToCart", cartRouter);
 
 //로그인 관련 함수
 app.post('/api/register', async (req, res) => {
