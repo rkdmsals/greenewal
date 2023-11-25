@@ -33,7 +33,7 @@ const Feedback = () => {
                 console.log(response.data);
                 setFeedbacks(response.data);
             });
-    });
+    }, []); // 마운트될 때 한 번만 실행되도록 빈 배열 전달
 
     const onContentHandler = (event) => {
         setContent(event.currentTarget.value)
