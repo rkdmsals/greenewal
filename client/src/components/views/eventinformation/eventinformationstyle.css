@@ -36,15 +36,15 @@
         margin-top: 40px;
     }
     .leftposter-image{
-        width: 10%;
+        width: 12%;
         height: auto;
     }
     .poster-image{
-        width: 58.5%;
+        width: 65%;
         height: auto
     }
     .rightposter-image{
-        width: 10%;
+        width: 12%;
         height:  auto;
     }
     .postertext{
@@ -69,6 +69,7 @@
 
     .datetext{
         font-size: 16px;
+        margin-left: 0;
     }
     .date1text{
         margin-bottom: 15px;
@@ -82,9 +83,6 @@
     .map{
         margin-top: 20px;
         font-family: "pretendard";
-    }
-    .maptext{
-        margin-left: 18px;
     }
     .maptext1{
         font-size: 16px;
@@ -134,6 +132,5 @@
 
 .item-41, .item-42, .item-43, .item-44 {
     margin-bottom: 20px;
-    margin-left: 18px;
 }
 
