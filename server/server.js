@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
@@ -7,28 +6,21 @@ const { auth } = require('./middleware/auth');
 const app = express();
 //const { PORT, MONGO_URI } = process.env;
 const config = require('./config/key');
-
 const PORT = 3005;
 const MongoStore = require("connect-mongo");
 var fs = require('fs')
 const path = require("path");
-
+//로그인 DB 가져오기
 const { UserInfo } = require("./models/userInfo");
-const cartRouter = require("./routes/cartRoutes");
 
-const FeedbackRouter = require("./routes/feedback")
-
-app.use(express.static(path.join(__dirname, "../client/build")));
-app.use(express.urlencoded({ extended: true }))
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json());
-app.use(cookieParser());
-
+//Route 가져오기
 
 // router 연결
-var routes = require('./routes/index');
-app.use('/', routes);
-app.use('/api/feedback', FeedbackRouter)
+// var routes = require('./routes/index');
+// app.use('/', routes);
+const FeedbackRouter = require("./routes/feedback");
+const cartRouter = require("./routes/cartRoutes");
+
 //몽고DB 연결
 mongoose.set("strictQuery", false);
 mongoose
@@ -41,7 +33,19 @@ mongoose
   })
   .catch((e) => console.error(e));
 
+// app.use(express.static(path.join(__dirname, "../client/build")));
+app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
+app.use(cookieParser());
 
+//호스팅 에러 해결?
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+
+//로그인 관련 함수
 app.post('/api/register', async (req, res) => {
   const userInfo = new UserInfo(req.body)
 
@@ -117,5 +121,5 @@ app.get('/api/logout', auth, (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`recruiting-site server listening on port ${PORT}`);
+  console.log(`greenewal server listening on port ${PORT}`);
 });

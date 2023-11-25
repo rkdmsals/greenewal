@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./components/utilis/variables.css"
-import LogOut from "./components/views/LogOut";
 import StartPage from "./components/views/StartPage/StartPage";
 import SpeakerPage from "./components/views/SpeakerPage/SpeakerPage";
 import SpeakerDetailPage from "./components/views/SpeakerPage/SpeakerDetailPage/SpeakerDeatailPage";
@@ -44,7 +42,6 @@ function App() {
         {/* MainLayout에서 사용하는 페이지들 */}
         <Header />
         <Routes>
-
           <Route exact path="/start" element={<StartPage2 />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
           <Route path="/shop/product-detail/:productId" element={<ProductDetail />} />

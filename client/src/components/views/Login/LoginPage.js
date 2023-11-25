@@ -39,24 +39,17 @@ function LoginPage() {
                     alert('Error')
                 }
             })
-
     }
-
     useEffect(() => {
-
         dispatch(auth()).then(response => {
             console.log(response)
-
             if (!response.payload.isAuth) {
                 return
             } else {
                 navigate('/');
             }
         })
-
-
-    }, [])
-
+    })
 
     return (
         <div className='LoginPage_background'>

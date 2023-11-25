@@ -11,6 +11,7 @@ function PayingPage() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [userId, setUserId] = useState("");
+    // const [userObjectId, setUserObjectId] = useState("");
     const [cartItems, setCartItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0)
     useEffect(() => {
@@ -26,7 +27,7 @@ function PayingPage() {
                 navigate('/login');
             }
         })
-    }, []);
+    });
 
     /*장바구니 DB에 담긴 물품들 가져오는 코드 */
     useEffect(() => {
@@ -52,7 +53,7 @@ function PayingPage() {
         cartItems.map((a) => {
             total_price = total_price + a.price * a.quantity
         })
-        setTotalPrice(total_price)
+        return setTotalPrice(total_price)
     }, [cartItems])
 
 
@@ -76,9 +77,17 @@ function PayingPage() {
             })
                 .then(function (response) {
                     console.log(response);
-                    alert("주문이 완료되었습니다!");
                     //이때 cartDB 삭제하기
-                    navigate("/shop");
+                    axios.post('/api/addToCart/dropCart', {
+                        userId: userId,
+                    })
+                    // alert("주문이 완료되었습니다!");
+
+                })
+                .then(function (response) {
+                    console.log(response)
+                    alert("주문이 완료되었습니다!")
+                    navigate("/shop")
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -98,7 +107,7 @@ function PayingPage() {
                         <div>{a.title}({a.quantity})</div>
                         <div>{a.price}￦</div>
                     </div>)
-            }) : console.log("전부 됨")}
+            }) : <div style={{ display: "none" }}></div>}
 
             {/* 굿즈 다 반환하고 나서 */}
             <div className="PayTotal">

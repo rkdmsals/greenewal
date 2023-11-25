@@ -143,9 +143,23 @@
     border-radius: 10px;
     color: white;
     margin-top: 5%;
-    margin-bottom: 5%;
+
     font-size: 16px;
     position: fixed;
-    bottom: 0px;
+    bottom: 2%;
     left: 5%;
+    z-index: 10;
+}
+
+@media screen and (min-width:840px) {
+    .ProductDisplay_background {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .ProductDisplay_cart_button {
+        width: 450px;
+        left: calc(50% - 225px);
+    }
+
 }

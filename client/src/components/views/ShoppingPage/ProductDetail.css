@@ -12,18 +12,21 @@
     margin-left: 5%;
     margin-right: 5%;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 
 .ProductDetail_img_container {
-    width: 330px;
-    height: 360px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
 }
 
 
 .detailImg_wrapper {
-    width: 330px;
-    height: 330px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .ProductDetail_main_description_container {
@@ -71,7 +74,8 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 8%;
+    margin-top: 2%;
+    margin-bottom: 10px;
 }
 
 .ProductDetail_cart_button {
@@ -93,4 +97,11 @@
     border-radius: 10px;
     margin-left: 2%;
     font-size: 16px;
+}
+
+@media screen and (min-width:840px) {
+    .ProductDetail_background {
+        width: 500px;
+        margin: 0 auto;
+    }
 }

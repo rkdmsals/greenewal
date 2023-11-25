@@ -32,7 +32,7 @@ function ProductDetail() {
             }
             */
         })
-    }, []);
+    });
 
     const addToCart = () => {
         if (!userId) {
@@ -50,7 +50,7 @@ function ProductDetail() {
         })
             .then(response => {
                 if (response.status === 200) {
-                    console.log('장바구니에 상품이 추가되었습니다.');
+                    alert('장바구니에 상품이 추가되었습니다.');
                     navigate(`/cart/${userId}`);  // 장바구니로 이동
                 } else {
                     console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
@@ -62,26 +62,6 @@ function ProductDetail() {
 
 
     };
-
-
-    // const directParchase = () => {
-    //     axios.post('/api/addToCart/direct', {
-    //         userId: userId,
-    //         productId: product.id,
-    //         quantity: 1, // 장바구니에 추가하는 상품의 수량
-    //     })
-    //         .then(response => {
-    //             if (response.status === 200) {
-    //                 console.log('장바구니에 상품이 추가되었습니다.');
-    //                 navigate('/cart');  // 장바구니로 이동 -----> 구글폼으로..
-    //             } else {
-    //                 console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
-    //             }
-    //         })
-    //         .catch(error => {
-    //             console.error('장바구니 요청 중 오류 발생:', error);
-    //         });
-    // };
 
     const settings = {
         dots: true,
