@@ -9,8 +9,9 @@ function OrderCheck() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [userId, setUserId] = useState("");
-    const [totalPrice, setTotalPrice] = useState(0);
+    const [totalPrice, setTotalPrice] = useState([]);
     const [orderThings, setOrderThings] = useState([]);
+    const [userInfo, setUserInfo] = useState({})
     useEffect(() => {
         dispatch(auth()).then(response => {
             // console.log(response);
@@ -41,44 +42,58 @@ function OrderCheck() {
     }, [userId]);
 
     useEffect(() => {
-        var total_price = 0
+        let total_price = [];
         {
-            orderThings.productList ? orderThings.productList.map((a) => {
-                total_price = total_price + a.price * a.quantity
+            orderThings.length ? orderThings.map((b, idx) => {
+
+
+                total_price[idx] = 0;
+                {
+                    orderThings[idx].productList ? orderThings[idx].productList.map((a) => {
+                        total_price[idx] = total_price[idx] + a.price * a.quantity
+                    })
+                        : console.log("없음");
+                }
             }) : console.log("orderThings 받지 못함")
+        }
+        if (orderThings.length) {
+            setUserInfo(orderThings[0])
         }
         setTotalPrice(total_price)
     }, [orderThings])
 
     return (<div className="PayingBack">
         {/* 구매 내역 */}
-        <div className="PayContainer BuyingList">
-            <div className="PayingTitle">구매 내역</div>
-            {/* {console.log(orderThings.productList)} */}
-            {orderThings.productList ? orderThings.productList.map((a, idx) => {
-                return (
-                    <div className="BuyingEach">
-                        <div>{a.title}({a.quantity})</div>
-                        <div>{a.price}￦</div>
-                    </div>)
-            }) : console.log("전부 됨")}
+        {orderThings.length ? orderThings.map((b, idx) => {
+            return (
+                <div className="PayContainer BuyingList">
+                    <div className="PayingTitle">구매 내역{idx + 1}</div>
+                    {/* {console.log(orderThings.productList)} */}
+                    {b.productList ? b.productList.map((a) => {
+                        return (
+                            <div className="BuyingEach">
+                                <div>{a.title}({a.quantity})</div>
+                                <div>{a.price}￦</div>
+                            </div>)
+                    }) : console.log("전부 됨")}
 
-            {/* 굿즈 다 반환하고 나서 */}
-            <div className="PayTotal">
-                <div>총 결제 금액 {">"}</div>
-                <div>{totalPrice}￦</div>
-            </div>
-        </div>
+                    {/* 굿즈 다 반환하고 나서 */}
+                    <div className="PayTotal">
+                        <div>총 결제 금액 {">"}</div>
+                        <div>{totalPrice[idx]}￦</div>
+                    </div>
+                </div>)
+        }) : console.log("없음")}
         {/* 주문자 정보 */}
-        <div className="PayContainer">
+        {<div className="PayContainer">
             <div className="PayingTitle">주문자 정보</div>
             <div className="PayingInfo">
-                <div><span>입금자명</span><div className="userInfoInOrder">{orderThings.orderName}</div></div>
-                <div><span>입금 시각</span><div className="userInfoInOrder">{orderThings.orderTime}</div></div>
-                <div><span>환불계좌</span><div className="userInfoInOrder">{orderThings.refundAccount}</div ></div>
-                <div><span>- 은행</span><div className="userInfoInOrder">{orderThings.refundBank}</div></div>
+                <div><span>입금자명</span><div className="userInfoInOrder">{userInfo.orderName}</div></div>
+                <div><span>입금 시각</span><div className="userInfoInOrder">{userInfo.orderTime}</div></div>
+                <div><span>환불 계좌</span><div className="userInfoInOrder">{userInfo.refundAccount}</div ></div>
+                <div><span>환불 은행</span><div className="userInfoInOrder">{userInfo.refundBank}</div></div>
             </div>
-        </div>
+        </div>}
 
         {/* 장소/시간 안내 */}
         <div className="PayContainer">
