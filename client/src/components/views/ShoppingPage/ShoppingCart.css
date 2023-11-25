@@ -19,14 +19,14 @@
 }
 
 .CartEach img {
-    /* width: 100px;
-    height: 100px; */
-    width: 25vw;
-    height: 25vw;
+
     /* padding: 20px 0px; */
     mask: url(../../../../public/img/Booth/cloberVec.svg);
     mask-size: cover;
     /* margin-bottom: 20px; */
+    height: 100%;
+    width: auto;
+    margin-left: 5%;
 }
 
 .CartRight {
@@ -143,16 +143,31 @@
         width: 500px;
         margin: 0 auto;
     }
+
+    .ShopBill {
+        width: 500px;
+        /* margin: 0 auto; */
+        left: calc(50vw - 250px);
+
+        /* left: 500px; */
+    }
+
+    .CartEach {
+        width: 100%;
+        height: 160px;
+    }
+
+    /* .CartEach img {
+        height: 70%;
+        width: auto;
+    } */
 }
 
-@media screen and (min-width:300px) {
+@media screen and (max-width:300px) {
     .CartEach {
         width: 90%;
         margin: 0 auto;
     }
 
-    .ShopBill {
-        width: 100%;
-        /* margin: 0 auto; */
-    }
+
 }
