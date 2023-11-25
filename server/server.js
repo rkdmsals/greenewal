@@ -40,9 +40,11 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 //호스팅 에러 해결?
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
+
+
+// app.use()
+
+
 app.use("/api/feedback", FeedbackRouter);
 app.use("/api/addToCart", cartRouter);
 
@@ -120,7 +122,9 @@ app.get('/api/logout', auth, (req, res) => {
       res.json({ success: false, err });
     })
 })
-
+app.get('/', (req, res) => {
+  res.sendFile(express.static(path.join(__dirname, '../client/build/')));
+});
 app.listen(PORT, () => {
   console.log(`greenewal server listening on port ${PORT}`);
 });
