@@ -1,8 +1,8 @@
-html{
+html {
     background-color: var(--background-yellow);
 }
 
-.RegisterPage_background{
+.RegisterPage_background {
 
     margin: 5% 10%;
     font-size: var(--content-font-size);
@@ -81,7 +81,7 @@ html{
 }
 
 /* desktop */
-@media screen and (min-width:800px) {
+@media screen and (min-width:840px) {
     .RegisterPage_background {
         width: 500px;
         margin: 0 auto;
@@ -89,7 +89,7 @@ html{
 }
 
 @media screen and (max-width:320px) {
-    .register_input{
+    .register_input {
         width: 150px;
     }
-    }
+}
