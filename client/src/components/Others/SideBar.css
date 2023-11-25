@@ -153,7 +153,11 @@ ul li a.active {
     margin-left: 30px;
 }
 
-@media screen and (min-width:800px) {
+#GoToOrder {
+    margin-left: 20px;
+}
+
+@media screen and (min-width:840px) {
     .sidebar {
         width: 350px;
 

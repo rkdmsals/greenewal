@@ -50,7 +50,7 @@ function ProductDetail() {
         })
             .then(response => {
                 if (response.status === 200) {
-                    console.log('장바구니에 상품이 추가되었습니다.');
+                    alert('장바구니에 상품이 추가되었습니다.');
                     navigate(`/cart/${userId}`);  // 장바구니로 이동
                 } else {
                     console.error('장바구니에 상품을 추가하는 데 실패했습니다.');

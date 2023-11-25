@@ -57,13 +57,16 @@ function SideBar({ show }) {
 
                     <div className="border"></div>
                 </div>
-                {isAuth && isTicket ? <div className="sidebar_ticket" onClick={() => navigate('/ticket')}>
-                    <div className="ticket_title">
-                        <img src="/img/SideBar/ticket_icon.png" alt="ticket" className="ticket_icon" />
-                        <div>나의 티켓</div>
+                <div className="sidebar_ticket" >
+                    <div className="ticket_title" >
+                        <img src="/img/SideBar/ticket_icon.png" alt="ticket" className="ticket_icon" onClick={() => { if (isAuth) { navigate('/ticket') } else { alert("로그인 후 이용해주세요") } }} />
+                        <div onClick={() => { if (isAuth) { navigate('/ticket') } else { alert("로그인 후 이용해주세요") } }}>나의 티켓</div>
+                        <div id="GoToOrder" onClick={() => { navigate("/checkOrder") }}>주문 내역</div>
                     </div>
-                    <img src="/img/SideBar/ticket_pic.png" alt="ticket" className="ticket_pic" />
-                </div> : <div></div>}
+
+                    {isAuth && isTicket ? <img src="/img/SideBar/ticket_pic.png" alt="ticket" className="ticket_pic" />
+                        : <div></div>}
+                </div>
                 <ul>
                     <li>
                         <Link to="/eventinfo">행사 정보</Link>

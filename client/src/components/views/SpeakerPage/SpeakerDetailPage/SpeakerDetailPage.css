@@ -112,7 +112,7 @@ html {
 }
 
 /* desktop */
-@media screen and (min-width:800px) {
+@media screen and (min-width:840px) {
     .speakerDetailPage_background {
         margin-top: 4%;
 
