@@ -24,8 +24,7 @@ function CartEach({ userId, productId, quantityFirst, productName, price, update
                 userId: userId,
                 productId: productId,
                 quantity: reQuantity,
-            })
-                ;
+            });
             return setQuantity(reQuantity), updateTotal()
         }
 
