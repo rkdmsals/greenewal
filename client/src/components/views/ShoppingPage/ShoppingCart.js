@@ -42,7 +42,7 @@ function ShoppingCart() {
             axios.get(`/api/addToCart/read/${userId}`)
                 .then(response => {
                     // console.log(response.data.productList[0])
-                    var productListCopy = [{ "productId": 1, "quantity": 3 }];
+                    var productListCopy = [];
                     response.data.productList ? response.data.productList.map((a, idx) => {
 
                         productListCopy[idx] = Object.assign({}, a);
