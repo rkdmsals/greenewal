@@ -123,6 +123,10 @@
     margin-top: 4.5%;
     margin-right: 15px;
 }
+.instarlink a {
+    color: black !important;
+    text-decoration: none;
+}
 .instarlinktxt{
     display: inline-block;
     margin-right: 8px;

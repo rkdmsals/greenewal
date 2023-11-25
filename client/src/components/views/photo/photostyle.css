@@ -29,6 +29,11 @@
 .button-m{
   margin-left: 5%;
 }
+.photo-item-button.initial {
+  background-color: black;
+  color: white;
+}
+
 .photo-item-button:hover {
   background-color: #080808;
   color: #fff;
