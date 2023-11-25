@@ -9,7 +9,7 @@ module.exports.addToCart = async (req, res) => {
         const quantity = req.body.quantity;
         const title = req.body.title;
         const price = req.body.price;
-        console.log("컨트롤러에서", title, price)
+        // console.log("컨트롤러에서", title, price)
         // 장바구니가 있는지 확인하고 없으면 새로 생성
         let cart = await Cart.findOne({ userId: userId });
         if (!cart) {
@@ -136,6 +136,19 @@ module.exports.removeFromCart = async (req, res) => {
 
         await cart.save();
         res.status(200).json({ message: '상품이 장바구니에서 삭제되었습니다.', cart });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+module.exports.dropCart = async (req, res) => {
+
+    const userId = req.body.userId;
+    try {
+
+        await Cart.findOneAndDelete({ userId: userId })
+            .then(res.status(200).json({ message: '상품이 장바구니에서 삭제되었습니다.' }))
+
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
