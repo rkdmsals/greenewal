@@ -14,17 +14,7 @@ var fs = require('fs')
 const path = require("path");
 
 const { UserInfo } = require("./models/userInfo");
-
-//const { feedback } = require("./models/feedback");
-//Route 가져오기
-// const PayForGoodsRouter = require("./routes/payForGoods");
-// app.use("/api/payForGoods", PayForGoodsRouter);
-
-
-/////////////////////
 const cartRouter = require("./routes/cartRoutes");
-//app.use("/api/addToCart", cartRouter);
-////////////////////
 
 const FeedbackRouter = require("./routes/feedback")
 
@@ -51,9 +41,6 @@ mongoose
   })
   .catch((e) => console.error(e));
 
-
-// mongodb://localhost/<db-name>
-//mongoose.connect('mongodb://localhost/');
 
 app.post('/api/register', async (req, res) => {
   const userInfo = new UserInfo(req.body)
