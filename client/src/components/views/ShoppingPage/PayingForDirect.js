@@ -98,9 +98,9 @@ function PayingForDirect() {
             </div>
             <div className="PayingInfo">
                 <div><span>입금자명</span><input type="text" id="OrderName" ></input></div>
-                <div><span>입금 시각</span><input type="text" id="OrderTime"></input></div>
+                <div><span>입금시각</span><input type="text" id="OrderTime"></input></div>
                 <div><span>환불계좌</span><input type="text" id="RefundAccount" ></input></div>
-                <div><span>- 은행</span><input type="text" id="RefundBank"></input></div>
+                <div><span>환불은행</span><input type="text" id="RefundBank"></input></div>
             </div>
         </div>
 

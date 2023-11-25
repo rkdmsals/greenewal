@@ -35,12 +35,12 @@ function PayingPage() {
             axios.get(`/api/addToCart/read/${userId}`)
                 .then(response => {
                     // console.log(response.data.productList[0])
-                    var productListCopy = [{ "productId": 1, "quantity": 3 }];
+                    var productListCopy = [];
                     response.data.productList ? response.data.productList.map((a, idx) => {
 
                         productListCopy[idx] = Object.assign({}, a);
 
-                    }) : console.log("productListCopy", productListCopy);
+                    }) : alert("장바구니에 담긴 물건이 없습니다!")
                     return setCartItems(productListCopy);
                 })
                 .catch(err => {
@@ -125,9 +125,9 @@ function PayingPage() {
             </div>
             <div className="PayingInfo">
                 <div><span>입금자명</span><input type="text" id="OrderName" ></input></div>
-                <div><span>입금 시각</span><input type="text" id="OrderTime"></input></div>
+                <div><span>입금시각</span><input type="text" id="OrderTime"></input></div>
                 <div><span>환불계좌</span><input type="text" id="RefundAccount" ></input></div>
-                <div><span>- 은행</span><input type="text" id="RefundBank"></input></div>
+                <div><span>환불은행</span><input type="text" id="RefundBank"></input></div>
             </div>
         </div>
 

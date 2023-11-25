@@ -103,8 +103,7 @@ const Eventinformation = () => {
                         44기
                     </div>
                     <div className="name">
-                        나혜은, 박영주, 이재이, 김기림, 김예원<br></br>
-                        성혜린 
+                        나혜은, 박영주, 이재이, 김기림, 김예원, 성혜린 
                     </div>
                 </div>   
             </div>     

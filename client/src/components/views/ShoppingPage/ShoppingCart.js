@@ -7,7 +7,7 @@ import { auth } from '../../../_actions/user_action';
 import axios from 'axios';
 import "./ShoppingCart.css"
 import CartEach from './CartEach';
-
+import productTotalData from "./productsTotal.json"
 function ShoppingCart() {
 
     const navigate = useNavigate();
@@ -35,7 +35,7 @@ function ShoppingCart() {
                 navigate('/login');
             }
         })
-    }, []);
+    });
 
     useEffect(() => {
         if (userId) {
@@ -61,33 +61,33 @@ function ShoppingCart() {
         var total_price = 0
         var total_quantity = 0
 
-        cartItems.length ? cartItems.map((a) => [
-            total_price = total_price + a.price * a.quantity,
+        cartItems.length ? cartItems.map((a) => {
+            total_price = total_price + a.price * a.quantity;
             total_quantity = total_quantity + a.quantity
-        ]) : console.log("장바구니에 담긴 상품이 존재x")
+        }) : console.log("장바구니에 담긴 상품이 존재x")
 
         return setTotalPrice(total_price), setTotalQuantity(total_quantity)
     }, [cartItems])
 
     useEffect(() => {
-        if (dataChange) {
-            var total_price = 0
-            var total_quantity = 0
-            console.log("실행되는지?")
-            cartItems.length ? cartItems.map((a) => [
-                total_price = total_price + a.price * a.quantity,
-                total_quantity = total_quantity + a.quantity
-            ]) : console.log("장바구니에 담긴 상품이 존재x")
 
-            return setTotalPrice(total_price), setTotalQuantity(total_quantity), setDataChange(false);
-        } else { console.log("이상함...") }
+        var total_price = 0
+        var total_quantity = 0
+        console.log("실행되는지?")
+        cartItems.length ? cartItems.map((a) => [
+            total_price = total_price + a.price * a.quantity,
+            total_quantity = total_quantity + a.quantity
+        ]) : console.log("장바구니에 담긴 상품이 존재x")
+
+        return setTotalPrice(total_price), setTotalQuantity(total_quantity), setDataChange(false);
+
 
     }, [dataChange])
     const updateTotal = () => {
 
         console.log("값이 변경됨!!")
 
-        return setDataChange(true);
+        return setDataChange(!dataChange);
     }
 
     return (
@@ -106,7 +106,7 @@ function ShoppingCart() {
                     <span style={{ color: "#7D7D7D" }}>총 {totalQuantity}개</span></div>
                 <div className='BillLine2'>
                     <span style={{ fontSize: "14px" }}>총 결제 금액  {">"}</span>
-                    <span>{totalPrice}w</span></div>
+                    <span>{totalPrice}￦</span></div>
                 <button onClick={() => { if (cartItems.length) { navigate("/paying") } else { alert("장바구니에 담긴 상품이 없습니다!") } }}>결제하기</button>
             </div>
         </div>)

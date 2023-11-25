@@ -60,11 +60,11 @@ function SideBar({ show }) {
                 <div className="sidebar_ticket" >
                     <div className="ticket_title" >
                         <img src="/img/SideBar/ticket_icon.png" alt="ticket" className="ticket_icon" onClick={() => { if (isAuth) { navigate('/ticket') } else { alert("로그인 후 이용해주세요") } }} />
-                        <div onClick={() => { if (isAuth) { navigate('/ticket') } else { alert("로그인 후 이용해주세요") } }}>나의 티켓</div>
+                        <div onClick={() => { if (isAuth) { navigate('/ticket', { state: isTicket }) } else { alert("로그인 후 이용해주세요") } }}>나의 티켓</div>
                         <div id="GoToOrder" onClick={() => { navigate("/checkOrder") }}>주문 내역</div>
                     </div>
 
-                    {isAuth && isTicket ? <img src="/img/SideBar/ticket_pic.png" alt="ticket" className="ticket_pic" />
+                    {isAuth && isTicket ? <img src="/img/SideBar/ticket_pic.png" alt="ticket" className="ticket_pic" onClick={() => { navigate('/ticket', { state: isTicket }) }} />
                         : <div></div>}
                 </div>
                 <ul>
@@ -95,7 +95,7 @@ function SideBar({ show }) {
 
             </div>
 
-        </div>)
+        </div >)
 }
 
 export default SideBar

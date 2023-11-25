@@ -35,7 +35,7 @@
     display: inline-block;
     margin-left: 19px;
     width: 50%;
-    border: 1px solid var(--toneDown-black);
+    /* border: 1px solid var(--toneDown-black); */
 }
 
 .PayingInfo span {
@@ -79,4 +79,19 @@
     box-sizing: border-box;
     padding-top: 24px;
     margin-bottom: 20px;
+}
+
+#DontShow {
+    display: none;
+}
+
+#Show {
+    display: block;
+}
+
+@media screen and (min-width:840px) {
+    .PayingBack {
+        width: 500px;
+        margin: 0 auto;
+    }
 }

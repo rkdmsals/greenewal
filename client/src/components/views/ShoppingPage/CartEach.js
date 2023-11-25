@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import $ from "jquery"
 function CartEach({ userId, productId, quantityFirst, productName, price, updateTotal }) {
     // const userId = values.userId;
     // const productId = values.productId;
@@ -9,9 +9,12 @@ function CartEach({ userId, productId, quantityFirst, productName, price, update
     // const price = values.price;
     // const updateTotal = () => { values.updateTotal(true) }
 
-    const [cartItems, setCartItems] = useState([]);
-
+    // const [cartItems, setCartItems] = useState([]);
     const [quantity, setQuantity] = useState(quantityFirst);
+
+    useEffect(() => {
+        return setQuantity(quantityFirst);
+    }, [productId])
 
     const minusQuantity = () => {
 
@@ -21,8 +24,7 @@ function CartEach({ userId, productId, quantityFirst, productName, price, update
                 userId: userId,
                 productId: productId,
                 quantity: reQuantity,
-            })
-                ;
+            });
             return setQuantity(reQuantity), updateTotal()
         }
 
@@ -51,7 +53,8 @@ function CartEach({ userId, productId, quantityFirst, productName, price, update
                     console.log('상품이 장바구니에서 삭제되었습니다.');
                     //const updatedCartItems = cartItems.filter(item => item.productId !== productId);
                     //setCartItems(updatedCartItems);
-                    return updateTotal();
+                    // $(`#cart${productId}`).css("display", "none")
+                    return updateTotal(), setQuantity(quantityFirst);
                 } else {
                     console.error('상품을 장바구니에서 삭제하는 데 실패했습니다.');
                 }
@@ -62,7 +65,7 @@ function CartEach({ userId, productId, quantityFirst, productName, price, update
     }
 
     return (
-        <div className='CartEach'>
+        <div className='CartEach' id={`cart${productId}`}>
             <img className="CartProductImg"></img>
             <div className='CartRight'>
                 <div>

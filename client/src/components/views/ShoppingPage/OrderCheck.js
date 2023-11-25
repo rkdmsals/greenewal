@@ -25,15 +25,19 @@ function OrderCheck() {
                 navigate('/login');
             }
         })
-    }, []);
+    });
 
     /*order DB 가져오는 코드 */
     useEffect(() => {
         if (userId) {
             axios.get(`/api/addToCart/checkOrder/${userId}`)
                 .then(response => {
-                    console.log(response.data)
-                    return setOrderThings(response.data);
+                    // console.log(response.data)
+                    if (response.data) {
+                        return setOrderThings(response.data);
+                    } else {
+                        alert("주문 내역이 없습니다!")
+                    }
                 })
                 .catch(err => {
                     console.error('장바구니 불러오기 중 오류 발생', err);
@@ -62,7 +66,7 @@ function OrderCheck() {
         setTotalPrice(total_price)
     }, [orderThings])
 
-    return (<div className="PayingBack">
+    return (<div className="PayingBack" id={orderThings.length ? "show" : "DontShow"} >
         {/* 구매 내역 */}
         {orderThings.length ? orderThings.map((b, idx) => {
             return (
@@ -85,20 +89,20 @@ function OrderCheck() {
                 </div>)
         }) : console.log("없음")}
         {/* 주문자 정보 */}
-        {<div className="PayContainer">
+        {<div className="PayContainer" >
             <div className="PayingTitle">주문자 정보</div>
-            <div className="PayingInfo">
-                <div><span>입금자명</span><div className="userInfoInOrder">{userInfo.orderName}</div></div>
-                <div><span>입금 시각</span><div className="userInfoInOrder">{userInfo.orderTime}</div></div>
-                <div><span>환불 계좌</span><div className="userInfoInOrder">{userInfo.refundAccount}</div ></div>
-                <div><span>환불 은행</span><div className="userInfoInOrder">{userInfo.refundBank}</div></div>
+            <div className="PayingInfo" >
+                <div><span>입금자명 : </span><div className="userInfoInOrder">{userInfo.orderName}</div></div>
+                <div><span>입금시각 : </span><div className="userInfoInOrder">{userInfo.orderTime}</div></div>
+                <div><span>환불계좌 : </span><div className="userInfoInOrder">{userInfo.refundAccount}</div ></div>
+                <div><span>환불은행 : </span><div className="userInfoInOrder">{userInfo.refundBank}</div></div>
             </div>
         </div>}
 
         {/* 장소/시간 안내 */}
         <div className="PayContainer">
             <div className="PayingTitle">장소/시간 안내</div>
-            <div className="PayingTxt">수령 장소: ECC 이삼봉홀 굿즈 부스<br />
+            <div className="PayingTxt">수령 장소: ECC 이삼봉홀 운영진 부스<br />
                 수령 가능 시간: 11/27(월) 9:00-17:00</div>
             <img src="/img/eventinformation/map.png"></img>
         </div>
