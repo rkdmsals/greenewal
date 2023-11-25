@@ -30,32 +30,32 @@ function StartPage2() {
 
     return (
         <div className="GrnPage">
-            <div className="GrnPage_container">
-                <div className="GrnPage_Title_container">
-                    <div className="Grn_img_container">
-                        <div className="GrnTitle">Ewahaian</div>
-                        <img className="Grn_clober_green" src="/img/StartPage/clober_green.png" />
-                    </div>
-                    <div className="GrnTitle">Gree<span>n-ew</span>al</div>
-                    <img alt=" "></img>
-                </div>
-                <div className="GrnTxt">이화이언 리뉴얼을 기념하여 <br />11/27 {"<Green-ewal>"}행사가 <br />이삼봉홀에서 진행됩니다.</div>
-                <div className="GrnBanner">
-                    <Slider {...settings}>
-                        <div>
-                            <img className="GrnBanE" onClick={() => redirectToExternalLink('https://naver.com')} alt=""></img>
-                        </div>
-                        <div>
-                            <img className="GrnBanE" id="GrnBanE_2" onClick={() => redirectToExternalLink('https://naver.com')} alt=""></img>
-                        </div>
-                    </Slider>
-                </div>
-                <div className="GrnRoute">
-                    <div className="GrnRoute_inner_container">
-                        <div className="GrnRoute_menu_container">
-                            <div className="GrnRoute_menu">행사 정보</div>
+        <div className="GrnPage_container">
+        <div className="GrnPage_Title_container">
+            <div className="Grn_img_container">
+                <div className="GrnTitle">Ewahaian</div>
+                <img className="Grn_clober_green" src="/img/StartPage/clober_green.png" />
+            </div>
+            <div className="GrnTitle">Gree<span>n-ew</span>al</div>
+            <img></img>
+        </div>
+        <div className="GrnTxt">이화이언 리뉴얼을 기념하여 <br />11/27 {"<Green-ewal>"}행사가 <br />이삼봉홀에서 진행됩니다.</div>
+        <div className="GrnBanner">
+        <Slider {...settings}>
+            <div>
+                <img className="GrnBanE" src="/img/StartPage/banner1.png"onClick={() => redirectToExternalLink('https://www.beplain.co.kr/')}></img>
+            </div>
+            <div>
+                <img className="GrnBanE" id="GrnBanE_2" onClick={() => redirectToExternalLink('https://naver.com')}></img>
+            </div>
+        </Slider>
+        </div>
+        <div className="GrnRoute">
+            <div className="GrnRoute_inner_container">
+            <div className="GrnRoute_menu_container">
+                <div className="GrnRoute_menu">행사 정보</div>
                             <img className="Grn_arr_black" src="/img/StartPage/arr_black.png" onClick={() => handleClick('/eventinfo')} alt="GreenewalInfo"></img>
-                        </div>
+                    </div>
                         <div className="Grn_line"></div>
                         <div className="GrnRoute_menu_container">
                             <div className="GrnRoute_menu">부스 정보</div>
