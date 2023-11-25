@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
@@ -15,30 +14,14 @@ const path = require("path");
 
 const { UserInfo } = require("./models/userInfo");
 
-//const { feedback } = require("./models/feedback");
 //Route 가져오기
-// const PayForGoodsRouter = require("./routes/payForGoods");
-// app.use("/api/payForGoods", PayForGoodsRouter);
-
-
-/////////////////////
-const cartRouter = require("./routes/cartRoutes");
-//app.use("/api/addToCart", cartRouter);
-////////////////////
-
-const FeedbackRouter = require("./routes/feedback")
-
-app.use(express.static(path.join(__dirname, "../client/build")));
-app.use(express.urlencoded({ extended: true }))
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json());
-app.use(cookieParser());
-
 
 // router 연결
-var routes = require('./routes/index');
-app.use('/', routes);
-app.use('/api/feedback', FeedbackRouter)
+// var routes = require('./routes/index');
+// app.use('/', routes);
+const FeedbackRouter = require("./routes/feedback");
+const cartRouter = require("./routes/cartRoutes");
+
 //몽고DB 연결
 mongoose.set("strictQuery", false);
 mongoose
@@ -51,9 +34,14 @@ mongoose
   })
   .catch((e) => console.error(e));
 
+app.use(express.static(path.join(__dirname, "../client/build")));
+app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use('/api/feedback', FeedbackRouter)
+app.use('/api/addToCart', cartRouter);
 
-// mongodb://localhost/<db-name>
-//mongoose.connect('mongodb://localhost/');
 
 app.post('/api/register', async (req, res) => {
   const userInfo = new UserInfo(req.body)
