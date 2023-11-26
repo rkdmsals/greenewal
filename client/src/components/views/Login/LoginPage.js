@@ -42,11 +42,12 @@ function LoginPage() {
     }
     useEffect(() => {
         dispatch(auth()).then(response => {
-            console.log(response)
+            // console.log(response)
             if (!response.payload.isAuth) {
                 return
             } else {
-                navigate('/');
+                //로그인 되어있는 유저일 경우, 그 전 페이지로 이동시킴
+                window.history.back();
             }
         })
     })

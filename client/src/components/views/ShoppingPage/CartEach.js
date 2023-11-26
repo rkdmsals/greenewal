@@ -50,17 +50,18 @@ function CartEach({ userId, productId, quantityFirst, productName, price, update
         })
             .then(response => {
                 if (response.status === 200) {
-                    console.log('상품이 장바구니에서 삭제되었습니다.');
+                    // console.log('상품이 장바구니에서 삭제되었습니다.');
+
                     //const updatedCartItems = cartItems.filter(item => item.productId !== productId);
                     //setCartItems(updatedCartItems);
                     // $(`#cart${productId}`).css("display", "none")
                     return updateTotal(), setQuantity(quantityFirst);
                 } else {
-                    console.error('상품을 장바구니에서 삭제하는 데 실패했습니다.');
+                    // console.error('상품을 장바구니에서 삭제하는 데 실패했습니다.');
                 }
             })
             .catch(error => {
-                console.error('장바구니 요청 중 오류 발생:', error);
+                // console.error('장바구니 요청 중 오류 발생:', error);
             });
     }
 

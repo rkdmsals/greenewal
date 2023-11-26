@@ -24,11 +24,11 @@ function ShoppingCart() {
 
     useEffect(() => {
         dispatch(auth()).then(response => {
-            console.log(response);
+            // console.log(response);
 
             if (response.payload.isAuth) {
                 setUserId(response.payload.id);
-                console.log(response.payload.id);
+                // console.log(response.payload.id);
                 return;
             }
             else {
@@ -47,12 +47,12 @@ function ShoppingCart() {
 
                         productListCopy[idx] = Object.assign({}, a);
 
-                    }) : console.log("productListCopy", productListCopy);
+                    }) : console.log("");
                     return setCartItems(productListCopy);
                 }
                 )
                 .catch(err => {
-                    console.error('장바구니 불러오기 중 오류 발생', err);
+                    // console.error('장바구니 불러오기 중 오류 발생', err);
                 });
         }
     }, [userId, dataChange]);
@@ -64,7 +64,7 @@ function ShoppingCart() {
         cartItems.length ? cartItems.map((a) => {
             total_price = total_price + a.price * a.quantity;
             total_quantity = total_quantity + a.quantity
-        }) : console.log("장바구니에 담긴 상품이 존재x")
+        }) : console.log("")
 
         return setTotalPrice(total_price), setTotalQuantity(total_quantity)
     }, [cartItems])
@@ -73,11 +73,11 @@ function ShoppingCart() {
 
         var total_price = 0
         var total_quantity = 0
-        console.log("실행되는지?")
+
         cartItems.length ? cartItems.map((a) => [
             total_price = total_price + a.price * a.quantity,
             total_quantity = total_quantity + a.quantity
-        ]) : console.log("장바구니에 담긴 상품이 존재x")
+        ]) : console.log("")
 
         return setTotalPrice(total_price), setTotalQuantity(total_quantity), setDataChange(false);
 
@@ -85,7 +85,7 @@ function ShoppingCart() {
     }, [dataChange])
     const updateTotal = () => {
 
-        console.log("값이 변경됨!!")
+        // console.log("값이 변경됨!!")
 
         return setDataChange(!dataChange);
     }
@@ -93,13 +93,13 @@ function ShoppingCart() {
     return (
         <div className='Cart'>
             {/* 카트에 들어있는 개수만큼 CartEach 반환해서 사용하면 됨 */}
-            {console.log("cartItems:", cartItems)}
+            {/* {console.log("cartItems:", cartItems)} */}
 
             <div className='CartContainer'>
                 {cartItems.length ? cartItems.map((a) => {
                     return <CartEach userId={userId} productId={a.productId} quantityFirst={a.quantity}
                         productName={a.title} price={a.price} updateTotal={updateTotal} img={productTotalData[a.productId - 1].img} />
-                }) : console.log("안됨")}
+                }) : console.log("")}
             </div>
             <div className='ShopBill' >
                 <div className='BillLine1'>

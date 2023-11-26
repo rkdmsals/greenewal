@@ -53,7 +53,7 @@ const Feedback = () => {
 
         fetchData();
     }, [dispatch, navigate]); */
-    
+
     useEffect(() => {
         axios.get('/api/feedback/read')
             .then(response => {
@@ -68,11 +68,11 @@ const Feedback = () => {
         console.log(e.target.id)
         axios.delete('/api/feedback/delete', { data: { _id: e.target.id } })
             .then(() => {
-                console.log('delete성공');
+                // console.log('delete성공');
                 window.location.reload(); // 삭제 성공 후 페이지 새로고침
             })
             .catch(() => {
-                console.log('delete실패');
+                // console.log('delete실패');
             })
     }
     const onSubmitHandler = (event) => {
@@ -83,10 +83,10 @@ const Feedback = () => {
             studentID: StudentID
         })
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             })
             .catch(function (error) {
-                console.log(error);
+                // console.log(error);
             });
     }
 

@@ -42,7 +42,7 @@ function ProductDisplay() {
 
     useEffect(() => {
         dispatch(auth()).then(response => {
-            console.log(response);
+            // console.log(response);
 
             if (response.payload.isAuth) {
                 setUserId(response.payload.id);
@@ -54,10 +54,10 @@ function ProductDisplay() {
     const addDirectCart = (productInfo) => {
         if (!userId) {
             alert('로그인 후 이용 가능합니다.');
-            navigate('/login');
+            // navigate('/login');
             return;
         }
-        console.log(productInfo);
+        // console.log(productInfo);
         // console.log('userid: ' + userId + ' product: ' + product.id);
         axios.post('/api/addToCart/add', {
             userId: userId,
@@ -149,7 +149,7 @@ function ProductDisplay() {
                             navigate(`/cart/${userId}`);
                         } else {
                             alert('로그인 후 이용 가능합니다.');
-                            navigate('/login');
+                            // navigate('/login');
                         }
 
                     }}>
