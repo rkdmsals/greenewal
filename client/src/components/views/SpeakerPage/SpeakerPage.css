@@ -42,6 +42,7 @@ html {
 
 .timeTable_content_container {
     width: 60%;
+    font-family: "Gowun Dodum";
 }
 
 .timeTable_break {
@@ -148,7 +149,8 @@ html {
     position: relative;
     margin-top: 5%;
     margin-left: 50%;
-    width: 50%
+    width: 50%;
+    font-family: "Gowun Dodum";
 }
 
 .speakerInfo_topic_content_2 {
