@@ -85,19 +85,18 @@ html {
 
 .speaker_detail_svg1 {
     position: absolute;
-    top: 17%;
-    left: 5%;
+    top: 12%;
+    left: 4%;
 
-}
-
-.speaker_detail_img1 {
-    width: 140px;
 }
 
 .speaker_detail_svg2 {
     position: absolute;
-    top: 12%;
-    left: 44%;
+    top: 17%;
+    left: 55%;
+}
+.speaker_detail_img2 {
+    width: 140px;
 }
 
 .speaker_detail_svg3 {
@@ -133,25 +132,25 @@ html {
 
     .speaker_detail_svg1 {
         position: absolute;
-        top: 17%;
+        top: 12%;
         left: 10%;
 
     }
 
-    .speaker_detail_img1 {
+    .speaker_detail_img2 {
         width: 140px;
     }
 
     .speaker_detail_svg2 {
         position: absolute;
-        top: 12%;
+        top: 17%;
         left: 55%;
     }
 
     .speaker_detail_svg3 {
         position: absolute;
-        top: 19%;
-        left: 10%;
+        top: 8%;
+        left: 13%;
     }
 
     .speakerInfo_detail_topic {

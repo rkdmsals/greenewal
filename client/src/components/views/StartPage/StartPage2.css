@@ -1,6 +1,6 @@
 .GrnPage {
     position: fixed;
-    height: calc(100vh - 100px);
+    height: calc((var(--vh, 1vh) * 100)-100px);
     width: 90%;
     margin: 0 auto;
 }

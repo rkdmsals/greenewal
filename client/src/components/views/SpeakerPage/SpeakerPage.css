@@ -22,7 +22,6 @@ html {
     font-size: 35px;
     font-weight: bold;
     font-family: "kameron-bold";
-
 }
 
 .dia_svg {
@@ -158,18 +157,18 @@ html {
 
 .speaker_svg1 {
     position: absolute;
-    top: 13%;
-    left: 5%;
+    top: 12%;
+    left: 4%;
 }
 
-.speaker_img1 {
+.speaker_img2 {
     width: 150px;
 }
 
 .speaker_svg2 {
     position: absolute;
     top: 12%;
-    left: 26%;
+    left: 36%;
 }
 
 .speaker_svg3 {

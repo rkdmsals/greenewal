@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.use(express.static(path.join('../client/public)));
+app.use(express.static(path.join('../client/public')));
 //호스팅 에러 해결?
 
 
@@ -129,8 +129,8 @@ app.get('/*', function(req, res) {
     if (err) {
       res.status(500).send(err)
     }
-  })
-})
+  }
+});
 
 
 /*app.use(express.static('client/build'))*/;
