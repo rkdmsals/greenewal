@@ -34,9 +34,9 @@ function OrderCheck() {
                 userId: userId,
             })
                 .then(response => {
-                    // console.log(response.data)
-                    if (response.data) {
-                        return setOrderThings(response.data);
+                    console.log(response.data.order)
+                    if (response.data.order) {
+                        return setOrderThings(response.data.order);
                     } else {
                         return alert("주문 내역이 없습니다!")
                     }
