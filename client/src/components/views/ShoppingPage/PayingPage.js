@@ -64,7 +64,7 @@ function PayingPage() {
                 userId: userId,
             }).then(response => {
                 console.log(response);
-                alert("주문이 완료되었습니다!");
+                // alert("주문이 완료되었습니다!");
                 navigate("/shop");
             }).catch(error => {
                 console.log(error);
@@ -96,7 +96,7 @@ function PayingPage() {
                     setIsDrop(true);
                 }
 
-                // alert("주문이 완료되었습니다!");
+                alert("주문이 완료되었습니다!");
             })
                 .catch(function (error) {
                     console.log(error);
