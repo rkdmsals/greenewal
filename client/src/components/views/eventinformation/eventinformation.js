@@ -116,10 +116,10 @@ const Eventinformation = () => {
                         나혜은, 박영주, 이재이, 김기림, 김예원, 성혜린 
                     </div>
                 </div>   
-            </div>     
+            </div>   
+            <Footer />  
       </div>  
     </div>
-    <Footer />
     </div>
   );
 }
