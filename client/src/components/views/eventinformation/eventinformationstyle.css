@@ -106,7 +106,12 @@
     .helplogo-image{
         margin-top: 12%;
     }
-
+    .help-text{
+        font-size: 16px;
+        font-weight: "pretendard";
+        line-height: 33px;
+        letter-spacing: 1px;
+    }
     .aboutmanagement{
         font-family: "pretendard";
         margin-top: 5%;
