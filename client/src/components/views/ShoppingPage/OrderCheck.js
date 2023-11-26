@@ -18,14 +18,14 @@ function OrderCheck() {
 
             if (response.payload.isAuth) {
                 setUserId(response.payload.id);
-                // console.log(response.payload.id);
+                console.log(response.payload.id);
                 return;
             }
             else {
                 navigate('/login');
             }
         })
-    });
+    }, []);
 
     /*order DB 가져오는 코드 */
     useEffect(() => {
@@ -36,31 +36,31 @@ function OrderCheck() {
                     if (response.data) {
                         return setOrderThings(response.data);
                     } else {
-                        alert("주문 내역이 없습니다!")
+                        return alert("주문 내역이 없습니다!")
                     }
                 })
                 .catch(err => {
-                    console.error('장바구니 불러오기 중 오류 발생', err);
+                    console.error('주문내역 불러오기 중 오류 발생', err);
                 });
         }
     }, [userId]);
 
     useEffect(() => {
         let total_price = [];
-        {
+        {//주문 정보의 길이가 0이 아니면, 즉, 있으면 map 돌려서 정보 반환
             orderThings.length ? orderThings.map((b, idx) => {
-
 
                 total_price[idx] = 0;
                 {
-                    orderThings[idx].productList ? orderThings[idx].productList.map((a) => {
+                    b.productList ? b.productList.map((a) => {
                         total_price[idx] = total_price[idx] + a.price * a.quantity
                     })
                         : console.log("없음");
                 }
-            }) : console.log("orderThings 받지 못함")
+            }) : console.log("")
         }
         if (orderThings.length) {
+            console.log(orderThings)
             setUserInfo(orderThings[0])
         }
         setTotalPrice(total_price)
@@ -87,7 +87,7 @@ function OrderCheck() {
                         <div>{totalPrice[idx]}￦</div>
                     </div>
                 </div>)
-        }) : console.log("없음")}
+        }) : console.log("반환 완료")}
         {/* 주문자 정보 */}
         {<div className="PayContainer" >
             <div className="PayingTitle">주문자 정보</div>
