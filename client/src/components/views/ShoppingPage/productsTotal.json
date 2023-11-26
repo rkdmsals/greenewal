@@ -62,7 +62,7 @@
         "title": "레고 피규어",
         "originalPrice": 11000,
         "discountedPrice": 9900,
-        "describe": "내용내용내용내용내용내용",
+        "describe": "초록 후드의 캐릭터, 공구템을 입고 있는 벗들의 모습 같지 않나요?",
         "img": "/img/ShoppingPage/productsDetail/5-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/5-1.png",
@@ -71,10 +71,10 @@
     },
     {
         "id": 6,
-        "title": "아크릴 코스터",
-        "originalPrice": 7500,
-        "discountedPrice": 6500,
-        "describe": "내용내용내용",
+        "title": "그립톡",
+        "originalPrice": 4000,
+        "discountedPrice": 3000,
+        "describe": "달콤한 바닐라맛의 아이스크림 그립톡, 보기만 해도 놀이동산이 가고 싶어지지 않나요?",
         "img": "/img/ShoppingPage/productsDetail/6-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/6-1.png"
@@ -82,10 +82,10 @@
     },
     {
         "id": 7,
-        "title": "메탈 스티커",
-        "originalPrice": 2500,
-        "discountedPrice": 2000,
-        "describe": "내용내용내용",
+        "title": "아크릴 코스터",
+        "originalPrice": 7500,
+        "discountedPrice": 6500,
+        "describe": "간결함 속에도 유니크한 매력이 느껴집니다.",
         "img": "/img/ShoppingPage/productsDetail/7-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/7-1.png"
@@ -96,7 +96,7 @@
         "title": "리무버블 스티커",
         "originalPrice": 3500,
         "discountedPrice": 2000,
-        "describe": "내용내용내용",
+        "describe": "쉽게 붙이고 떼어낼 수 있는 리무버블 스티커로, 물건이나 공간을 꾸밀 때 편리하게 사용할 수 있어요.",
         "img": "/img/ShoppingPage/productsDetail/8-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/8-1.png"
@@ -107,7 +107,7 @@
         "title": "띠부띠부씰+학생증",
         "originalPrice": 3500,
         "discountedPrice": 2500,
-        "describe": "내용내용내용",
+        "describe": "다채로운 학교 건물 띠부띠부씰과 함께하는 학생증 세트입니다.",
         "img": "/img/ShoppingPage/productsDetail/9-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/9-1.png",
@@ -119,7 +119,7 @@
         "title": "전자파 차단 스티커",
         "originalPrice": 10000,
         "discountedPrice": 8000,
-        "describe": "내용내용내용",
+        "describe": "전자기기로부터 보호해주는 차단 스티커로, 편리하고 안전한 사용환경을 만들어줍니다.",
         "img": "/img/ShoppingPage/productsDetail/10-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/10-1.png",
@@ -132,7 +132,7 @@
         "title": "시리얼컵",
         "originalPrice": 7500,
         "discountedPrice": 6500,
-        "describe": "내용내용내용",
+        "describe": "귀여운 디자인의 시리얼컵으로, 아침 식사를 더 즐겁게 만들어줄 거예요.",
         "img": "/img/ShoppingPage/productsDetail/11-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/11-1.png",
@@ -142,23 +142,21 @@
     },
     {
         "id": 12,
-        "title": "스마트톡",
-        "originalPrice": 6500,
-        "discountedPrice": 5000,
-        "describe": "내용내용내용",
+        "title": "마스킹 테이프",
+        "originalPrice": 3000,
+        "discountedPrice": 1000,
+        "describe": "마스킹 테이프를 이용해서 나만의 다이어리를 꾸며보세요!",
         "img": "/img/ShoppingPage/productsDetail/12-1.png",
         "detailImg": [
-            "/img/ShoppingPage/productsDetail/12-1.png",
-            "/img/ShoppingPage/productsDetail/12-2.png",
-            "/img/ShoppingPage/productsDetail/12-3.png"
+            "/img/ShoppingPage/productsDetail/12-1.png"
         ]
     },
     {
         "id": 13,
-        "title": "노트북 스티커",
+        "title": "띠부띠부씰 8종+책갈피",
         "originalPrice": 3000,
         "discountedPrice": 2500,
-        "describe": "내용내용내용",
+        "describe": "다양한 캐릭터와 유니크한 디자인의 띠부띠부씰과 함께하는 책갈피 세트입니다.",
         "img": "/img/ShoppingPage/productsDetail/13-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/13-1.png",
@@ -169,10 +167,10 @@
     },
     {
         "id": 14,
-        "title": "띠부띠부씰 8종+책갈피",
+        "title": "노트북 스티커",
         "originalPrice": 3000,
         "discountedPrice": 2500,
-        "describe": "내용내용내용내용내용내용",
+        "describe": "다양한 디자인과 크기로 구성된 노트북 스티커 세트입니다. 노트북이나 다른 전자기기를 꾸밀 때 아주 유용해요!",
         "img": "/img/ShoppingPage/productsDetail/14-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/14-1.png",
@@ -185,7 +183,7 @@
         "title": "금속 키링(꿀단지)",
         "originalPrice": 7000,
         "discountedPrice": 3000,
-        "describe": "내용내용내용내용내용내용",
+        "describe": "꿀단지 모양의 디자인이 독특한 금속 키링입니다. 가방이나 지갑 등에 걸어 사용하기 좋아요.",
         "img": "/img/ShoppingPage/productsDetail/15-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/15-1.png"
@@ -196,7 +194,7 @@
         "title": "금속 뱃지(나침반)",
         "originalPrice": 4500,
         "discountedPrice": 1500,
-        "describe": "내용내용내용내용내용내용",
+        "describe": "금속 소재로 만들어진 나침반 뱃지로, 여행과 모험을 상징하는 아이템으로 소장가치가 높아요.",
         "img": "/img/ShoppingPage/productsDetail/16-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/16-1.png",
@@ -208,7 +206,7 @@
         "title": "에코백",
         "originalPrice": 9000,
         "discountedPrice": 6000,
-        "describe": "내용내용내용내용내용내용",
+        "describe": "심플한 디자인의 에코백으로 활용성과 스타일을 동시에 챙겨보세요.",
         "img": "/img/ShoppingPage/productsDetail/17-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/17-1.png",
@@ -221,23 +219,12 @@
         "title": "아크릴 키링",
         "originalPrice": 4500,
         "discountedPrice": 3000,
-        "describe": "내용내용내용내용내용내용",
+        "describe": "아크릴 소재의 키링으로, 심플한 디자인이 가방이나 열쇠에 매치하기 좋아요.",
         "img": "/img/ShoppingPage/productsDetail/18-1.png",
         "detailImg": [
             "/img/ShoppingPage/productsDetail/18-1.png",
             "/img/ShoppingPage/productsDetail/18-2.png",
             "/img/ShoppingPage/productsDetail/18-3.png"
-        ]
-    },
-    {
-        "id": 19,
-        "title": "마스킹 테이프",
-        "originalPrice": 3000,
-        "discountedPrice": 1000,
-        "describe": "내용내용내용내용내용내용",
-        "img": "/img/ShoppingPage/productsDetail/19-1.png",
-        "detailImg": [
-            "/img/ShoppingPage/productsDetail/19-1.png"
         ]
     }
 ]
