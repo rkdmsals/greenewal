@@ -97,7 +97,7 @@ module.exports.modifyQuantity = async (req, res) => {
 
 module.exports.getOrder = async (req, res) => {
     try {
-        const userId = req.params.userId; // 요청에서 userId를 가져옴
+        const userId = req.body.userId; // 요청에서 userId를 가져옴
 
         const order = await Order.find({ "userId": userId }).populate('productList.productId'); // 해당 userId의 장바구니 데이터 조회
 
