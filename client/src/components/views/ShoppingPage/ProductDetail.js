@@ -14,17 +14,17 @@ function ProductDetail() {
     const navigate = useNavigate();
     const location = useLocation();
     const { product } = location.state;
-    console.log(product)
+    // console.log(product)
 
     const [userId, setUserId] = useState("");
 
     useEffect(() => {
         dispatch(auth()).then(response => {
-            console.log(response);
+            // console.log(response);
 
             if (response.payload.isAuth) {
                 setUserId(response.payload.id);
-                console.log(response.payload.id);
+                // console.log(response.payload.id);
                 return
             }
             /*else {
@@ -32,7 +32,7 @@ function ProductDetail() {
             }
             */
         })
-    });
+    }, []);
 
     const addToCart = () => {
         if (!userId) {
@@ -40,7 +40,7 @@ function ProductDetail() {
             return;
         }
 
-        console.log('userid: ' + userId + ' product: ' + product.id);
+        // console.log('userid: ' + userId + ' product: ' + product.id);
         axios.post('/api/addToCart/add', {
             userId: userId,
             productId: product.id,
@@ -53,11 +53,11 @@ function ProductDetail() {
                     alert('장바구니에 상품이 추가되었습니다.');
                     navigate(`/cart/${userId}`);  // 장바구니로 이동
                 } else {
-                    console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
+                    // console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
                 }
             })
             .catch(error => {
-                console.error('장바구니 요청 중 오류 발생:', error);
+                // console.error('장바구니 요청 중 오류 발생:', error);
             });
 
 

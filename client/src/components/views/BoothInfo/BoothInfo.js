@@ -1,13 +1,11 @@
 import Footer from "../../Others/Footer"
 import "./BoothInfo.css"
-import Header from "../../Others/Header"
 import { useNavigate } from "react-router-dom"
 function BoothInfo() {
     const navigate = useNavigate();
     return (<div className="BoothInfo">
         {/* <div className="BoothMap">여기에 부스 배치도 들어가도록</div> */}
         <div className="BoothTitle">Booth Info</div>
-
         <div className="AllBooths">
             {/* {'>'} 전체부스 */}
             <div className="EachBooth">
@@ -19,7 +17,6 @@ function BoothInfo() {
                     <button onClick={() => navigate("/renewal")}></button>
                 </div>
             </div>
-
             <div className="EachBooth" id="LongTxt">
                 <img className="BoothImg" src="/img/Booth/cloberVec.svg" alt="운영진부스- 이벤트 이미지(로고)"></img>
                 <div className="EachBoothInfo">
@@ -29,7 +26,6 @@ function BoothInfo() {
                     <button onClick={() => navigate("/event")}></button>
                 </div>
             </div>
-
             <div className="EachBooth" id="LongTxt">
                 <img className="BoothImg" src="/img/ShoppingPage/productsDetail/15-1.png" alt="지난 굿즈 이미지"></img>
                 <div className="EachBoothInfo">

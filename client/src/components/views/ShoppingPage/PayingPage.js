@@ -60,6 +60,7 @@ function PayingPage() {
 
     useEffect(() => {
         if (isDrop) {
+            // axios 404 error 가 호스팅 시에만 뜸...
             axios.post('/api/addToCart/dropCart', {
                 userId: userId,
             }).then(response => {
@@ -80,7 +81,7 @@ function PayingPage() {
         const refundBank = document.getElementById('RefundBank').value;
         const refundAccount = document.getElementById('RefundAccount').value;
 
-        console.log("값은", orderName, orderTime, refundBank, refundAccount)
+        // console.log("값은", orderName, orderTime, refundBank, refundAccount)
         if (orderName && orderTime && refundBank && refundAccount) {
             axios.post('/api/addToCart/uploadPurchase', {
                 userId: userId,
@@ -90,7 +91,7 @@ function PayingPage() {
                 refundBank: refundBank,
                 refundAccount: refundAccount
             }).then(response => {
-                console.log(response);
+                // console.log(response);
                 //이때 cartDB 삭제하기
                 if (response) {
                     setIsDrop(true);
@@ -99,7 +100,7 @@ function PayingPage() {
                 alert("주문이 완료되었습니다!");
             })
                 .catch(function (error) {
-                    console.log(error);
+                    // console.log(error);
                 });
         } else {
             alert("주문에 필요한 정보를 모두 작성해주세요")

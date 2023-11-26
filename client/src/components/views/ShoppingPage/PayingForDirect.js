@@ -44,7 +44,7 @@ function PayingForDirect() {
         const refundBank = document.getElementById('RefundBank').value;
         const refundAccount = document.getElementById('RefundAccount').value;
 
-        console.log("값은", orderName, orderTime, refundBank, refundAccount)
+        // console.log("값은", orderName, orderTime, refundBank, refundAccount)
         if (orderName && orderTime && refundBank && refundAccount) {
             axios.post('/api/addToCart/uploadPurchase', {
                 userId: userId,
@@ -60,13 +60,13 @@ function PayingForDirect() {
                 refundAccount: refundAccount,
             })
                 .then(function (response) {
-                    console.log(response);
+                    // console.log(response);
                     alert("주문이 완료되었습니다!");
                     //이때 cartDB 삭제하기
                     navigate("/shop")
                 })
                 .catch(function (error) {
-                    console.log(error);
+                    // console.log(error);
                 });
         } else {
             alert("주문에 필요한 정보를 모두 작성해주세요")
