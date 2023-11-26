@@ -1,60 +1,74 @@
-    .postertext,.date,.datetext, .map,.help,.aboutmanagement,.line-image{
+    .postertext,
+    .date,
+    .datetext,
+    .map,
+    .help,
+    .aboutmanagement,
+    .line-image {
         margin: 0 auto;
-        width:90%;
+        width: 90%;
 
     }
-    .eventinformation-container{
+
+    .eventinformation-container {
         width: 100%;
-        padding-top: 50px; 
-    }
-  .titletext{
-      margin-top: 5.2%;
-      margin-left: 5.3%;
-      font-size: 250%;
-      font-weight: bold;
-    }
-    .ei-title-image{
-      width: 6%;
-      height: 7%;
+        padding-top: 50px;
     }
 
-    .ei-clover-image{
+    .titletext {
+        margin-top: 5.2%;
+        margin-left: 5.3%;
+        font-size: 250%;
+        font-weight: bold;
+    }
+
+    .ei-title-image {
+        width: 6%;
+        height: 7%;
+    }
+
+    .ei-clover-image {
         width: 35px;
         height: 35px;
         box-sizing: border-box;
-        
+
     }
-    .line-image{
+
+    .line-image {
         width: 90%;
         margin-left: 5%;
     }
 
-    .eiposter{
+    .eiposter {
         display: flex;
         justify-content: space-between;
-        width:100%;
+        width: 100%;
         margin-top: 40px;
     }
-    .leftposter-image{
+
+    .leftposter-image {
         width: 12%;
         height: auto;
     }
-    .poster-image{
+
+    .poster-image {
         width: 65%;
         height: auto
     }
-    .rightposter-image{
+
+    .rightposter-image {
         width: 12%;
-        height:  auto;
+        height: auto;
     }
-    .postertext{
+
+    .postertext {
         margin-top: 20px;
         font-family: 'Gowun Dodum';
     }
 
-    .ei-title{
+    .ei-title {
         display: flex;
-        height: 35px;  
+        height: 35px;
         margin-bottom: 5%;
         font-size: 22px;
         font-weight: bold;
@@ -62,36 +76,41 @@
         box-sizing: border-box;
     }
 
-    .date{
+    .date {
         margin-top: 7%;
         font-family: 'Gowun Dodum';
     }
 
-    .datetext{
+    .datetext {
         font-size: 16px;
         margin-left: 0;
     }
-    .date1text{
+
+    .date1text {
         margin-bottom: 15px;
         font-weight: 550;
     }
-    .date2text{
-        line-height: 1.8; 
+
+    .date2text {
+        line-height: 1.8;
     }
 
 
-    .map{
+    .map {
         margin-top: 20px;
         font-family: 'Gowun Dodum';
     }
-    .maptext1{
+
+    .maptext1 {
         font-size: 16px;
         font-weight: 550;
     }
-    .mptext2{
+
+    .mptext2 {
         font-size: 14px;
     }
-    .map-image{
+
+    .map-image {
         margin-top: 20px;
         width: 100%;
         height: auto;
@@ -99,50 +118,58 @@
     }
 
 
-    .help{
+    .help {
         font-family: 'Gowun Dodum';
         margin-top: 20px;
     }
-    .helplogo-image{
+
+    .helplogo-image {
         margin-top: 12%;
     }
-    .help-text{
+
+    .help-text {
         font-size: 16px;
         font-weight: "pretendard";
         line-height: 33px;
         letter-spacing: 1px;
     }
-    .aboutmanagement{
+
+    .aboutmanagement {
         font-family: 'Gowun Dodum';
         margin-top: 5%;
-        margin-bottom: 60px;
+        /* margin-bottom: 60px; */
     }
-    .amtext{
+
+    .amtext {
         margin-top: 2%;
     }
-    .number{
+
+    .number {
         font-size: 20px;
         font-weight: bold;
-        text-decoration:underline;
+        text-decoration: underline;
         margin-bottom: 10px;
     }
 
-.eitxt{
-    margin-left: 15px;
-    margin-top: 6.5px;
-    box-sizing: border-box;
+    .eitxt {
+        margin-left: 15px;
+        margin-top: 6.5px;
+        box-sizing: border-box;
 
-}
-
-
-.item-41, .item-42, .item-43, .item-44 {
-    margin-bottom: 20px;
-}
-
-@media screen and (min-width:840px) {
-
-    .eventinformation-container {
-        width: 500px;
-        margin: 0 auto;
     }
-}
+
+
+    .item-41,
+    .item-42,
+    .item-43,
+    .item-44 {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width:840px) {
+
+        .eventinformation-container {
+            width: 500px;
+            margin: 0 auto;
+        }
+    }
