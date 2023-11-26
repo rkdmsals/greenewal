@@ -65,7 +65,17 @@ const Eventinformation = () => {
                 <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
                 <div className="eitxt">도움주신 분들</div>
             </div>
-            <img  alt="헬퍼로고" className="hleplogo-image"/>
+            <div className="help-text">
+                    ORION<br></br>
+                    AKBAR<br></br>
+                    DARLCHA<br></br>  
+                    GHOST YOGURT<br></br>
+                    Naturas<br></br>
+                    beplain<br></br>
+                    더다믐<br></br>
+                    농협식품<br></br>
+                    서울일러스트레이션페어
+            </div>
       </div>
       <img src="/img/eventinformation/line.png" alt="구분선" className="line-image"/>
       <div className="aboutmanagement">
