@@ -9,7 +9,7 @@
     margin-top: 20px;
     font-size: var(--title-font-size);
     font-weight: bold;
-    font-family: "kameron-bold";
+    font-family: "Gowun Dodum";
 }
 .event-title-image{
     width: 22px;
@@ -23,7 +23,7 @@
     margin-top: 6%;
     font-size: 14px;
     color: #7D7D7D;
-    font-family: "pretendard";
+    font-family: "Gowun Dodum";
 }
 
 .e-t-txt{
@@ -37,12 +37,12 @@
     font-size: 14px;
     font-weight: 550;
     vertical-align: 45px; 
-    font-family: "pretendard";
+    font-family: "Gowun Dodum";
 }
 .event-title{
     font-size: 22px;
     font-weight: bold; 
-    font-family: "pretendard";
+    font-family: "Gowun Dodum";
 }
 
 .eventep{
@@ -54,7 +54,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
-    font-family: "pretendard";
+    font-family: "Gowun Dodum";
 }
 
 .n1-image{
@@ -90,7 +90,7 @@
 }
 .stamp-eventep{
     margin-bottom: 6%;
-    font-family: "pretendard";
+    font-family: "Gowun Dodum";
 }
 
 .bestdresser{
@@ -128,15 +128,39 @@
 .instarlinktxt{
     display: inline-block;
     margin-right: 8px;
-    font-size: 16px;
-    font-weight: 550;
+    font-size: 14px;
+    font-weight: 600;
     text-align: right;
-    font-family: "pretendard";
+    font-family: "Gowun Dodum";
 }
 .instarlink-image{
     width: 28px;
     height: 28px;
+    animation: move-arrow-sideways 1.0s infinite;
 }
+
+@keyframes move-arrow-sideways {
+    0% {
+        transform: translateX(0%);
+      }
+
+      25%{
+        transform: translateX(9%);
+      }
+    
+      50% {
+        transform: translateX(18%);
+      }
+    
+      75% {
+        transform: translateX(9%);
+      }
+
+      100% {
+        transform: translateX(0%);
+      }
+}
+
 @media screen and (min-width: 281px) and (max-width: 320px) {
     .event-title{
         font-size: 18px;

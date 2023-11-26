@@ -53,6 +53,30 @@
     width: 31px;
     height: 31px;
     margin-left: 10%;
+    animation: move_arr_white 0.9s infinite;
+}
+
+@keyframes move_arr_white {
+    0% {
+        transform: translateY(0%);
+      }
+
+      25%{
+        transform: translateY(12.5%);
+      }
+    
+      50% {
+        transform: translateY(25%);
+      }
+    
+      75% {
+        transform: translateY(12.5%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
 }
 
 /* desktop */
