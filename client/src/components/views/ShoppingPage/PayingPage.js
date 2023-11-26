@@ -78,16 +78,8 @@ function PayingPage() {
                 .then(function (response) {
                     console.log(response);
                     //이때 cartDB 삭제하기
-                    axios.post('/api/addToCart/dropCart', {
-                        userId: userId,
-                    })
+                    DeleteCart();
                     // alert("주문이 완료되었습니다!");
-
-                })
-                .then(function (response) {
-                    console.log(response)
-                    alert("주문이 완료되었습니다!")
-                    navigate("/shop")
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -96,7 +88,18 @@ function PayingPage() {
             alert("주문에 필요한 정보를 모두 작성해주세요")
         }
     }
-
+    const DeleteCart = () => {
+        axios.post('/api/addToCart/dropCart', {
+            userId: userId,
+        }).then(function (response) {
+            console.log(response)
+            alert("주문이 완료되었습니다!")
+            navigate("/shop")
+        })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
     return (<div className="PayingBack">
         {/* 구매 내역 */}
         <div className="PayContainer BuyingList">
