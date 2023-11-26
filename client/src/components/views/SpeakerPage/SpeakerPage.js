@@ -27,7 +27,7 @@ function SpeakerPage() {
                             <div className="timeTable_content">
                                 <div>17:30 - 18:20</div>
                                 <div className="timeTable_content_name">
-                                    <img className="clober_img" src="img/SpeakerPage/clober2.png" />
+                                    {/* <img className="clober_img" src="img/SpeakerPage/clober2.png" /> */}
                                     <div>전효진 변호사</div>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@ function SpeakerPage() {
                             <div className="timeTable_content">
                                 <div>18:30 - 19:20</div>
                                 <div className="timeTable_content_name">
-                                    <img className="clober_img" src="img/SpeakerPage/clober2.png" />
+                                    {/* <img className="clober_img" src="img/SpeakerPage/clober2.png" /> */}
                                     <div>이주미 변호사</div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ function SpeakerPage() {
                             <div className="timeTable_content">
                                 <div>19:30 - 20:20</div>
                                 <div className="timeTable_content_name">
-                                    <img className="clober_img" src="img/SpeakerPage/clober2.png" />
+                                    {/* <img className="clober_img" src="img/SpeakerPage/clober2.png" /> */}
                                     <div>노슈니 크리에이터</div>
                                 </div>
                             </div>

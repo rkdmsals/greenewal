@@ -46,7 +46,7 @@ html {
     margin-top: 3%;
     margin-left: 10%;
     width: 90%;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 150%;
 }
 
@@ -56,6 +56,7 @@ html {
     align-items: flex-end;
     font-size: 28px;
     font-weight: bold;
+    font-family: 'Gowun Dodum';
 }
 
 .speakerInfo_detail_name_2 {
@@ -73,7 +74,7 @@ html {
 }
 
 .speakerInfo_detail_topic {
-    margin-top: 10%;
+    margin-top: 6%;
     font-size: var(--content-font-size);
     font-weight: bold;
 }
