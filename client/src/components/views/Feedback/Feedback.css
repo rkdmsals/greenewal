@@ -54,8 +54,6 @@
 }
 
 .fb_main_content_inner_container {
-  position: absolute; 
-  z-index: 2;
   padding: 10% 10% 5% 10%;
 }
 
