@@ -35,7 +35,7 @@ function ShoppingCart() {
                 navigate('/login');
             }
         })
-    });
+    }, []);//한번만 실행
 
     useEffect(() => {
         if (userId) {

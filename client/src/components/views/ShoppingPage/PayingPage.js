@@ -27,7 +27,7 @@ function PayingPage() {
                 navigate('/login');
             }
         })
-    });
+    }, []);//한 번만 실행
 
     /*장바구니 DB에 담긴 물품들 가져오는 코드 */
     useEffect(() => {
@@ -48,6 +48,7 @@ function PayingPage() {
                 });
         }
     }, [userId]);
+
     useEffect(() => {
         var total_price = 0
         cartItems.map((a) => {
@@ -73,9 +74,9 @@ function PayingPage() {
                 orderName: orderName,
                 orderTime: orderTime,
                 refundBank: refundBank,
-                refundAccount: refundAccount,
+                refundAccount: refundAccount
             })
-                .then(function (response) {
+                .then(response => {
                     console.log(response);
                     //이때 cartDB 삭제하기
                     DeleteCart();
@@ -91,12 +92,12 @@ function PayingPage() {
     const DeleteCart = () => {
         axios.post('/api/addToCart/dropCart', {
             userId: userId,
-        }).then(function (response) {
-            console.log(response)
-            alert("주문이 완료되었습니다!")
-            navigate("/shop")
+        }).then(response => {
+            console.log(response);
+            alert("주문이 완료되었습니다!");
+            navigate("/shop");
         })
-            .catch(function (error) {
+            .catch(error => {
                 console.log(error);
             });
     }
