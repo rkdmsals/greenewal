@@ -65,7 +65,7 @@ module.exports.uploadPurchase = async (req, res) => {
         let order = new Order({ userId, productList, orderName, orderTime, refundBank, refundAccount });
 
         await order.save();
-        res.status(200).json({ message: '주문 확인이 완료되었습니다.', order });
+        res.status(200).json({ message: '주문이 완료되었습니다.', order });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -97,10 +97,10 @@ module.exports.modifyQuantity = async (req, res) => {
 
 module.exports.getOrder = async (req, res) => {
     try {
-        const userId = req.body.userId; // 요청에서 userId를 가져옴
+        const userId = req.params.userId; // 요청에서 userId를 가져옴
 
         const order = await Order.find({ "userId": userId }).populate('productList.productId'); // 해당 userId의 장바구니 데이터 조회
-
+        console.log("order에서", order)
         res.status(200).json(order); // 주문 데이터를 JSON 형태로 응답
     } catch (error) {
         // 에러 발생 시 클라이언트에 에러 메시지를 응답
@@ -139,6 +139,7 @@ module.exports.removeFromCart = async (req, res) => {
 module.exports.dropCart = async (req, res) => {
 
     const userId = req.body.userId;
+    console.log("dropCart에서", userId)
     try {
         await Cart.findOneAndDelete({ "userId": userId })
             .then(res.status(200).json({ message: '장바구니 초기화 완료되었습니다.' }))
