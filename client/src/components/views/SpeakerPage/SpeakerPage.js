@@ -2,7 +2,7 @@ import "./SpeakerPage.css";
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as Dia } from "../../../assets/images/SpeakerPage/dia.svg";
-import { ReactComponent as Speaker_2 } from "../../../assets/images/SpeakerPage/speaker2.svg";
+import { ReactComponent as Speaker_1 } from "../../../assets/images/SpeakerPage/speaker1.svg";
 // import { ReactComponent as Speaker_3 } from "../../../assets/images/SpeakerPage/speaker3.svg";
 
 function SpeakerPage() {
@@ -68,17 +68,17 @@ function SpeakerPage() {
                     <div className="x_scroll">
                         <div className="speakerInfo" id="speakerInfo_1">
                             <div className="speakerInfo_content">
-                                <div className="speakerInfo_name speakerInfo_name_1">이주미</div>
-                                <div className="speakerInfo_topic_content">본래 내가 바라던<br /> 것은 변호사가<br />아니었다.</div>
-                                <div className="speaker_svg1"><img className="speaker_img1" src="/img/SpeakerPage/speaker1.png" alt="speaker1" /></div>
+                                <div className="speakerInfo_name speakerInfo_name_1">전효진</div>
+                                <div className="speakerInfo_topic_content">변호사 합격, <br />그 이후</div>
+                                <div className="speaker_svg1"><Speaker_1 /></div>
                             </div>
 
                         </div>
                         <div className="speakerInfo" id="speakerInfo_2">
                             <div className="speakerInfo_content">
-                                <div className="speakerInfo_name speakerInfo_name_2">전효진</div>
-                                <div className="speakerInfo_topic_content speakerInfo_topic_content_2">변호사 합격, <br />그 이후</div>
-                                <div className="speaker_svg2"><Speaker_2 /></div>
+                                <div className="speakerInfo_name speakerInfo_name_2">이주미</div>
+                                <div className="speakerInfo_topic_content speakerInfo_topic_content_2">본래 내가 바라던<br /> 것은 변호사가<br />아니었다.</div>
+                                <div className="speaker_svg2"><img className="speaker_img2" src="/img/SpeakerPage/speaker2.png" alt="speaker2" /></div>
                             </div>
 
                         </div>
@@ -87,7 +87,7 @@ function SpeakerPage() {
                                 <div className="speakerInfo_name speakerInfo_name_3">노슈니</div>
                                 <div className="speakerInfo_topic_content">노션 초보자들을 <br /> 위한 포트폴리오 작성 꿀팁</div>
                                 {/* <div className="speaker_svg3"><Speaker_3 /></div> */}
-                                <div className="speaker_svg3"><img className="speaker_img3" src="/img/SpeakerPage/speaker3.png" /></div>
+                                <div className="speaker_svg3"><img className="speaker_img3" src="/img/SpeakerPage/speaker3.png" alt="speaker3"/></div>
                             </div>
 
                         </div>

@@ -22,7 +22,13 @@ import Renewal from "./components/views/Renewal/Renewal";
 import PayingForDirect from "./components/views/ShoppingPage/PayingForDirect";
 import OrderCheck from "./components/views/ShoppingPage/OrderCheck";
 function App() {
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`); //"--vh"라는 속성으로 정의해준다.
+    console.log('window resize ');
+  }
 
+  window.addEventListener('resize', () => setScreenSize());
   return (
     <div className="App">
       <BrowserRouter>
@@ -63,8 +69,7 @@ function App() {
           <Route exact path="/checkOrder" element={<OrderCheck />} />
         </Routes>
       </div>
-    );
-  }
+    );}
 }
 
 export default App;
