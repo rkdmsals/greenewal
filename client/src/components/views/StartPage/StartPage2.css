@@ -104,12 +104,19 @@
         width: 500px;
         margin: 0 auto;
     }
+    .GrnBanner {
+        height: 105px;
+    }
+    
+    .GrnBanE {
+        height: 110px;
+    }
 }
 
 /* 381px */
-@media screen and (max-width:375px) {
+@media screen and (max-width:381px) {
     .GrnTitle {
-        font-size: var(--title-font-size);
+        font-size: 35px;
     }
 
     .GrnTitle span {
