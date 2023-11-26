@@ -1,6 +1,6 @@
 .fb_main_container {
   padding-top: 50px;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -11,6 +11,8 @@
 }
 
 .fb_title_container {
+  position: relative; 
+  z-index: 1;
   margin: 0 10%;
   padding: 5% 0;
   height: 20%;
@@ -37,6 +39,10 @@
 }
 
 .fb_main_content_container {
+
+  position: relative; 
+  z-index: 2;
+
   background-color: white;
   box-shadow: 0px -4px 3px 0px gray;
   border-radius: 30px 30px 0 0;
@@ -48,6 +54,8 @@
 }
 
 .fb_main_content_inner_container {
+  position: absolute; 
+  z-index: 2;
   padding: 10% 10% 5% 10%;
 }
 
@@ -92,12 +100,15 @@
   display: flex;
   align-items: center;
   height: 100%;
+  margin-bottom: 10%;
 }
 
 .fb_content_input {
   width: 75%;
   height: 100%;
   margin-left: 7%;
+  margin-bottom: 5%;
+  margin-top: 5%;
   font-size: 16px;
   border: 0;
   border-radius: 15px;
@@ -109,17 +120,20 @@
   margin-right: 5%;
   border-radius: 15px;
   border: 0;
+  background-color: rgba(244,244,244,0);
 }
 
 .fb_btn_img {
   width: 30px;
   height: 30px;
+  background-color: rgba(244,244,244,0);
 }
 
 .fb_del_btn_img {
   margin-left: 5px;
   width: 10px;
   height: 10px;
+  background-color: rgba(244,244,244,0);
 }
 
 /* desktop */
@@ -128,5 +142,20 @@
     position: relative;
     width: 500px;
     margin: 0 auto;
+  }
+}
+/* 375px */
+@media screen and (max-width:381px) {
+  .fb_title {
+    font-size: 30px;
+  }
+  .fb_title_content {
+    font-size: 12.5px;
+  }
+  .fb_content_input {
+    font-size: 14px;
+  }
+  .fb_main_content {
+    font-size: 14px;
   }
 }
