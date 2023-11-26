@@ -73,7 +73,9 @@ function LoginPage() {
                     </button>
                     <Link className='nav_register' to="/register"> 회원가입 </Link>
 
-                    <div className='LoginText'>Greenewal 행사사이트 계정은 이화이언 계정과 연동되지 않습니다.
+                    <div className='LoginText'>
+                        <div className='LoginText_title'>안내사항</div>
+                        Greenewal 행사사이트 계정은 이화이언 계정과 연동되지 않습니다.
                         굿즈 구매 등의 편의를 위해 이화이언 아이디를 기재하는 것으로 해두었으니, 이용에 참고 바랍니다</div>
                 </div>
 
