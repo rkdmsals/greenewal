@@ -47,9 +47,8 @@ function OrderCheck() {
 
     useEffect(() => {
         let total_price = [];
-        {
+        {//주문 정보의 길이가 0이 아니면, 즉, 있으면 map 돌려서 정보 반환
             orderThings.length ? orderThings.map((b, idx) => {
-
 
                 total_price[idx] = 0;
                 {
@@ -87,7 +86,7 @@ function OrderCheck() {
                         <div>{totalPrice[idx]}￦</div>
                     </div>
                 </div>)
-        }) : console.log("없음")}
+        }) : console.log(orderThings)}
         {/* 주문자 정보 */}
         {<div className="PayContainer" >
             <div className="PayingTitle">주문자 정보</div>
