@@ -23,10 +23,10 @@ function Renewal() {
                     </div>
                 </div>
                 <div className="ReContTxt">이화이언이 22주년을 맞아 새로운 모습으로 찾아오게 되었습니다! 새로워진 이화이언의 모습을 오프라인에서 먼저 만나보세요! </div>
-                <div className="RenewalRoute">
+                <div className="RenewalRoute" onClick={() => { navigate("/feedback") }}>
 
                     <span>피드백 남기러 가기</span>
-                    <div className="ReRouteImg" onClick={() => { navigate("/feedback") }}></div>
+                    <div className="ReRouteImg" ></div>
 
                 </div>
             </div>

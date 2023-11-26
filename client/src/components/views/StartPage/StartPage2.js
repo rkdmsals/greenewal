@@ -39,7 +39,7 @@ function StartPage2() {
             <div className="GrnTitle">Gree<span>n-ew</span>al</div>
             <img></img>
         </div>
-        <div className="GrnTxt">이화이언 리뉴얼을 기념하여 <br />11/27 {"<Green-ewal>"}행사가 <br />이삼봉홀에서 진행됩니다.</div>
+        <div className="GrnTxt">이화이언 리뉴얼을 기념하여 열리는<br />{"<Green-ewal>"}행사에 대해 알아보세요!</div>
         <div className="GrnBanner">
         <Slider {...settings}>
             <div>
@@ -59,23 +59,23 @@ function StartPage2() {
         <div className="GrnRoute">
             <div className="GrnRoute_inner_container">
             <div className="GrnRoute_menu_container">
-                <div className="GrnRoute_menu">행사 정보</div>
-                            <img className="Grn_arr_black" src="/img/StartPage/arr_black.png" onClick={() => handleClick('/eventinfo')} alt="GreenewalInfo"></img>
+                <div className="GrnRoute_menu" onClick={() => handleClick('/eventinfo')}>행사 정보</div>
+                            <img className="Grn_arr_black" src="/img/StartPage/arr_black.png"  alt="GreenewalInfo"></img>
                     </div>
                         <div className="Grn_line"></div>
-                        <div className="GrnRoute_menu_container">
+                        <div className="GrnRoute_menu_container" onClick={() => handleClick('/booth')}>
                             <div className="GrnRoute_menu">부스 정보</div>
-                            <img className="Grn_arr_black" src="/img/StartPage/arr_black.png" onClick={() => handleClick('/booth')} alt="BoothInfo"></img>
+                            <img className="Grn_arr_black" src="/img/StartPage/arr_black.png"  alt="BoothInfo"></img>
                         </div>
                         <div className="Grn_line"></div>
-                        <div className="GrnRoute_menu_container">
+                        <div className="GrnRoute_menu_container" onClick={() => handleClick('/speaker')}>
                             <div className="GrnRoute_menu">강연 정보</div>
-                            <img className="Grn_arr_black" src="/img/StartPage/arr_black.png" onClick={() => handleClick('/speaker')} alt="SpeakerInfo"></img>
+                            <img className="Grn_arr_black" src="/img/StartPage/arr_black.png"  alt="SpeakerInfo"></img>
                         </div>
                         <div className="Grn_line"></div>
-                        <div className="GrnRoute_menu_container">
+                        <div className="GrnRoute_menu_container" onClick={() => handleClick('/event')}>
                             <div className="GrnRoute_menu">이벤트 정보</div>
-                            <img className="Grn_arr_black" src="/img/StartPage/arr_black.png" onClick={() => handleClick('/event')} alt="EventInfo"></img>
+                            <img className="Grn_arr_black" src="/img/StartPage/arr_black.png"  alt="EventInfo"></img>
                         </div>
                         <div className="Grn_line"></div>
                     </div>

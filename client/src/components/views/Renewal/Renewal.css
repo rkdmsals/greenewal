@@ -2,7 +2,7 @@
     width: 90%;
     margin: 0 auto;
     padding-top: 70px;
-    font-family: "pretendard-medium";
+    font-family: 'Gowun Dodum';
     font-size: 14px;
 }
 
@@ -93,6 +93,28 @@
     height: 28px;
     background-size: cover;
     margin-left: 13px;
+    animation: move-arrow-sideways 1.0s infinite;
+}
+@keyframes move-arrow-sideways {
+    0% {
+        transform: translateX(0%);
+      }
+
+      25%{
+        transform: translateX(9%);
+      }
+    
+      50% {
+        transform: translateX(18%);
+      }
+    
+      75% {
+        transform: translateX(9%);
+      }
+
+      100% {
+        transform: translateX(0%);
+      }
 }
 
 @media screen and (min-width:840px) {

@@ -49,7 +49,7 @@
     }
     .postertext{
         margin-top: 20px;
-        font-family: "pretendard";
+        font-family: 'Gowun Dodum';
     }
 
     .ei-title{
@@ -58,13 +58,13 @@
         margin-bottom: 5%;
         font-size: 22px;
         font-weight: bold;
-        font-family: "kameron-bold";
+        font-family: 'Gowun Dodum';
         box-sizing: border-box;
     }
 
     .date{
         margin-top: 7%;
-        font-family: "pretendard";
+        font-family: 'Gowun Dodum';
     }
 
     .datetext{
@@ -82,7 +82,7 @@
 
     .map{
         margin-top: 20px;
-        font-family: "pretendard";
+        font-family: 'Gowun Dodum';
     }
     .maptext1{
         font-size: 16px;
@@ -100,7 +100,7 @@
 
 
     .help{
-        font-family: "pretendard";
+        font-family: 'Gowun Dodum';
         margin-top: 20px;
     }
     .helplogo-image{
@@ -113,7 +113,7 @@
         letter-spacing: 1px;
     }
     .aboutmanagement{
-        font-family: "pretendard";
+        font-family: 'Gowun Dodum';
         margin-top: 5%;
         margin-bottom: 60px;
     }
