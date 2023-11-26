@@ -48,7 +48,7 @@ const Event = () => {
                     <div className="eventep">
                         <div className="bestdresser-eventep">
                             이화이언의 뉴 컬러, 이화그린!<br></br>
-                            초록색 옷을 입고 온 이화인들에게 간단한 선물 증정!
+                            초록색 옷을 입고 온 이화인들에게 선물 증정!
                         </div>
                     </div>
                 </div>

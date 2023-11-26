@@ -24,6 +24,36 @@ const Feedback = () => {
         })
 
     }, []);
+
+    /* 안될경우 코드
+    useEffect(() => {
+        // 페이지 새로 고침 시 로컬 스토리지에서 studentID 불러오기
+        const storedStudentID = localStorage.getItem('studentID');
+        setStudentID(storedStudentID || "기본값");
+
+        const fetchData = async () => {
+            try {
+                const response = await dispatch(auth());
+                if (response.payload.isAuth) {
+                    if (response.payload.studentID) {
+                        setStudentID(response.payload.studentID);
+                        // 페이지 로딩 시 studentID를 로컬 스토리지에 저장
+                        localStorage.setItem('studentID', response.payload.studentID);
+                    } else {
+                        setStudentID("오류");
+                    }
+                } else {
+                    setStudentID("로그인 안함");
+                    navigate('/login');
+                }
+            } catch (error) {
+                console.error("데이터를 가져오는 동안 오류 발생:", error);
+            }
+        };
+
+        fetchData();
+    }, [dispatch, navigate]); */
+    
     useEffect(() => {
         axios.get('/api/feedback/read')
             .then(response => {

@@ -27,7 +27,7 @@ const Eventinformation = () => {
 
         <div className="datetext">
             <div className="date1text">
-                2023년 11월 27일(월) 10:00 - 20:00
+                <b> 2023년 11월 27일(월) 10:00 - 20:00 </b>
             </div>
         
             <div className="date2text">
@@ -49,7 +49,7 @@ const Eventinformation = () => {
             </div>
             <div className="maptext">
                 <div className="maptext1">
-                    이화여자대학교 ECC B4층 이삼봉홀
+                    이화여자대학교 <b>ECC B4층 이삼봉홀</b>
                 </div>
                 <div className="maptext2">
                     : 스타벅스 ECC점 옆, ECC N번 출구 근처
@@ -65,13 +65,23 @@ const Eventinformation = () => {
                 <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
                 <div className="eitxt">도움주신 분들</div>
             </div>
-            <img  alt="헬퍼로고" className="hleplogo-image"/>
+            <div className="help-text">
+                    ORION<br></br>
+                    AKBAR<br></br>
+                    DARLCHA<br></br>  
+                    GHOST YOGURT<br></br>
+                    Naturas<br></br>
+                    beplain<br></br>
+                    더다믐<br></br>
+                    농협식품<br></br>
+                    서울일러스트레이션페어
+            </div>
       </div>
       <img src="/img/eventinformation/line.png" alt="구분선" className="line-image"/>
       <div className="aboutmanagement">
             <div className="ei-title">    
                 <img src="/img/eventinformation/clover.png" alt="클로버" className="ei-clover-image"/>
-                <div className="eitxt">어바웃 운영진</div>
+                <div className="eitxt">ABOUT 운영진</div>
             </div>   
             <div className="amtext"> 
                 <div className="item-41">
@@ -106,10 +116,10 @@ const Eventinformation = () => {
                         나혜은, 박영주, 이재이, 김기림, 김예원, 성혜린 
                     </div>
                 </div>   
-            </div>     
+            </div>   
+            <Footer />  
       </div>  
     </div>
-    <Footer />
     </div>
   );
 }
