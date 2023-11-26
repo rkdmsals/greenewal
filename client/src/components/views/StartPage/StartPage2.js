@@ -46,10 +46,13 @@ function StartPage2() {
                 <img className="GrnBanE" src="/img/StartPage/banner1.png" alt="banner1" onClick={() => redirectToExternalLink('https://www.beplain.co.kr/')}></img>
             </div>
             <div>
-                <img className="GrnBanE" id="GrnBanE_2" src="/img/StartPage/banner2.png" alt="banner2" onClick={() => redirectToExternalLink('https://naver.com')}></img>
+                <img className="GrnBanE" id="GrnBanE_2" src="/img/StartPage/banner2.png" alt="banner2" onClick={() => redirectToExternalLink('http://www.naturas.co.kr/')}></img>
             </div>
             <div>
-                <img className="GrnBanE" id="GrnBanE_3" src="/img/StartPage/banner3.png" alt="banner3" onClick={() => redirectToExternalLink('https://naver.com')}></img>
+                <img className="GrnBanE" id="GrnBanE_3" src="/img/StartPage/banner3.png" alt="banner3" onClick={() => redirectToExternalLink('https://darlcha.com/')}></img>
+            </div>
+            <div>
+                <img className="GrnBanE" id="GrnBanE_4" src="/img/StartPage/banner4.png" alt="banner4" onClick={() => redirectToExternalLink('https://akbar.kr/')}></img>
             </div>
         </Slider>
         </div>
