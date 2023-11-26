@@ -13,7 +13,8 @@ function PayingPage() {
     const [userId, setUserId] = useState("");
     // const [userObjectId, setUserObjectId] = useState("");
     const [cartItems, setCartItems] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0);
+    const [isDrop, setIsDrop] = useState(false);
     useEffect(() => {
         dispatch(auth()).then(response => {
             // console.log(response);
@@ -55,8 +56,21 @@ function PayingPage() {
             total_price = total_price + a.price * a.quantity
         })
         return setTotalPrice(total_price)
-    }, [cartItems])
+    }, [cartItems]);
 
+    useEffect(() => {
+        if (isDrop) {
+            axios.post('/api/addToCart/dropCart', {
+                userId: userId,
+            }).then(response => {
+                console.log(response);
+                alert("주문이 완료되었습니다!");
+                navigate("/shop");
+            }).catch(error => {
+                console.log(error);
+            });
+        }
+    }, [isDrop])
 
     const DoPurchase = () => {
         //장바구니 DB에서 똑같이 읽어와서 다르게 보여주고,
@@ -75,13 +89,15 @@ function PayingPage() {
                 orderTime: orderTime,
                 refundBank: refundBank,
                 refundAccount: refundAccount
+            }).then(response => {
+                console.log(response);
+                //이때 cartDB 삭제하기
+                if (response) {
+                    setIsDrop(true);
+                }
+
+                // alert("주문이 완료되었습니다!");
             })
-                .then(response => {
-                    console.log(response);
-                    //이때 cartDB 삭제하기
-                    DeleteCart();
-                    // alert("주문이 완료되었습니다!");
-                })
                 .catch(function (error) {
                     console.log(error);
                 });
@@ -89,18 +105,7 @@ function PayingPage() {
             alert("주문에 필요한 정보를 모두 작성해주세요")
         }
     }
-    const DeleteCart = () => {
-        axios.post('/api/addToCart/dropCart', {
-            userId: userId,
-        }).then(response => {
-            console.log(response);
-            alert("주문이 완료되었습니다!");
-            navigate("/shop");
-        })
-            .catch(error => {
-                console.log(error);
-            });
-    }
+
     return (<div className="PayingBack">
         {/* 구매 내역 */}
         <div className="PayContainer BuyingList">
