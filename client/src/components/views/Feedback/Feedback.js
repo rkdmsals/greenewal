@@ -15,22 +15,18 @@ const Feedback = () => {
     const [StudentID, setStudentID] = useState("")
     useEffect(() => {
         dispatch(auth()).then(response => {
-            console.log(response);
-
             if (response.payload.isAuth) {
                 setStudentID(response.payload.studentID);
-                console.log(response.payload.studentID);
                 return
             } else {
                 navigate('/login');
             }
         })
 
-    }, [])
+    }, []);
     useEffect(() => {
         axios.get('/api/feedback/read')
             .then(response => {
-                console.log(response.data);
                 setFeedbacks(response.data);
             });
     }, []); // 마운트될 때 한 번만 실행되도록 빈 배열 전달
