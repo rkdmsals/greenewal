@@ -30,7 +30,9 @@ function OrderCheck() {
     /*order DB 가져오는 코드 */
     useEffect(() => {
         if (userId) {
-            axios.get(`/api/addToCart/checkOrder/${userId}`)
+            axios.post(`/api/addToCart/checkOrder`, {
+                userId: userId,
+            })
                 .then(response => {
                     // console.log(response.data)
                     if (response.data) {
