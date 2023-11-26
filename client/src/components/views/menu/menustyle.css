@@ -83,3 +83,10 @@
     margin-right: 10px;
   }
 }
+
+@media screen and (min-width:840px) {
+  .menu-container{
+    width: 500px;
+    margin: 0 auto;
+  }
+}

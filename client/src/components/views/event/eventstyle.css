@@ -147,3 +147,9 @@
         font-size: 15.3px;
     }
 }
+@media screen and (min-width:840px) {
+    .event-container{
+      width: 500px;
+      margin: 0 auto;
+    }
+  }

@@ -88,3 +88,9 @@
     font-size: 38px;
   }
 }
+@media screen and (min-width:840px) {
+  .photo-container{
+    width: 500px;
+    margin: 0 auto;
+  }
+}
