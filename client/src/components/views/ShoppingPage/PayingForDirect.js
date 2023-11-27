@@ -108,7 +108,8 @@ function PayingForDirect() {
         <div className="PayContainer">
             <div className="PayingTitle">장소/시간 안내</div>
             <div className="PayingTxt">수령 장소: ECC 이삼봉홀 굿즈 부스<br />
-                수령 가능 시간: 11/27(월) 9:00-17:00</div>
+                수령 가능 시간: 11/27(월) 9:00-17:00<br />
+                굿즈 부스에 있는 운영진에게 송금 완료 화면을 보여주세요!</div>
             <img src="/img/eventinformation/map.png"></img>
         </div>
 
