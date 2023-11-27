@@ -34,34 +34,34 @@ function ProductDetail() {
         })
     }, []);
 
-    const addToCart = () => {
-        if (!userId) {
-            navigate('/login');
-            return;
-        }
+    // const addToCart = () => {
+    //     if (!userId) {
+    //         navigate('/login');
+    //         return;
+    //     }
 
-        // console.log('userid: ' + userId + ' product: ' + product.id);
-        axios.post('/api/addToCart/add', {
-            userId: userId,
-            productId: product.id,
-            quantity: 1, // 장바구니에 추가하는 상품의 수량
-            title: product.title,
-            price: product.discountedPrice
-        })
-            .then(response => {
-                if (response.status === 200) {
-                    alert('장바구니에 상품이 추가되었습니다.');
-                    navigate(`/cart/${userId}`);  // 장바구니로 이동
-                } else {
-                    // console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
-                }
-            })
-            .catch(error => {
-                // console.error('장바구니 요청 중 오류 발생:', error);
-            });
+    //     // console.log('userid: ' + userId + ' product: ' + product.id);
+    //     axios.post('/api/addToCart/add', {
+    //         userId: userId,
+    //         productId: product.id,
+    //         quantity: 1, // 장바구니에 추가하는 상품의 수량
+    //         title: product.title,
+    //         price: product.discountedPrice
+    //     })
+    //         .then(response => {
+    //             if (response.status === 200) {
+    //                 alert('장바구니에 상품이 추가되었습니다.');
+    //                 navigate(`/cart/${userId}`);  // 장바구니로 이동
+    //             } else {
+    //                 // console.error('장바구니에 상품을 추가하는 데 실패했습니다.');
+    //             }
+    //         })
+    //         .catch(error => {
+    //             // console.error('장바구니 요청 중 오류 발생:', error);
+    //         });
 
 
-    };
+    // };
 
     const settings = {
         dots: true,
@@ -119,19 +119,20 @@ function ProductDetail() {
                 </div>
 
                 <div className="ProductDetial_bottom_button_wrapper">
-                    <button className="ProductDetail_cart_button" onClick={addToCart}>
+                    {/* <button className="ProductDetail_cart_button" onClick={alert("부스가 종료되어 주문이 불가합니다!")}>
                         장바구니
                     </button>
-                    <button className="ProductDetail_buy_button" onClick={() => {
-                        navigate('/payingdirect', {
-                            state: {
-                                productName: product.title, productId: product.id,
-                                productPrice: product.discountedPrice
-                            }
-                        })
-                    }}>
+                    <button className="ProductDetail_buy_button" onClick={
+                        alert("부스가 종료되어 주문이 불가합니다!")
+                        // navigate('/payingdirect', {
+                        //     state: {
+                        //         productName: product.title, productId: product.id,
+                        //         productPrice: product.discountedPrice
+                        //     }
+                        // })
+                    }>
                         구매하기
-                    </button>
+                    </button> */}
                 </div>
 
 

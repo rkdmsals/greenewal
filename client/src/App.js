@@ -51,22 +51,22 @@ function App() {
           <Route exact path="/start" element={<StartPage2 />} />
           <Route exact path="/shop" element={<ProductDisplay />} />
           <Route path="/shop/product-detail/:productId" element={<ProductDetail />} />
-          <Route exact path="/cart/:userId" element={<ShoppingCart />} />
+          {/* <Route exact path="/cart/:userId" element={<ShoppingCart />} /> */}
           <Route exact path="/speaker" element={<SpeakerPage />} />
           <Route exact path="/speaker/detail" element={<SpeakerDetailPage />} />
           <Route exact path="/login" element={<LoginPage />} />
           <Route exact path="/register" element={<RegisterPage />} />
           <Route exact path="/foods" element={<Menu />} />
-          <Route exact path="/ticket" element={<Ticket />} />
+          {/* <Route exact path="/ticket" element={<Ticket />} /> */}
           <Route exact path="/booth" element={<BoothInfo />} />
           <Route exact path="/event" element={<Event />} />
           <Route exact path="/eventinfo" element={<EventInformation />} />
           <Route exact path="/photo" element={<Photo />} />
           <Route exact path="/feedback" element={<Feedback />} />
-          <Route exact path="/paying" element={<PayingPage />} />
-          <Route exact path="/payingdirect" element={<PayingForDirect />} />
+          {/* <Route exact path="/paying" element={<PayingPage />} /> */}
+          {/* <Route exact path="/payingdirect" element={<PayingForDirect />} /> */}
           <Route exact path="/renewal" element={<Renewal />} />
-          <Route exact path="/checkOrder" element={<OrderCheck />} />
+          {/* <Route exact path="/checkOrder" element={<OrderCheck />} /> */}
         </Routes>
       </div>
     );
